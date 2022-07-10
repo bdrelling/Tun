@@ -4,7 +4,11 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        TunerScreen()
+        #if os(macOS)
+            TunerView()
+        #else
+            TunerScreen()
+        #endif
     }
 }
 

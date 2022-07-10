@@ -58,6 +58,8 @@
 /* Begin PBXFileReference section */
 		D36444C4287B417D0031D13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D36444C6287B41A80031D13B /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D36444CC287B56770031D13B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKitTuner.swift; sourceTree = "<group>"; };
 		D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerScreen.swift; sourceTree = "<group>"; };
 		D3F447F22877F01A00670FBA /* SynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthApp.swift; sourceTree = "<group>"; };
@@ -128,6 +130,23 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		D36444CB287B56700031D13B /* Experimental */ = {
+			isa = PBXGroup;
+			children = (
+				D36444CF287B56970031D13B /* Menus */,
+			);
+			path = Experimental;
+			sourceTree = "<group>";
+		};
+		D36444CF287B56970031D13B /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				D36444C8287B518A0031D13B /* AppDelegate.swift */,
+				D36444CC287B56770031D13B /* MenuController.swift */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
 		D3F447EC2877F01900670FBA = {
 			isa = PBXGroup;
 			children = (
@@ -142,9 +161,10 @@
 		D3F447F12877F01A00670FBA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D36444C5287B418D0031D13B /* Config */,
 				D3F4487B287A2D2100670FBA /* AudioKitExamples */,
+				D36444C5287B418D0031D13B /* Config */,
 				D3F44836287927D600670FBA /* Core */,
+				D36444CB287B56700031D13B /* Experimental */,
 				D3F448132877F2C400670FBA /* Resources */,
 			);
 			path = Shared;
