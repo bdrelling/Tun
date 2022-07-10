@@ -27,7 +27,6 @@ playground.xcworkspace
 
 ## Swift Package Manager
 Packages
-Package.resolved
 .build/
 .swiftpm/
 
