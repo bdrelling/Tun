@@ -59,7 +59,8 @@
 		D36444C6287B41A80031D13B /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36444CC287B56770031D13B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		D36444D0287B5DEF0031D13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D36444D0287B5DEF0031D13B /* Info.iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.iOS.plist; sourceTree = "<group>"; };
+		D36444D1287B64C10031D13B /* Info.macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.macOS.plist; sourceTree = "<group>"; };
 		D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKitTuner.swift; sourceTree = "<group>"; };
 		D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerScreen.swift; sourceTree = "<group>"; };
 		D3F447F22877F01A00670FBA /* SynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthApp.swift; sourceTree = "<group>"; };
@@ -116,16 +117,10 @@
 		D36444C5287B418D0031D13B /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				D36444D0287B5DEF0031D13B /* Info.plist */,
-				D36444C6287B41A80031D13B /* Shared.xcconfig */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		D36444C7287B42380031D13B /* Config */ = {
-			isa = PBXGroup;
-			children = (
 				D3F448012877F01A00670FBA /* macOS.entitlements */,
+				D36444D1287B64C10031D13B /* Info.macOS.plist */,
+				D36444D0287B5DEF0031D13B /* Info.iOS.plist */,
+				D36444C6287B41A80031D13B /* Shared.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -151,14 +146,13 @@
 			isa = PBXGroup;
 			children = (
 				D3F448352879268200670FBA /* README.md */,
-				D3F447F12877F01A00670FBA /* Shared */,
-				D3F448002877F01A00670FBA /* macOS */,
+				D3F447F12877F01A00670FBA /* Tuner */,
 				D3F447FA2877F01A00670FBA /* Products */,
 				D3F448252877F6BD00670FBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		D3F447F12877F01A00670FBA /* Shared */ = {
+		D3F447F12877F01A00670FBA /* Tuner */ = {
 			isa = PBXGroup;
 			children = (
 				D3F4487B287A2D2100670FBA /* AudioKitExamples */,
@@ -167,7 +161,7 @@
 				D36444CB287B56700031D13B /* Experimental */,
 				D3F448132877F2C400670FBA /* Resources */,
 			);
-			path = Shared;
+			path = Tuner;
 			sourceTree = "<group>";
 		};
 		D3F447FA2877F01A00670FBA /* Products */ = {
@@ -177,14 +171,6 @@
 				D3F447FF2877F01A00670FBA /* Tuner.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D3F448002877F01A00670FBA /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				D36444C7287B42380031D13B /* Config */,
-			);
-			path = macOS;
 			sourceTree = "<group>";
 		};
 		D3F448132877F2C400670FBA /* Resources */ = {
@@ -587,7 +573,7 @@
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Shared/Config/Info.plist;
+				INFOPLIST_FILE = Tuner/Config/Info.iOS.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your voice or instrument.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -617,7 +603,7 @@
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Shared/Config/Info.plist;
+				INFOPLIST_FILE = Tuner/Config/Info.iOS.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your voice or instrument.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -643,7 +629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/Config/macOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Tuner/Config/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;
@@ -651,6 +637,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tuner/Config/Info.macOS;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© Brian Drelling";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your voice or instrument.";
@@ -671,7 +658,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/Config/macOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Tuner/Config/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;
@@ -679,6 +666,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tuner/Config/Info.macOS;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© Brian Drelling";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your voice or instrument.";
