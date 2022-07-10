@@ -83,7 +83,7 @@ final class MusicMathTests: XCTestCase, MusicMathCalculating {
         XCTAssertEqual(notes.closest(to: 1000), .e(4))
         XCTAssertEqual(notes.closest(to: 10000), .e(4))
         XCTAssertEqual(notes.closest(to: 100000), .e(4))
-        
+
         // Any zero or negative frequencies should be treated as invalid frequencies and therefore return nil.
         XCTAssertEqual(notes.closest(to: 0), nil)
         XCTAssertEqual(notes.closest(to: -100), nil)
