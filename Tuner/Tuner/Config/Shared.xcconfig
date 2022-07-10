@@ -3,4 +3,10 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
+// Xcode
+
 PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.tuner
+
+// Custom
+APP_VERSION = 0.2.0
+PRIVACY_MICROPHONE_USAGE_DESCRIPTION = We need access to your microphone in order to detect the frequency of your instrument or voice.
