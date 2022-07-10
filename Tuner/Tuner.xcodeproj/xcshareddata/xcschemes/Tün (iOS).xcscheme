@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D3F447F82877F01A00670FBA"
-               BuildableName = "Tuner.app"
-               BlueprintName = "Tuner (iOS)"
+               BuildableName = "Tunerz.app"
+               BlueprintName = "T&#xfc;n (iOS)"
                ReferencedContainer = "container:Tuner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3F447F82877F01A00670FBA"
-            BuildableName = "Tuner.app"
-            BlueprintName = "Tuner (iOS)"
+            BuildableName = "Tunerz.app"
+            BlueprintName = "T&#xfc;n (iOS)"
             ReferencedContainer = "container:Tuner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -90,8 +90,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3F447F82877F01A00670FBA"
-            BuildableName = "Tuner.app"
-            BlueprintName = "Tuner (iOS)"
+            BuildableName = "Tunerz.app"
+            BlueprintName = "T&#xfc;n (iOS)"
             ReferencedContainer = "container:Tuner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

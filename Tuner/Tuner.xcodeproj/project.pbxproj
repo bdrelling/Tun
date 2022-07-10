@@ -66,7 +66,7 @@
 		D3F447F22877F01A00670FBA /* SynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthApp.swift; sourceTree = "<group>"; };
 		D3F447F32877F01A00670FBA /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
 		D3F447F42877F01A00670FBA /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
-		D3F447F92877F01A00670FBA /* Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F447F92877F01A00670FBA /* Tün.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tün.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F447FF2877F01A00670FBA /* Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F448012877F01A00670FBA /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		D3F448102877F2C200670FBA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		D3F447FA2877F01A00670FBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D3F447F92877F01A00670FBA /* Tuner.app */,
+				D3F447F92877F01A00670FBA /* Tün.app */,
 				D3F447FF2877F01A00670FBA /* Tuner.app */,
 			);
 			name = Products;
@@ -285,9 +285,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D3F447F82877F01A00670FBA /* Tuner (iOS) */ = {
+		D3F447F82877F01A00670FBA /* Tün (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tuner (iOS)" */;
+			buildConfigurationList = D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tün (iOS)" */;
 			buildPhases = (
 				D3F447F52877F01A00670FBA /* Sources */,
 				D3F447F62877F01A00670FBA /* Frameworks */,
@@ -297,7 +297,7 @@
 			);
 			dependencies = (
 			);
-			name = "Tuner (iOS)";
+			name = "Tün (iOS)";
 			packageProductDependencies = (
 				D3F448182877F5F200670FBA /* AudioKit */,
 				D3F4481B2877F60B00670FBA /* AudioKitEX */,
@@ -307,7 +307,7 @@
 				D3F4487428795B0800670FBA /* TunerKit */,
 			);
 			productName = "Synth (iOS)";
-			productReference = D3F447F92877F01A00670FBA /* Tuner.app */;
+			productReference = D3F447F92877F01A00670FBA /* Tün.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D3F447FE2877F01A00670FBA /* Tuner (macOS) */ = {
@@ -373,7 +373,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D3F447F82877F01A00670FBA /* Tuner (iOS) */,
+				D3F447F82877F01A00670FBA /* Tün (iOS) */,
 				D3F447FE2877F01A00670FBA /* Tuner (macOS) */,
 			);
 		};
@@ -586,7 +586,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_NAME = Tuner;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -615,7 +614,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_NAME = Tuner;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -692,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tuner (iOS)" */ = {
+		D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tün (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3F4480B2877F01A00670FBA /* Debug */,
