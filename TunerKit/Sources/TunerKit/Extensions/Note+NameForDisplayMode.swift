@@ -4,6 +4,15 @@ import MusicKit
 
 public extension Note {
     func name(for displayMode: NoteDisplayMode) -> String {
-        "\(self.note.name(for: displayMode))\(self.octave)"
+        guard self.note.isSharp else {
+            return self.name
+        }
+
+        switch displayMode {
+        case .both:
+            return "\(self.note.name)\(self.octave) / \(self.note.nameWithFlats)\(self.octave)"
+        case .flats, .sharps:
+            return "\(self.note.name(for: displayMode))\(self.octave)"
+        }
     }
 }

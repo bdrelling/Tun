@@ -9,12 +9,9 @@ struct NoteView: View {
     private static let fontSize: CGFloat = 96
 
     let note: Note?
-    @Binding var isListening: Bool
-    @Binding var displayMode: NoteDisplayMode
+    let isListening: Bool
 
-//    private var note: Note? {
-//        self.data.note
-//    }
+    @Binding var displayMode: NoteDisplayMode
 
     private var backgroundColor: Color {
         guard self.isListening else {
@@ -32,6 +29,7 @@ struct NoteView: View {
             } else {
                 Text(Note.inactiveNoteSymbol)
                     .fontWeight(.bold)
+                    .opacity(0.65)
             }
         }
         .font(.system(size: Self.fontSize))
@@ -60,8 +58,8 @@ struct NoteView_Previews: PreviewProvider {
         ForEach(NoteDisplayMode.allCases, id: \.self) { displayMode in
             ForEach([true, false], id: \.self) { isListening in
                 NoteView(
-                    note: .standard,
-                    isListening: .constant(isListening),
+                    note: .cSharp(4),
+                    isListening: isListening,
                     displayMode: .constant(displayMode)
                 )
             }

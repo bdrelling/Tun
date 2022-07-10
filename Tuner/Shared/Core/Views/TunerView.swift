@@ -13,7 +13,7 @@ struct TunerView: View {
             VStack {
                 ActiveTuningView(
                     tuning: .constant(.standard),
-                    data: self.$tuner.data
+                    data: self.tuner.data
                 )
                 .padding(.top, 100)
 
@@ -22,7 +22,7 @@ struct TunerView: View {
 
             NoteView(
                 note: self.tuner.data.note,
-                isListening: self.$tuner.isListening,
+                isListening: self.tuner.isListening,
                 displayMode: self.$noteDisplayMode
             )
             .edgesIgnoringSafeArea(.all)
@@ -39,7 +39,7 @@ struct TunerView: View {
 
 struct ActiveTuningView: View {
     @Binding var tuning: Tuning
-    @Binding var data: TunerData
+    let data: TunerData
 
     var body: some View {
         HStack(spacing: 16) {
@@ -58,7 +58,7 @@ struct ActiveTuningView_Previews: PreviewProvider {
     static var previews: some View {
         ActiveTuningView(
             tuning: .constant(.standard),
-            data: .constant(.mocked)
+            data: .mocked
         )
         .background(Color.inactive)
         .previewMatrix(.sizeThatFits)

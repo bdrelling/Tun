@@ -12,17 +12,16 @@ import TunerKit
 final class Tuner: ObservableObject {
     /// The amplitude threshold for when the mic begins to pick up audio, in order to suppress unwanted background noise.
     /// The lower then number, the more sensitive -- meaning that more audio is detected.
-    private static let noiseSensitivityThreshold: AUValue = 0.1
+    private static let noiseSensitivityThreshold: AUValue = 0.05
 
-    @Published var data: TunerData = .inactive
-    @Published var isListening: Bool = false
+    @Published private(set) var data: TunerData = .inactive
+    @Published private(set) var isListening: Bool = false
 
-    private(set) var engine = AudioEngine()
-    private(set) var initialDevice: Device!
+    private var engine = AudioEngine()
 
-    private(set) var mic: AudioEngine.InputNode!
-    private(set) var silence: Fader!
-    private var tracker: PitchTap!
+    private var mic: AudioEngine.InputNode!
+    private var silencer: Fader?
+    private var tracker: PitchTap?
 
     private var isInitialized: Bool = false
 
@@ -38,21 +37,9 @@ final class Tuner: ObservableObject {
             return
         }
 
-        #if os(macOS)
-            let device = self.engine.device
-        #else
-            guard let device = self.engine.inputDevice else {
-                print("Unable to retrieve engine.inputDevice.")
-                return
-            }
-        #endif
-
-        self.initialDevice = device
-
         self.mic = input
-        #warning("Can I remove this property?")
-        self.silence = Fader(self.mic, gain: 0)
-        self.engine.output = self.silence
+        self.silencer = Fader(self.mic, gain: 0)
+        self.engine.output = self.silencer
 
         self.tracker = PitchTap(self.mic) { pitch, amp in
             DispatchQueue.main.async {
@@ -84,7 +71,7 @@ final class Tuner: ObservableObject {
 
         do {
             try self.engine.start()
-            self.tracker.start()
+            self.tracker?.start()
         } catch {
             print(error.localizedDescription)
         }

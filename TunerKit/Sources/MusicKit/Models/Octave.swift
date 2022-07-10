@@ -20,6 +20,31 @@ extension Octave: Identifiable {
     }
 }
 
+public extension Octave {
+    var name: String {
+        switch self {
+        case .subContra:
+            return "sub-contra"
+        case .contra:
+            return "contra"
+        case .great:
+            return "great"
+        case .small:
+            return "small"
+        case .secondSmall:
+            return "2nd small"
+        case .thirdSmall:
+            return "3rd small"
+        case .fourthSmall:
+            return "4th small"
+        case .fifthSmall:
+            return "5th small"
+        case .sixthSmall:
+            return "6th small"
+        }
+    }
+}
+
 // MARK: - Aliases
 
 public extension Octave {

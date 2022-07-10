@@ -17,23 +17,6 @@ public struct Semitone: Equatable {
         }
     }
 
-    public var nameWithFlats: String {
-        switch self {
-        case .cSharp:
-            return "D♭"
-        case .dSharp:
-            return "E♭"
-        case .fSharp:
-            return "G♭"
-        case .gSharp:
-            return "A♭"
-        case .aSharp:
-            return "B♭"
-        default:
-            return self.name
-        }
-    }
-
     private init(_ name: String, index: Int, frequency: Float) {
         self.name = name
         self.index = index

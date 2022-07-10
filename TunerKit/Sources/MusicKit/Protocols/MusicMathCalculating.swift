@@ -5,8 +5,6 @@ import Foundation
 public protocol MusicMathCalculating {}
 
 public extension MusicMath {
-    #warning("Figure out how to replace 440 with the note.frequency without recursively crashing the app.")
-    static let standardNoteFrequency: Float = 440
     static var precision: Float = 100.0
 }
 
@@ -53,7 +51,7 @@ public extension MusicMathCalculating {
     static func frequencyForInterval(_ interval: Int) -> Float {
         // Multiply the frequency by 2^(n/12), where n is the number of half-steps away from the reference note.
         let power = Float(interval) / Float(Semitone.count)
-        let frequency = MusicMath.standardNoteFrequency * powf(2, power)
+        let frequency = Note.standard.frequency * powf(2, power)
 
         return round(frequency * MusicMath.precision) / MusicMath.precision
     }
