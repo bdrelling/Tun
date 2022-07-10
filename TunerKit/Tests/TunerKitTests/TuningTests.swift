@@ -8,8 +8,8 @@ final class TuningTests: XCTestCase {
     func testGuitarStandardTuning() {
         let tuning: Tuning = Instrument.guitar.standardTuning
 
-        let notes = tuning.notes.map(\.note)
-        XCTAssertEqual(notes, [
+        let semitones = tuning.notes.map(\.semitone)
+        XCTAssertEqual(semitones, [
             .e, // E2
             .a, // A2
             .d, // D3

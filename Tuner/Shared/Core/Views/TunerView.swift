@@ -1,6 +1,7 @@
 // Copyright © 2022 Brian Drelling. All rights reserved.
 
 import Combine
+import MusicKit
 import SwiftUI
 import TunerKit
 
@@ -15,6 +16,7 @@ struct TunerView: View {
                     tuning: .constant(Instrument.guitar.standardTuning),
                     data: self.tuner.data
                 )
+                .font(.title2)
                 .padding(.top, 100)
 
                 Spacer()
@@ -44,11 +46,23 @@ struct ActiveTuningView: View {
     var body: some View {
         HStack(spacing: 16) {
             ForEach(self.tuning.notes) { note in
-                Text(note.name)
-                    .foregroundColor(.white)
+                Group {
+                    if let closestNote = self.closestNote {
+                        Text(note.name)
+                            .fontWeight(note == closestNote ? .bold : .medium)
+                            .opacity(note == closestNote ? 1 : 0.65)
+                    } else {
+                        Text(note.name)
+                    }
+                }
+                .foregroundColor(.white)
             }
         }
         .padding()
+    }
+
+    private var closestNote: Note? {
+        self.tuning.notes.closest(to: self.data.frequency)
     }
 }
 
@@ -60,7 +74,7 @@ struct ActiveTuningView_Previews: PreviewProvider {
             tuning: .constant(Instrument.guitar.standardTuning),
             data: .mocked
         )
-        .background(Color.inactive)
+        .background(Color.theme.inactiveTunerBackgroundColor)
         .previewMatrix(.sizeThatFits)
     }
 }

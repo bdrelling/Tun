@@ -6,7 +6,7 @@ import SwiftUI
 
 struct NoteFrequencyTable: View {
     private let tableBackgroundColor: Color = .primary.opacity(0.15)
-    private let cellBackgroundColor: Color = .init(NSColor.textBackgroundColor)
+    private let cellBackgroundColor: Color = .theme.backgroundColor
     private let textColor: Color = .primary
     private let borderWidth: CGFloat = 0.5
 
@@ -34,7 +34,7 @@ struct NoteFrequencyTable: View {
         }
     }
 
-    @ViewBuilder  private var headerRow: some View {
+    @ViewBuilder private var headerRow: some View {
         HStack(spacing: self.borderWidth) {
             Group {
                 Text("Note")

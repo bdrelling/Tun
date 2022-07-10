@@ -60,7 +60,34 @@ final class MusicMathTests: XCTestCase, MusicMathCalculating {
         XCTAssertEqual(MusicMath.noteForFrequency(329.6), .e(4))
     }
 
-    // MARK: Theoreticall
+    func testCalculatingClosestNote() {
+        // Notes for Guitar standard tuning.
+        // E2 = 82.41
+        // A2 = 110.00
+        // D3 = 146.83
+        // G3 = 196.00
+        // B3 = 246.94
+        // E4 = 329.63
+        let notes: [Note] = [.e(2), .a(2), .d(3), .g(3), .b(3), .e(4)]
+
+        // Exact middle between A2 and D3 is approximately 128.415.
+        XCTAssertEqual(notes.closest(to: 120), .a(2))
+        XCTAssertEqual(notes.closest(to: 130), .d(3))
+
+        // Any frequency below the lowest note should return the lowest note.
+        XCTAssertEqual(notes.closest(to: 82), .e(2))
+        XCTAssertEqual(notes.closest(to: 10), .e(2))
+        XCTAssertEqual(notes.closest(to: 0), .e(2))
+        XCTAssertEqual(notes.closest(to: -100), .e(2))
+
+        // Any frequency above the highest note should return the highest note.
+        XCTAssertEqual(notes.closest(to: 330), .e(4))
+        XCTAssertEqual(notes.closest(to: 1000), .e(4))
+        XCTAssertEqual(notes.closest(to: 10000), .e(4))
+        XCTAssertEqual(notes.closest(to: 100000), .e(4))
+    }
+
+    // MARK: Outliers
 
     func testFirstNegativeOctave() {
         let frequencies = Semitone.allCases.map { Note($0, octave: -1) }.map(\.frequency)
@@ -108,9 +135,9 @@ final class MusicMathTests: XCTestCase, MusicMathCalculating {
         let highNotes = Semitone.allCases.map { Note($0, octave: 100) }
 
         XCTAssertEqual(lowNotes.count, Semitone.count)
-        XCTAssertEqual(lowNotes.map(\.note), Semitone.allCases)
+        XCTAssertEqual(lowNotes.map(\.semitone), Semitone.allCases)
 
         XCTAssertEqual(highNotes.count, Semitone.count)
-        XCTAssertEqual(highNotes.map(\.note), Semitone.allCases)
+        XCTAssertEqual(highNotes.map(\.semitone), Semitone.allCases)
     }
 }

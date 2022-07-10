@@ -15,3 +15,11 @@ public struct Tuning: Equatable {
         self.notes = notes
     }
 }
+
+// MARK: - Extensions
+
+extension Tuning {
+    func closestNote(to frequency: Float) -> Note? {
+        self.notes.closest(to: frequency)
+    }
+}

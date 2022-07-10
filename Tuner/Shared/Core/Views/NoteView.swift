@@ -15,21 +15,18 @@ struct NoteView: View {
 
     private var backgroundColor: Color {
         guard self.isListening else {
-            return .inactive
+            return .theme.inactiveTunerBackgroundColor
         }
 
-        return .closer
+        return .theme.closerTunerBackgroundColor
     }
 
     var body: some View {
         Group {
             if let note = self.note {
-                Text(note.name(for: self.displayMode))
-                    .fontWeight(.bold)
+                Text(note.attributedName(for: self.displayMode, fontSize: Self.fontSize))
             } else {
-                Text(Note.inactiveNoteSymbol)
-                    .fontWeight(.bold)
-                    .opacity(0.65)
+                self.inactiveTextView
             }
         }
         .font(.system(size: Self.fontSize))
@@ -40,14 +37,43 @@ struct NoteView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(self.backgroundColor)
     }
+
+    private var inactiveTextView: some View {
+        Text(Note.inactiveNoteSymbol)
+            .fontWeight(.bold)
+            .opacity(0.65)
+    }
 }
 
-extension Note {
-    var textView: some View {
-        Text(self.note.name)
-            + Text("\(self.octave)")
-            .font(.system(size: 8.0))
-            .baselineOffset(6.0)
+// MARK: - Extensions
+
+private extension Note {
+    func attributedName(
+        for displayMode: NoteDisplayMode,
+        fontSize: CGFloat
+    ) -> AttributedString {
+        guard self.semitone.isSharp else {
+            return .init(self.name)
+        }
+
+        let nameWithSharps = AttributedString(self.semitone.name(for: .sharps))
+        let nameWithFlats = AttributedString(self.semitone.name(for: .flats))
+
+        var octaveAttributes = AttributeContainer()
+        octaveAttributes.font = Font.system(size: fontSize * 0.65)
+        octaveAttributes.baselineOffset = fontSize * -0.25
+
+        let octave = AttributedString("\(self.octave)", attributes: octaveAttributes)
+        let divider = AttributedString(" / ")
+
+        switch displayMode {
+        case .sharps:
+            return nameWithSharps + octave
+        case .flats:
+            return nameWithFlats + octave
+        case .both:
+            return nameWithSharps + octave + divider + nameWithFlats + octave
+        }
     }
 }
 

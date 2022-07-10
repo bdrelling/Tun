@@ -3,17 +3,16 @@
 import Foundation
 
 public struct Note: Equatable {
-    // TODO: Rename to semitone.
-    public let note: Semitone
+    public let semitone: Semitone
     public let octave: Int
     public let frequency: Float
 
     public var name: String {
-        "\(self.note.name)\(self.octave)"
+        "\(self.semitone.name)\(self.octave)"
     }
 
     public init(_ semitone: Semitone, octave: Int, frequency: Float? = nil) {
-        self.note = semitone
+        self.semitone = semitone
         self.octave = octave
         self.frequency = frequency ?? MusicMath.frequencyForNote(semitone, octave: octave)
     }
