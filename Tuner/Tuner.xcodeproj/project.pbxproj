@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D3ED09F9287A2D94004CBC96 /* AudioKitTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */; };
 		D3ED09FA287A2D97004CBC96 /* AudioKitTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */; };
+		D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */; };
+		D3ED0A00287AA60D004CBC96 /* TunerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */; };
 		D3F448022877F01A00670FBA /* SynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* SynthApp.swift */; };
 		D3F448032877F01A00670FBA /* SynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* SynthApp.swift */; };
 		D3F448042877F01A00670FBA /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F32877F01A00670FBA /* TunerView.swift */; };
@@ -55,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKitTuner.swift; sourceTree = "<group>"; };
+		D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerScreen.swift; sourceTree = "<group>"; };
 		D3F447F22877F01A00670FBA /* SynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthApp.swift; sourceTree = "<group>"; };
 		D3F447F32877F01A00670FBA /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
 		D3F447F42877F01A00670FBA /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 				D3F4484528792AE000670FBA /* NoteView.swift */,
 				D3F4483D2879281700670FBA /* RootView.swift */,
 				D3F447F32877F01A00670FBA /* TunerView.swift */,
+				D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -384,6 +388,7 @@
 				D3F448302877FDEA00670FBA /* AudioManager.swift in Sources */,
 				D3F4483E2879281700670FBA /* RootView.swift in Sources */,
 				D3F44879287A27F500670FBA /* NoteFrequencyTable.swift in Sources */,
+				D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */,
 				D3F4483A287927F600670FBA /* Tuner.swift in Sources */,
 				D3ED09F9287A2D94004CBC96 /* AudioKitTuner.swift in Sources */,
 				D3F4485B28792C7600670FBA /* Color+Theme.swift in Sources */,
@@ -405,6 +410,7 @@
 				D3F448312877FDEA00670FBA /* AudioManager.swift in Sources */,
 				D3F4483F2879281700670FBA /* RootView.swift in Sources */,
 				D3F4487A287A27F500670FBA /* NoteFrequencyTable.swift in Sources */,
+				D3ED0A00287AA60D004CBC96 /* TunerScreen.swift in Sources */,
 				D3F4483B287927F600670FBA /* Tuner.swift in Sources */,
 				D3ED09FA287A2D97004CBC96 /* AudioKitTuner.swift in Sources */,
 				D3F4485C28792C7600670FBA /* Color+Theme.swift in Sources */,

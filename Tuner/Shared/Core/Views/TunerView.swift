@@ -18,7 +18,7 @@ struct TunerView: View {
                     data: self.tuner.data
                 )
                 .font(.title2)
-                .padding(.top, 100)
+                .padding(.vertical, 48)
 
                 Spacer()
             }
@@ -83,6 +83,6 @@ struct ActiveTuningView_Previews: PreviewProvider {
 struct TunerView_Previews: PreviewProvider {
     static var previews: some View {
         TunerView()
-            .previewMatrix(.currentDevice)
+            .previewMatrix(.sizeThatFits)
     }
 }
