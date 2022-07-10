@@ -2,7 +2,6 @@
 
 import InstrumentKit
 import MusicKit
-import TunerKit
 import XCTest
 
 final class TuningTests: XCTestCase {
