@@ -1,6 +1,7 @@
 // Copyright © 2022 Brian Drelling. All rights reserved.
 
 import MusicKit
+import TunerKit
 import XCTest
 
 final class NoteDisplayModeTests: XCTestCase {

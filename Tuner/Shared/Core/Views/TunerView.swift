@@ -1,6 +1,7 @@
 // Copyright © 2022 Brian Drelling. All rights reserved.
 
 import Combine
+import InstrumentKit
 import MusicKit
 import SwiftUI
 import TunerKit

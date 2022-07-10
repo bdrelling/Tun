@@ -1,5 +1,7 @@
 // Copyright © 2022 Brian Drelling. All rights reserved.
 
+import MusicKit
+
 public extension Instrument {
     static let guitar: Self = .init(
         name: "Guitar",
@@ -10,6 +12,7 @@ public extension Instrument {
         ],
         standardTuning: .e(2), .a(2), .d(3), .g(3), .b(3), .e(4),
         alternativeTunings: [
+            // https://musiciantuts.com/guitar-tunings/
             .init("Drop D", notes: .d(2), .a(2), .d(3), .g(3), .b(3), .e(4)),
             .init("Open D", notes: .d(2), .a(2), .d(3), .fSharp(3), .a(3), .d(4)),
             .init("Open G", notes: .d(2), .g(2), .d(2), .g(2), .b(3), .d(4)),

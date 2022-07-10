@@ -5,6 +5,7 @@ import PackageDescription
 let package = Package(
     name: "TunerKit",
     products: [
+        .library(name: "InstrumentKit", targets: ["InstrumentKit"]),
         .library(name: "MusicKit", targets: ["MusicKit"]),
         .library(name: "TunerKit", targets: ["TunerKit"]),
     ],
@@ -12,16 +13,29 @@ let package = Package(
     targets: [
         // Product Targets
         .target(
+            name: "InstrumentKit",
+            dependencies: [
+                .target(name: "MusicKit"),
+            ]
+        ),
+        .target(
             name: "MusicKit",
             dependencies: []
         ),
         .target(
             name: "TunerKit",
             dependencies: [
+                .target(name: "InstrumentKit"),
                 .target(name: "MusicKit"),
             ]
         ),
         // Test Targets
+        .testTarget(
+            name: "InstrumentKitTests",
+            dependencies: [
+                "InstrumentKit"
+            ]
+        ),
         .testTarget(
             name: "MusicKitTests",
             dependencies: [
