@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "TunKit",
+    name: "TünKit",
     products: [
         .library(name: "InstrumentKit", targets: ["InstrumentKit"]),
         .library(name: "MusicKit", targets: ["MusicKit"]),

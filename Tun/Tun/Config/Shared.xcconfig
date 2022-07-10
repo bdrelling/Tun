@@ -5,7 +5,7 @@
 
 // Xcode
 
-PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.tuner
+PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.tun
 PRODUCT_NAME = Tün
 
 // Custom

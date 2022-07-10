@@ -42,5 +42,5 @@ extension MenuController {
 }
 
 extension UIMenu.Identifier {
-    static let references: UIMenu.Identifier = .init("com.briandrelling.tuner.menus.references")
+    static let references: UIMenu.Identifier = .init("com.briandrelling.tun.menus.references")
 }
