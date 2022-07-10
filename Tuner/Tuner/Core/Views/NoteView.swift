@@ -52,18 +52,19 @@ private extension Note {
         for displayMode: NoteDisplayMode,
         fontSize: CGFloat
     ) -> AttributedString {
-        guard self.semitone.isSharp else {
-            return .init(self.name)
-        }
-
         let nameWithSharps = AttributedString(self.semitone.name(for: .sharps))
-        let nameWithFlats = AttributedString(self.semitone.name(for: .flats))
 
         var octaveAttributes = AttributeContainer()
         octaveAttributes.font = Font.system(size: fontSize * 0.65)
         octaveAttributes.baselineOffset = fontSize * -0.25
-
         let octave = AttributedString("\(self.octave)", attributes: octaveAttributes)
+
+        guard self.semitone.isSharp else {
+            return nameWithSharps + octave
+        }
+
+        let nameWithFlats = AttributedString(self.semitone.name(for: .flats))
+
         let divider = AttributedString(" / ")
 
         switch displayMode {
@@ -82,13 +83,17 @@ private extension Note {
 struct NoteView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(NoteDisplayMode.allCases, id: \.self) { displayMode in
-            ForEach([true, false], id: \.self) { isListening in
-                NoteView(
-                    note: .cSharp(4),
-                    isListening: isListening,
-                    displayMode: .constant(displayMode)
-                )
-            }
+            NoteView(
+                note: .c(2),
+                isListening: true,
+                displayMode: .constant(displayMode)
+            )
+
+            NoteView(
+                note: .cSharp(4),
+                isListening: true,
+                displayMode: .constant(displayMode)
+            )
         }
         .previewMatrix(.sizeThatFits, colorSchemes: [.light])
     }
