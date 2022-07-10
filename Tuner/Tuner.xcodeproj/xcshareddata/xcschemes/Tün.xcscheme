@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D3F447F82877F01A00670FBA"
                BuildableName = "Tu&#x308;n.app"
-               BlueprintName = "T&#xfc;n (iOS)"
+               BlueprintName = "T&#xfc;n"
                ReferencedContainer = "container:Tuner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3F447F82877F01A00670FBA"
             BuildableName = "Tu&#x308;n.app"
-            BlueprintName = "T&#xfc;n (iOS)"
+            BlueprintName = "T&#xfc;n"
             ReferencedContainer = "container:Tuner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -91,7 +91,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3F447F82877F01A00670FBA"
             BuildableName = "Tu&#x308;n.app"
-            BlueprintName = "T&#xfc;n (iOS)"
+            BlueprintName = "T&#xfc;n"
             ReferencedContainer = "container:Tuner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

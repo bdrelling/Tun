@@ -9,5 +9,5 @@ PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.tuner
 PRODUCT_NAME = Tün
 
 // Custom
-APP_VERSION = 0.1.1
+APP_VERSION = 0.2.0
 PRIVACY_MICROPHONE_USAGE_DESCRIPTION = We need access to your microphone in order to detect the frequency of your instrument or voice.

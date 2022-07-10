@@ -8,67 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		D3ED09F9287A2D94004CBC96 /* AudioKitTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */; };
-		D3ED09FA287A2D97004CBC96 /* AudioKitTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */; };
 		D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */; };
-		D3ED0A00287AA60D004CBC96 /* TunerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */; };
 		D3F448022877F01A00670FBA /* SynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* SynthApp.swift */; };
-		D3F448032877F01A00670FBA /* SynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* SynthApp.swift */; };
 		D3F448042877F01A00670FBA /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F32877F01A00670FBA /* TunerView.swift */; };
-		D3F448052877F01A00670FBA /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F32877F01A00670FBA /* TunerView.swift */; };
 		D3F448062877F01A00670FBA /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F447F42877F01A00670FBA /* AppIcons.xcassets */; };
-		D3F448072877F01A00670FBA /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F447F42877F01A00670FBA /* AppIcons.xcassets */; };
 		D3F448112877F2C200670FBA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F448102877F2C200670FBA /* Colors.xcassets */; };
-		D3F448122877F2C200670FBA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F448102877F2C200670FBA /* Colors.xcassets */; };
 		D3F448192877F5F200670FBA /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F448182877F5F200670FBA /* AudioKit */; };
 		D3F4481C2877F60B00670FBA /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4481B2877F60B00670FBA /* AudioKitEX */; };
 		D3F4481F2877F61E00670FBA /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4481E2877F61E00670FBA /* AudioKitUI */; };
 		D3F448242877F6AE00670FBA /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F448232877F6AE00670FBA /* SoundpipeAudioKit */; };
-		D3F448272877F6BD00670FBA /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F448262877F6BD00670FBA /* AudioKit */; };
-		D3F448292877F6BD00670FBA /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = D3F448282877F6BD00670FBA /* AudioKitEX */; };
-		D3F4482B2877F6BD00670FBA /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4482A2877F6BD00670FBA /* AudioKitUI */; };
-		D3F4482D2877F6BD00670FBA /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4482C2877F6BD00670FBA /* SoundpipeAudioKit */; };
 		D3F448302877FDEA00670FBA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4482F2877FDEA00670FBA /* AudioManager.swift */; };
-		D3F448312877FDEA00670FBA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4482F2877FDEA00670FBA /* AudioManager.swift */; };
 		D3F4483328780B0B00670FBA /* SynthApp+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4483228780B0B00670FBA /* SynthApp+Constants.swift */; };
-		D3F4483428780B0B00670FBA /* SynthApp+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4483228780B0B00670FBA /* SynthApp+Constants.swift */; };
 		D3F4483A287927F600670FBA /* Tuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44839287927F600670FBA /* Tuner.swift */; };
-		D3F4483B287927F600670FBA /* Tuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44839287927F600670FBA /* Tuner.swift */; };
 		D3F4483E2879281700670FBA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4483D2879281700670FBA /* RootView.swift */; };
-		D3F4483F2879281700670FBA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4483D2879281700670FBA /* RootView.swift */; };
 		D3F4484628792AE000670FBA /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4484528792AE000670FBA /* NoteView.swift */; };
-		D3F4484728792AE000670FBA /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4484528792AE000670FBA /* NoteView.swift */; };
 		D3F4485028792BDC00670FBA /* TunerCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4484F28792BDC00670FBA /* TunerCoordinating.swift */; };
-		D3F4485128792BDC00670FBA /* TunerCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4484F28792BDC00670FBA /* TunerCoordinating.swift */; };
 		D3F4485728792C4F00670FBA /* TunerView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4485628792C4F00670FBA /* TunerView+ViewModel.swift */; };
-		D3F4485828792C4F00670FBA /* TunerView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4485628792C4F00670FBA /* TunerView+ViewModel.swift */; };
 		D3F4485B28792C7600670FBA /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4485A28792C7600670FBA /* Color+Theme.swift */; };
-		D3F4485C28792C7600670FBA /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4485A28792C7600670FBA /* Color+Theme.swift */; };
 		D3F4485F2879392600670FBA /* KippleUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4485E2879392600670FBA /* KippleUI */; };
-		D3F448612879392E00670FBA /* KippleUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3F448602879392E00670FBA /* KippleUI */; };
 		D3F44863287941C500670FBA /* InputDevicePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44862287941C500670FBA /* InputDevicePicker.swift */; };
-		D3F44864287941C500670FBA /* InputDevicePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44862287941C500670FBA /* InputDevicePicker.swift */; };
 		D3F44866287941D500670FBA /* AudioDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44865287941D500670FBA /* AudioDeviceManager.swift */; };
-		D3F44867287941D500670FBA /* AudioDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44865287941D500670FBA /* AudioDeviceManager.swift */; };
 		D3F4487528795B0800670FBA /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4487428795B0800670FBA /* TunerKit */; };
-		D3F4487728795B0B00670FBA /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4487628795B0B00670FBA /* TunerKit */; };
 		D3F44879287A27F500670FBA /* NoteFrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */; };
-		D3F4487A287A27F500670FBA /* NoteFrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D36444C6287B41A80031D13B /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36444CC287B56770031D13B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		D36444D0287B5DEF0031D13B /* Info.iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.iOS.plist; sourceTree = "<group>"; };
-		D36444D1287B64C10031D13B /* Info.macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.macOS.plist; sourceTree = "<group>"; };
+		D36444D0287B5DEF0031D13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKitTuner.swift; sourceTree = "<group>"; };
 		D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerScreen.swift; sourceTree = "<group>"; };
 		D3F447F22877F01A00670FBA /* SynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthApp.swift; sourceTree = "<group>"; };
 		D3F447F32877F01A00670FBA /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
 		D3F447F42877F01A00670FBA /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
 		D3F447F92877F01A00670FBA /* Tün.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tün.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3F447FF2877F01A00670FBA /* Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3F448012877F01A00670FBA /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		D3F448102877F2C200670FBA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D3F4482F2877FDEA00670FBA /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		D3F4483228780B0B00670FBA /* SynthApp+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SynthApp+Constants.swift"; sourceTree = "<group>"; };
@@ -98,28 +72,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3F447FC2877F01A00670FBA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3F4487728795B0B00670FBA /* TunerKit in Frameworks */,
-				D3F448272877F6BD00670FBA /* AudioKit in Frameworks */,
-				D3F448612879392E00670FBA /* KippleUI in Frameworks */,
-				D3F4482B2877F6BD00670FBA /* AudioKitUI in Frameworks */,
-				D3F4482D2877F6BD00670FBA /* SoundpipeAudioKit in Frameworks */,
-				D3F448292877F6BD00670FBA /* AudioKitEX in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D36444C5287B418D0031D13B /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				D3F448012877F01A00670FBA /* macOS.entitlements */,
-				D36444D0287B5DEF0031D13B /* Info.iOS.plist */,
-				D36444D1287B64C10031D13B /* Info.macOS.plist */,
+				D36444D0287B5DEF0031D13B /* Info.plist */,
 				D36444C6287B41A80031D13B /* Shared.xcconfig */,
 			);
 			path = Config;
@@ -168,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				D3F447F92877F01A00670FBA /* Tün.app */,
-				D3F447FF2877F01A00670FBA /* Tuner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,9 +243,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D3F447F82877F01A00670FBA /* Tün (iOS) */ = {
+		D3F447F82877F01A00670FBA /* Tün */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tün (iOS)" */;
+			buildConfigurationList = D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tün" */;
 			buildPhases = (
 				D3F447F52877F01A00670FBA /* Sources */,
 				D3F447F62877F01A00670FBA /* Frameworks */,
@@ -297,7 +255,7 @@
 			);
 			dependencies = (
 			);
-			name = "Tün (iOS)";
+			name = "Tün";
 			packageProductDependencies = (
 				D3F448182877F5F200670FBA /* AudioKit */,
 				D3F4481B2877F60B00670FBA /* AudioKitEX */,
@@ -308,31 +266,6 @@
 			);
 			productName = "Synth (iOS)";
 			productReference = D3F447F92877F01A00670FBA /* Tün.app */;
-			productType = "com.apple.product-type.application";
-		};
-		D3F447FE2877F01A00670FBA /* Tuner (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D3F4480D2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tuner (macOS)" */;
-			buildPhases = (
-				D3F447FB2877F01A00670FBA /* Sources */,
-				D3F447FC2877F01A00670FBA /* Frameworks */,
-				D3F447FD2877F01A00670FBA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Tuner (macOS)";
-			packageProductDependencies = (
-				D3F448262877F6BD00670FBA /* AudioKit */,
-				D3F448282877F6BD00670FBA /* AudioKitEX */,
-				D3F4482A2877F6BD00670FBA /* AudioKitUI */,
-				D3F4482C2877F6BD00670FBA /* SoundpipeAudioKit */,
-				D3F448602879392E00670FBA /* KippleUI */,
-				D3F4487628795B0B00670FBA /* TunerKit */,
-			);
-			productName = "Synth (macOS)";
-			productReference = D3F447FF2877F01A00670FBA /* Tuner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -346,9 +279,6 @@
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					D3F447F82877F01A00670FBA = {
-						CreatedOnToolsVersion = 13.4.1;
-					};
-					D3F447FE2877F01A00670FBA = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
@@ -373,8 +303,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D3F447F82877F01A00670FBA /* Tün (iOS) */,
-				D3F447FE2877F01A00670FBA /* Tuner (macOS) */,
+				D3F447F82877F01A00670FBA /* Tün */,
 			);
 		};
 /* End PBXProject section */
@@ -386,15 +315,6 @@
 			files = (
 				D3F448062877F01A00670FBA /* AppIcons.xcassets in Resources */,
 				D3F448112877F2C200670FBA /* Colors.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D3F447FD2877F01A00670FBA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3F448072877F01A00670FBA /* AppIcons.xcassets in Resources */,
-				D3F448122877F2C200670FBA /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,28 +340,6 @@
 				D3F4485B28792C7600670FBA /* Color+Theme.swift in Sources */,
 				D3F4485028792BDC00670FBA /* TunerCoordinating.swift in Sources */,
 				D3F4484628792AE000670FBA /* NoteView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D3F447FB2877F01A00670FBA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3F44867287941D500670FBA /* AudioDeviceManager.swift in Sources */,
-				D3F448052877F01A00670FBA /* TunerView.swift in Sources */,
-				D3F44864287941C500670FBA /* InputDevicePicker.swift in Sources */,
-				D3F4483428780B0B00670FBA /* SynthApp+Constants.swift in Sources */,
-				D3F448032877F01A00670FBA /* SynthApp.swift in Sources */,
-				D3F4485828792C4F00670FBA /* TunerView+ViewModel.swift in Sources */,
-				D3F448312877FDEA00670FBA /* AudioManager.swift in Sources */,
-				D3F4483F2879281700670FBA /* RootView.swift in Sources */,
-				D3F4487A287A27F500670FBA /* NoteFrequencyTable.swift in Sources */,
-				D3ED0A00287AA60D004CBC96 /* TunerScreen.swift in Sources */,
-				D3F4483B287927F600670FBA /* Tuner.swift in Sources */,
-				D3ED09FA287A2D97004CBC96 /* AudioKitTuner.swift in Sources */,
-				D3F4485C28792C7600670FBA /* Color+Theme.swift in Sources */,
-				D3F4485128792BDC00670FBA /* TunerCoordinating.swift in Sources */,
-				D3F4484728792AE000670FBA /* NoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +473,7 @@
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tuner/Config/Info.iOS.plist;
+				INFOPLIST_FILE = Tuner/Config/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRIVACY_MICROPHONE_USAGE_DESCRIPTION)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -603,7 +501,7 @@
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tuner/Config/Info.iOS.plist;
+				INFOPLIST_FILE = Tuner/Config/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRIVACY_MICROPHONE_USAGE_DESCRIPTION)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -622,62 +520,6 @@
 			};
 			name = Release;
 		};
-		D3F4480E2877F01A00670FBA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Tuner/Config/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = 79E585EFP3;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tuner/Config/Info.macOS.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© Brian Drelling";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRIVACY_MICROPHONE_USAGE_DESCRIPTION)";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_NAME = Tuner;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		D3F4480F2877F01A00670FBA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Tuner/Config/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = 79E585EFP3;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tuner/Config/Info.macOS.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© Brian Drelling";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRIVACY_MICROPHONE_USAGE_DESCRIPTION)";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_NAME = Tuner;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -690,20 +532,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tün (iOS)" */ = {
+		D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tün" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3F4480B2877F01A00670FBA /* Debug */,
 				D3F4480C2877F01A00670FBA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D3F4480D2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tuner (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D3F4480E2877F01A00670FBA /* Debug */,
-				D3F4480F2877F01A00670FBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -774,41 +607,12 @@
 			package = D3F448222877F6AE00670FBA /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
 			productName = SoundpipeAudioKit;
 		};
-		D3F448262877F6BD00670FBA /* AudioKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F448172877F5F200670FBA /* XCRemoteSwiftPackageReference "AudioKit" */;
-			productName = AudioKit;
-		};
-		D3F448282877F6BD00670FBA /* AudioKitEX */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F4481A2877F60B00670FBA /* XCRemoteSwiftPackageReference "AudioKitEX" */;
-			productName = AudioKitEX;
-		};
-		D3F4482A2877F6BD00670FBA /* AudioKitUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F4481D2877F61E00670FBA /* XCRemoteSwiftPackageReference "AudioKitUI" */;
-			productName = AudioKitUI;
-		};
-		D3F4482C2877F6BD00670FBA /* SoundpipeAudioKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F448222877F6AE00670FBA /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
-			productName = SoundpipeAudioKit;
-		};
 		D3F4485E2879392600670FBA /* KippleUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D3F4485D2879392600670FBA /* XCRemoteSwiftPackageReference "UI" */;
 			productName = KippleUI;
 		};
-		D3F448602879392E00670FBA /* KippleUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F4485D2879392600670FBA /* XCRemoteSwiftPackageReference "UI" */;
-			productName = KippleUI;
-		};
 		D3F4487428795B0800670FBA /* TunerKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TunerKit;
-		};
-		D3F4487628795B0B00670FBA /* TunerKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TunerKit;
 		};
