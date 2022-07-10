@@ -637,7 +637,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tuner/Config/Info.macOS;
+				INFOPLIST_FILE = Tuner/Config/Info.macOS.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© Brian Drelling";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your voice or instrument.";
@@ -666,7 +666,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tuner/Config/Info.macOS;
+				INFOPLIST_FILE = Tuner/Config/Info.macOS.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© Brian Drelling";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your voice or instrument.";
