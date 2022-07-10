@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2100287B7E37006538CE /* InstrumentKit */; };
+		D3CF2103287B7E37006538CE /* MusicKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2102287B7E37006538CE /* MusicKit */; };
+		D3CF2105287B7E37006538CE /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2104287B7E37006538CE /* TunerKit */; };
 		D3ED09F9287A2D94004CBC96 /* AudioKitTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */; };
 		D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */; };
-		D3F448022877F01A00670FBA /* SynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* SynthApp.swift */; };
+		D3F448022877F01A00670FBA /* TunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* TunApp.swift */; };
 		D3F448042877F01A00670FBA /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F32877F01A00670FBA /* TunerView.swift */; };
 		D3F448062877F01A00670FBA /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F447F42877F01A00670FBA /* AppIcons.xcassets */; };
 		D3F448112877F2C200670FBA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F448102877F2C200670FBA /* Colors.xcassets */; };
@@ -18,7 +21,7 @@
 		D3F4481F2877F61E00670FBA /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4481E2877F61E00670FBA /* AudioKitUI */; };
 		D3F448242877F6AE00670FBA /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F448232877F6AE00670FBA /* SoundpipeAudioKit */; };
 		D3F448302877FDEA00670FBA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4482F2877FDEA00670FBA /* AudioManager.swift */; };
-		D3F4483328780B0B00670FBA /* SynthApp+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4483228780B0B00670FBA /* SynthApp+Constants.swift */; };
+		D3F4483328780B0B00670FBA /* TunApp+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4483228780B0B00670FBA /* TunApp+Constants.swift */; };
 		D3F4483A287927F600670FBA /* Tuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44839287927F600670FBA /* Tuner.swift */; };
 		D3F4483E2879281700670FBA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4483D2879281700670FBA /* RootView.swift */; };
 		D3F4484628792AE000670FBA /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4484528792AE000670FBA /* NoteView.swift */; };
@@ -28,7 +31,6 @@
 		D3F4485F2879392600670FBA /* KippleUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4485E2879392600670FBA /* KippleUI */; };
 		D3F44863287941C500670FBA /* InputDevicePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44862287941C500670FBA /* InputDevicePicker.swift */; };
 		D3F44866287941D500670FBA /* AudioDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44865287941D500670FBA /* AudioDeviceManager.swift */; };
-		D3F4487528795B0800670FBA /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4487428795B0800670FBA /* TunerKit */; };
 		D3F44879287A27F500670FBA /* NoteFrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,15 +39,17 @@
 		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36444CC287B56770031D13B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D36444D0287B5DEF0031D13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3CF2106287B7E66006538CE /* Tun.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tun.xctestplan; sourceTree = "<group>"; };
+		D3CF2107287B7FEC006538CE /* TunKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TunKit.xctestplan; sourceTree = "<group>"; };
 		D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKitTuner.swift; sourceTree = "<group>"; };
 		D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerScreen.swift; sourceTree = "<group>"; };
-		D3F447F22877F01A00670FBA /* SynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthApp.swift; sourceTree = "<group>"; };
+		D3F447F22877F01A00670FBA /* TunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunApp.swift; sourceTree = "<group>"; };
 		D3F447F32877F01A00670FBA /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
 		D3F447F42877F01A00670FBA /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
 		D3F447F92877F01A00670FBA /* Tün.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tün.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F448102877F2C200670FBA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D3F4482F2877FDEA00670FBA /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		D3F4483228780B0B00670FBA /* SynthApp+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SynthApp+Constants.swift"; sourceTree = "<group>"; };
+		D3F4483228780B0B00670FBA /* TunApp+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TunApp+Constants.swift"; sourceTree = "<group>"; };
 		D3F448352879268200670FBA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D3F44839287927F600670FBA /* Tuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuner.swift; sourceTree = "<group>"; };
 		D3F4483D2879281700670FBA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -63,11 +67,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3F4487528795B0800670FBA /* TunerKit in Frameworks */,
+				D3CF2103287B7E37006538CE /* MusicKit in Frameworks */,
+				D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */,
 				D3F448192877F5F200670FBA /* AudioKit in Frameworks */,
 				D3F4485F2879392600670FBA /* KippleUI in Frameworks */,
 				D3F4481F2877F61E00670FBA /* AudioKitUI in Frameworks */,
 				D3F448242877F6AE00670FBA /* SoundpipeAudioKit in Frameworks */,
+				D3CF2105287B7E37006538CE /* TunerKit in Frameworks */,
 				D3F4481C2877F60B00670FBA /* AudioKitEX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +86,8 @@
 			children = (
 				D36444D0287B5DEF0031D13B /* Info.plist */,
 				D36444C6287B41A80031D13B /* Shared.xcconfig */,
+				D3CF2106287B7E66006538CE /* Tun.xctestplan */,
+				D3CF2107287B7FEC006538CE /* TunKit.xctestplan */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -105,13 +113,13 @@
 			isa = PBXGroup;
 			children = (
 				D3F448352879268200670FBA /* README.md */,
-				D3F447F12877F01A00670FBA /* Tuner */,
+				D3F447F12877F01A00670FBA /* Tun */,
 				D3F447FA2877F01A00670FBA /* Products */,
 				D3F448252877F6BD00670FBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		D3F447F12877F01A00670FBA /* Tuner */ = {
+		D3F447F12877F01A00670FBA /* Tun */ = {
 			isa = PBXGroup;
 			children = (
 				D3F4487B287A2D2100670FBA /* AudioKitExamples */,
@@ -120,7 +128,7 @@
 				D36444CB287B56700031D13B /* Experimental */,
 				D3F448132877F2C400670FBA /* Resources */,
 			);
-			path = Tuner;
+			path = Tun;
 			sourceTree = "<group>";
 		};
 		D3F447FA2877F01A00670FBA /* Products */ = {
@@ -156,8 +164,8 @@
 		D3F448212877F67E00670FBA /* Apps */ = {
 			isa = PBXGroup;
 			children = (
-				D3F447F22877F01A00670FBA /* SynthApp.swift */,
-				D3F4483228780B0B00670FBA /* SynthApp+Constants.swift */,
+				D3F447F22877F01A00670FBA /* TunApp.swift */,
+				D3F4483228780B0B00670FBA /* TunApp+Constants.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -262,7 +270,9 @@
 				D3F4481E2877F61E00670FBA /* AudioKitUI */,
 				D3F448232877F6AE00670FBA /* SoundpipeAudioKit */,
 				D3F4485E2879392600670FBA /* KippleUI */,
-				D3F4487428795B0800670FBA /* TunerKit */,
+				D3CF2100287B7E37006538CE /* InstrumentKit */,
+				D3CF2102287B7E37006538CE /* MusicKit */,
+				D3CF2104287B7E37006538CE /* TunerKit */,
 			);
 			productName = "Synth (iOS)";
 			productReference = D3F447F92877F01A00670FBA /* Tün.app */;
@@ -283,7 +293,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D3F447F02877F01900670FBA /* Build configuration list for PBXProject "Tuner" */;
+			buildConfigurationList = D3F447F02877F01900670FBA /* Build configuration list for PBXProject "Tun" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -328,8 +338,8 @@
 				D3F44866287941D500670FBA /* AudioDeviceManager.swift in Sources */,
 				D3F448042877F01A00670FBA /* TunerView.swift in Sources */,
 				D3F44863287941C500670FBA /* InputDevicePicker.swift in Sources */,
-				D3F4483328780B0B00670FBA /* SynthApp+Constants.swift in Sources */,
-				D3F448022877F01A00670FBA /* SynthApp.swift in Sources */,
+				D3F4483328780B0B00670FBA /* TunApp+Constants.swift in Sources */,
+				D3F448022877F01A00670FBA /* TunApp.swift in Sources */,
 				D3F4485728792C4F00670FBA /* TunerView+ViewModel.swift in Sources */,
 				D3F448302877FDEA00670FBA /* AudioManager.swift in Sources */,
 				D3F4483E2879281700670FBA /* RootView.swift in Sources */,
@@ -473,11 +483,10 @@
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tuner/Config/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRIVACY_MICROPHONE_USAGE_DESCRIPTION)";
+				INFOPLIST_FILE = Tun/Config/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your instrument or voice.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,11 +510,10 @@
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tuner/Config/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRIVACY_MICROPHONE_USAGE_DESCRIPTION)";
+				INFOPLIST_FILE = Tun/Config/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your instrument or voice.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -523,7 +531,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D3F447F02877F01900670FBA /* Build configuration list for PBXProject "Tuner" */ = {
+		D3F447F02877F01900670FBA /* Build configuration list for PBXProject "Tun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3F448082877F01A00670FBA /* Debug */,
@@ -587,6 +595,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D3CF2100287B7E37006538CE /* InstrumentKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InstrumentKit;
+		};
+		D3CF2102287B7E37006538CE /* MusicKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MusicKit;
+		};
+		D3CF2104287B7E37006538CE /* TunerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TunerKit;
+		};
 		D3F448182877F5F200670FBA /* AudioKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D3F448172877F5F200670FBA /* XCRemoteSwiftPackageReference "AudioKit" */;
@@ -611,10 +631,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3F4485D2879392600670FBA /* XCRemoteSwiftPackageReference "UI" */;
 			productName = KippleUI;
-		};
-		D3F4487428795B0800670FBA /* TunerKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TunerKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,0 +1,42 @@
+{
+  "configurations" : [
+    {
+      "id" : "09FFBA98-98E8-4F76-85FE-C5260BB2C845",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Tun.xcodeproj",
+      "identifier" : "D3F447F82877F01A00670FBA",
+      "name" : "Tün"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/TunKit",
+        "identifier" : "InstrumentKitTests",
+        "name" : "InstrumentKitTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/TunKit",
+        "identifier" : "MusicKitTests",
+        "name" : "MusicKitTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/TunKit",
+        "identifier" : "TunerKitTests",
+        "name" : "TunerKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

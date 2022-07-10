@@ -3,7 +3,7 @@
 import SwiftUI
 
 @main
-struct SynthApp: App {
+struct TunApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()

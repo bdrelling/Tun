@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "F2C26C59-E61F-4E2B-BFB4-FE613E007AB7",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TunKit",
+        "identifier" : "InstrumentKitTests",
+        "name" : "InstrumentKitTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:TunKit",
+        "identifier" : "MusicKitTests",
+        "name" : "MusicKitTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:TunKit",
+        "identifier" : "TunerKitTests",
+        "name" : "TunerKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

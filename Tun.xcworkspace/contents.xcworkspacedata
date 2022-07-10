@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Tuner/Tuner.xcodeproj">
+      location = "group:Tun/Tun.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:TunerKit">
+      location = "group:TunKit">
    </FileRef>
 </Workspace>
