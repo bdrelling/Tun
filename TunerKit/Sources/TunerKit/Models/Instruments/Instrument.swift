@@ -7,6 +7,7 @@ public struct Instrument: Equatable {
 
     public let name: String
     public let numberOfStrings: Int
+    public let numberOfCourses: Int
     public let description: String?
     public let origins: [String]
     public let alternativeNames: [String]
@@ -20,6 +21,7 @@ public struct Instrument: Equatable {
     public init(
         name: String,
         numberOfStrings: Int,
+        numberOfCourses: Int? = nil,
         description: String? = nil,
         origins: [String] = [],
         alternativeNames: [String] = [],
@@ -28,6 +30,7 @@ public struct Instrument: Equatable {
     ) {
         self.name = name
         self.numberOfStrings = numberOfStrings
+        self.numberOfCourses = numberOfCourses ?? numberOfStrings
         self.description = description
         self.origins = origins
         self.alternativeNames = alternativeNames
