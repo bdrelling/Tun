@@ -6,9 +6,7 @@ import XCTest
 
 final class TuningTests: XCTestCase {
     func testGuitarStandardTuning() {
-        let tuning: Tuning = .standard
-
-        XCTAssertEqual(tuning.instrument, .guitar)
+        let tuning: Tuning = Instrument.guitar.standardTuning
 
         let notes = tuning.notes.map(\.note)
         XCTAssertEqual(notes, [

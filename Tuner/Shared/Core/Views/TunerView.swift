@@ -12,7 +12,7 @@ struct TunerView: View {
         ZStack {
             VStack {
                 ActiveTuningView(
-                    tuning: .constant(.standard),
+                    tuning: .constant(Instrument.guitar.standardTuning),
                     data: self.tuner.data
                 )
                 .padding(.top, 100)
@@ -57,7 +57,7 @@ struct ActiveTuningView: View {
 struct ActiveTuningView_Previews: PreviewProvider {
     static var previews: some View {
         ActiveTuningView(
-            tuning: .constant(.standard),
+            tuning: .constant(Instrument.guitar.standardTuning),
             data: .mocked
         )
         .background(Color.inactive)
