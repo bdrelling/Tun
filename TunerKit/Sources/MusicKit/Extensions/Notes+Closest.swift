@@ -2,7 +2,7 @@
 
 public extension Array where Element == Note {
     func closest(to frequency: Float) -> Note? {
-        guard frequency > 0 else {
+        guard frequency >= 0 else {
             return nil
         }
 

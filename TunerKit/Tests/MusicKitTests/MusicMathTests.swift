@@ -77,14 +77,16 @@ final class MusicMathTests: XCTestCase, MusicMathCalculating {
         // Any frequency below the lowest note should return the lowest note.
         XCTAssertEqual(notes.closest(to: 82), .e(2))
         XCTAssertEqual(notes.closest(to: 10), .e(2))
-        XCTAssertEqual(notes.closest(to: 0), .e(2))
-        XCTAssertEqual(notes.closest(to: -100), .e(2))
 
         // Any frequency above the highest note should return the highest note.
         XCTAssertEqual(notes.closest(to: 330), .e(4))
         XCTAssertEqual(notes.closest(to: 1000), .e(4))
         XCTAssertEqual(notes.closest(to: 10000), .e(4))
         XCTAssertEqual(notes.closest(to: 100000), .e(4))
+        
+        // Any zero or negative frequencies should be treated as invalid frequencies and therefore return nil.
+        XCTAssertEqual(notes.closest(to: 0), nil)
+        XCTAssertEqual(notes.closest(to: -100), nil)
     }
 
     // MARK: Outliers
