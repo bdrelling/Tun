@@ -39,9 +39,18 @@ struct NoteView: View {
     }
 
     private var inactiveTextView: some View {
-        Text(Note.inactiveNoteSymbol)
-            .fontWeight(.bold)
-            .opacity(0.65)
+        Image(systemName: "zzz")
+            .opacity(0.35)
+    }
+    
+    init(
+        note: Note? = nil,
+        isListening: Bool = false,
+        displayMode: Binding<NoteDisplayMode> = .constant(.both)
+    ) {
+        self.note = note
+        self.isListening = isListening
+        self._displayMode = displayMode
     }
 }
 
@@ -82,18 +91,19 @@ private extension Note {
 
 struct NoteView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(NoteDisplayMode.allCases, id: \.self) { displayMode in
+        Group {
             NoteView(
                 note: .c(2),
-                isListening: true,
-                displayMode: .constant(displayMode)
+                isListening: true
             )
-
-            NoteView(
-                note: .cSharp(4),
-                isListening: true,
-                displayMode: .constant(displayMode)
-            )
+            
+            ForEach(NoteDisplayMode.allCases, id: \.self) { displayMode in
+                NoteView(
+                    note: .cSharp(4),
+                    isListening: true,
+                    displayMode: .constant(displayMode)
+                )
+            }
         }
         .previewMatrix(.sizeThatFits, colorSchemes: [.light])
     }

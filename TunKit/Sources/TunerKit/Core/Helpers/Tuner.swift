@@ -7,7 +7,6 @@ import Combine
 import KippleCore
 import MusicKit
 import SoundpipeAudioKit
-import TunerKit
 
 final class Tuner: ObservableObject {
     // TODO: Make this sensitivity configurable?
@@ -15,8 +14,8 @@ final class Tuner: ObservableObject {
     /// The lower then number, the more sensitive -- meaning that more audio is detected.
     private static let noiseSensitivityThreshold: AUValue = 0.1
 
-    @Published private(set) var data: TunerData = .inactive
-    @Published private(set) var isListening: Bool = false
+    @Published private(set) var data: TunerData
+    @Published private(set) var isListening: Bool
 
     private var engine = AudioEngine()
 
@@ -26,7 +25,10 @@ final class Tuner: ObservableObject {
 
     private var isInitialized: Bool = false
 
-    init() {}
+    init(data: TunerData = .inactive, isListening: Bool = false) {
+        self.data = data
+        self.isListening = isListening
+    }
 
     func initialize() {
         guard !self.isInitialized else {

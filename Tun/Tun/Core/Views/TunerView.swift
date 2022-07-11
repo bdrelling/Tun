@@ -7,7 +7,7 @@ import SwiftUI
 import TunerKit
 
 struct TunerView: View {
-    @StateObject private var tuner = Tuner()
+    @StateObject var tuner: Tuner
 
     @State var selectedNote: Note?
     @Binding var noteDisplayMode: NoteDisplayMode
@@ -43,10 +43,12 @@ struct TunerView: View {
 
     init(
         selectedNote: Note? = nil,
-        displayMode: Binding<NoteDisplayMode> = .constant(.default)
+        displayMode: Binding<NoteDisplayMode> = .constant(.default),
+        tuner: Tuner = .init()
     ) {
         self._selectedNote = .init(initialValue: selectedNote)
         self._noteDisplayMode = displayMode
+        self._tuner = .init(wrappedValue: tuner)
     }
 }
 
@@ -69,4 +71,8 @@ struct TunerView_Previews: PreviewProvider {
         }
             .previewMatrix(.sizeThatFits)
     }
+}
+
+extension Tuner {
+    static let inactive: Self = .init(data: .inactive, isListening: false)
 }
