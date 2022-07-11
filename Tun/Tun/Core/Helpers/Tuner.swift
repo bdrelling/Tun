@@ -10,9 +10,10 @@ import SoundpipeAudioKit
 import TunerKit
 
 final class Tuner: ObservableObject {
+    // TODO: Make this sensitivity configurable?
     /// The amplitude threshold for when the mic begins to pick up audio, in order to suppress unwanted background noise.
     /// The lower then number, the more sensitive -- meaning that more audio is detected.
-    private static let noiseSensitivityThreshold: AUValue = 0.05
+    private static let noiseSensitivityThreshold: AUValue = 0.1
 
     @Published private(set) var data: TunerData = .inactive
     @Published private(set) var isListening: Bool = false

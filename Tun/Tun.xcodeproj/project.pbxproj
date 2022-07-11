@@ -142,7 +142,6 @@
 		D3F448132877F2C400670FBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D3F44869287942AE00670FBA /* Resources */,
 				D3F44868287942A800670FBA /* Assets */,
 			);
 			path = Resources;
@@ -231,13 +230,6 @@
 				D3F447F42877F01A00670FBA /* AppIcons.xcassets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		D3F44869287942AE00670FBA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		D3F4487B287A2D2100670FBA /* AudioKitExamples */ = {
