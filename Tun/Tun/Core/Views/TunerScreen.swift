@@ -1,38 +1,34 @@
 // Copyright © 2022 Brian Drelling. All rights reserved.
 
-#if !os(macOS)
+import SwiftUI
 
-    import SwiftUI
-
-    struct TunerScreen: View {
-        var body: some View {
-            NavigationView {
-                TunerView()
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            NavigationLink(destination: Text("Wow")) {
-                                Image(systemName: "gearshape")
-                            }
+struct TunerScreen: View {
+    var body: some View {
+        NavigationView {
+            TunerView()
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: Text("Wow")) {
+                            Image(systemName: "gearshape")
                         }
                     }
-                    .navigationBarTitleDisplayMode(.inline)
-                    .configureNavigation(.transparent())
-            }
-            .navigationViewStyle(.stack)
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .configureNavigation(.transparent())
         }
-
-        init() {
-            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-        }
+        .navigationViewStyle(.stack)
     }
-
-    // MARK: - Previews
-
-    struct TunerScreen_Previews: PreviewProvider {
-        static var previews: some View {
-            TunerScreen()
-                .previewMatrix(.currentDevice)
-        }
+    
+    init() {
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
     }
+}
 
-#endif
+// MARK: - Previews
+
+struct TunerScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        TunerScreen()
+            .previewMatrix(.currentDevice)
+    }
+}

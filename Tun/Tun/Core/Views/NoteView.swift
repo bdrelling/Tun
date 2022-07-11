@@ -18,7 +18,7 @@ struct NoteView: View {
             return .theme.inactiveTunerBackgroundColor
         }
 
-        return .theme.closestTunerBackgroundColor 
+        return .theme.closestTunerBackgroundColor
     }
 
     var body: some View {

@@ -8,21 +8,42 @@ import TunerKit
 
 struct TunerView: View {
     @StateObject private var tuner = Tuner()
+
+    @Binding var lockedNote: Note?
     @Binding var noteDisplayMode: NoteDisplayMode
+
+    @State private var isShowingNotePicker = false
 
     var body: some View {
         ZStack {
             VStack {
-                ActiveTuningView(
-                    tuning: .constant(Instrument.guitar.standardTuning),
-                    data: self.tuner.data
-                )
+                Group {
+                    if let lockedNote = self.$lockedNote.trySafeBinding() {
+                        ActiveNoteView(
+                            note: lockedNote,
+                            data: self.tuner.data
+                        )
+                    } else {
+                        Button(action: self.showNotePicker) {
+                            Text("Select a Note")
+                                .opacity(0.35)
+                        }
+                        .sheet(isPresented: self.$isShowingNotePicker) {
+                            NotePicker(selection: self.$lockedNote)
+                        }
+                    }
+                }
                 .font(.title2)
                 .padding(.vertical, 48)
 
+//                ActiveTuningView(
+//                    tuning: .constant(Instrument.guitar.standardTuning),
+//                    data: self.tuner.data
+//                )
+
                 Spacer()
             }
-
+            
             NoteView(
                 note: self.tuner.data.note,
                 isListening: self.tuner.isListening,
@@ -35,8 +56,26 @@ struct TunerView: View {
         .onDisappear(perform: self.tuner.stop)
     }
 
-    init(displayMode: Binding<NoteDisplayMode> = .constant(.default)) {
+    init(
+        lockedNote: Binding<Note?> = .constant(nil),
+        displayMode: Binding<NoteDisplayMode> = .constant(.default)
+    ) {
+        self._lockedNote = lockedNote
         self._noteDisplayMode = displayMode
+    }
+
+    private func showNotePicker() {
+        self.isShowingNotePicker.toggle()
+    }
+}
+
+struct ActiveNoteView: View {
+    @Binding var note: Note
+    let data: TunerData
+
+    var body: some View {
+        Text(self.note.name)
+            .padding()
     }
 }
 
