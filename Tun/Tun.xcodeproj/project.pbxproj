@@ -7,24 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D335053A287C030D00A414B8 /* AudioDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350538287C030D00A414B8 /* AudioDeviceManager.swift */; };
-		D335053B287C030D00A414B8 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350539287C030D00A414B8 /* AudioManager.swift */; };
 		D3942974287BE33D008AF700 /* ActiveNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942973287BE33D008AF700 /* ActiveNoteView.swift */; };
 		D3942976287BE342008AF700 /* ActiveTuningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942975287BE342008AF700 /* ActiveTuningView.swift */; };
 		D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2100287B7E37006538CE /* InstrumentKit */; };
 		D3CF2103287B7E37006538CE /* MusicKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2102287B7E37006538CE /* MusicKit */; };
 		D3CF2105287B7E37006538CE /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2104287B7E37006538CE /* TunerKit */; };
 		D3CF2109287BAB3D006538CE /* NotePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF2108287BAB3D006538CE /* NotePicker.swift */; };
-		D3ED09F9287A2D94004CBC96 /* AudioKitTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */; };
 		D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */; };
 		D3F448022877F01A00670FBA /* TunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* TunApp.swift */; };
 		D3F448042877F01A00670FBA /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F32877F01A00670FBA /* TunerView.swift */; };
 		D3F448062877F01A00670FBA /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F447F42877F01A00670FBA /* AppIcons.xcassets */; };
 		D3F448112877F2C200670FBA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F448102877F2C200670FBA /* Colors.xcassets */; };
-		D3F448192877F5F200670FBA /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F448182877F5F200670FBA /* AudioKit */; };
-		D3F4481C2877F60B00670FBA /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4481B2877F60B00670FBA /* AudioKitEX */; };
-		D3F4481F2877F61E00670FBA /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4481E2877F61E00670FBA /* AudioKitUI */; };
-		D3F448242877F6AE00670FBA /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3F448232877F6AE00670FBA /* SoundpipeAudioKit */; };
 		D3F4483328780B0B00670FBA /* TunApp+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4483228780B0B00670FBA /* TunApp+Constants.swift */; };
 		D3F4483E2879281700670FBA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4483D2879281700670FBA /* RootView.swift */; };
 		D3F4484628792AE000670FBA /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4484528792AE000670FBA /* NoteView.swift */; };
@@ -32,13 +25,10 @@
 		D3F4485728792C4F00670FBA /* TunerView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4485628792C4F00670FBA /* TunerView+ViewModel.swift */; };
 		D3F4485B28792C7600670FBA /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4485A28792C7600670FBA /* Color+Theme.swift */; };
 		D3F4485F2879392600670FBA /* KippleUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4485E2879392600670FBA /* KippleUI */; };
-		D3F44863287941C500670FBA /* InputDevicePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44862287941C500670FBA /* InputDevicePicker.swift */; };
 		D3F44879287A27F500670FBA /* NoteFrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D3350538287C030D00A414B8 /* AudioDeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioDeviceManager.swift; path = ../../../../TunKit/Sources/TunerKit/Core/Helpers/AudioDeviceManager.swift; sourceTree = "<group>"; };
-		D3350539287C030D00A414B8 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = ../../../../TunKit/Sources/TunerKit/Core/Helpers/AudioManager.swift; sourceTree = "<group>"; };
 		D36444C6287B41A80031D13B /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36444CC287B56770031D13B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
@@ -48,7 +38,6 @@
 		D3CF2106287B7E66006538CE /* Tun.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tun.xctestplan; sourceTree = "<group>"; };
 		D3CF2107287B7FEC006538CE /* TunKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TunKit.xctestplan; sourceTree = "<group>"; };
 		D3CF2108287BAB3D006538CE /* NotePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePicker.swift; sourceTree = "<group>"; };
-		D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKitTuner.swift; sourceTree = "<group>"; };
 		D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerScreen.swift; sourceTree = "<group>"; };
 		D3F447F22877F01A00670FBA /* TunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunApp.swift; sourceTree = "<group>"; };
 		D3F447F32877F01A00670FBA /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
@@ -62,7 +51,6 @@
 		D3F4484F28792BDC00670FBA /* TunerCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerCoordinating.swift; sourceTree = "<group>"; };
 		D3F4485628792C4F00670FBA /* TunerView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TunerView+ViewModel.swift"; sourceTree = "<group>"; };
 		D3F4485A28792C7600670FBA /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
-		D3F44862287941C500670FBA /* InputDevicePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDevicePicker.swift; sourceTree = "<group>"; };
 		D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFrequencyTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,12 +61,8 @@
 			files = (
 				D3CF2103287B7E37006538CE /* MusicKit in Frameworks */,
 				D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */,
-				D3F448192877F5F200670FBA /* AudioKit in Frameworks */,
 				D3F4485F2879392600670FBA /* KippleUI in Frameworks */,
-				D3F4481F2877F61E00670FBA /* AudioKitUI in Frameworks */,
-				D3F448242877F6AE00670FBA /* SoundpipeAudioKit in Frameworks */,
 				D3CF2105287B7E37006538CE /* TunerKit in Frameworks */,
-				D3F4481C2877F60B00670FBA /* AudioKitEX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +110,6 @@
 		D3F447F12877F01A00670FBA /* Tun */ = {
 			isa = PBXGroup;
 			children = (
-				D3F4487B287A2D2100670FBA /* AudioKitExamples */,
 				D36444C5287B418D0031D13B /* Config */,
 				D3F44836287927D600670FBA /* Core */,
 				D36444CB287B56700031D13B /* Experimental */,
@@ -154,7 +137,6 @@
 		D3F448202877F67800670FBA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D3F44862287941C500670FBA /* InputDevicePicker.swift */,
 				D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */,
 				D3CF2108287BAB3D006538CE /* NotePicker.swift */,
 				D3F4484528792AE000670FBA /* NoteView.swift */,
@@ -183,21 +165,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D3F4482E2877FDE400670FBA /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				D3350538287C030D00A414B8 /* AudioDeviceManager.swift */,
-				D3350539287C030D00A414B8 /* AudioManager.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		D3F44836287927D600670FBA /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				D3F448212877F67E00670FBA /* Apps */,
 				D3F4485928792C6F00670FBA /* Extensions */,
-				D3F4482E2877FDE400670FBA /* Helpers */,
 				D3F4484E28792BC800670FBA /* Protocols */,
 				D3F4485528792C4700670FBA /* ViewModels */,
 				D3F448202877F67800670FBA /* Views */,
@@ -238,14 +210,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		D3F4487B287A2D2100670FBA /* AudioKitExamples */ = {
-			isa = PBXGroup;
-			children = (
-				D3ED09F8287A2D94004CBC96 /* AudioKitTuner.swift */,
-			);
-			path = AudioKitExamples;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,10 +227,6 @@
 			);
 			name = "Tün";
 			packageProductDependencies = (
-				D3F448182877F5F200670FBA /* AudioKit */,
-				D3F4481B2877F60B00670FBA /* AudioKitEX */,
-				D3F4481E2877F61E00670FBA /* AudioKitUI */,
-				D3F448232877F6AE00670FBA /* SoundpipeAudioKit */,
 				D3F4485E2879392600670FBA /* KippleUI */,
 				D3CF2100287B7E37006538CE /* InstrumentKit */,
 				D3CF2102287B7E37006538CE /* MusicKit */,
@@ -301,10 +261,6 @@
 			);
 			mainGroup = D3F447EC2877F01900670FBA;
 			packageReferences = (
-				D3F448172877F5F200670FBA /* XCRemoteSwiftPackageReference "AudioKit" */,
-				D3F4481A2877F60B00670FBA /* XCRemoteSwiftPackageReference "AudioKitEX" */,
-				D3F4481D2877F61E00670FBA /* XCRemoteSwiftPackageReference "AudioKitUI" */,
-				D3F448222877F6AE00670FBA /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
 				D3F4485D2879392600670FBA /* XCRemoteSwiftPackageReference "UI" */,
 			);
 			productRefGroup = D3F447FA2877F01A00670FBA /* Products */;
@@ -333,10 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D335053A287C030D00A414B8 /* AudioDeviceManager.swift in Sources */,
 				D3F448042877F01A00670FBA /* TunerView.swift in Sources */,
-				D3F44863287941C500670FBA /* InputDevicePicker.swift in Sources */,
-				D335053B287C030D00A414B8 /* AudioManager.swift in Sources */,
 				D3942976287BE342008AF700 /* ActiveTuningView.swift in Sources */,
 				D3F4483328780B0B00670FBA /* TunApp+Constants.swift in Sources */,
 				D3F448022877F01A00670FBA /* TunApp.swift in Sources */,
@@ -345,7 +298,6 @@
 				D3F4483E2879281700670FBA /* RootView.swift in Sources */,
 				D3F44879287A27F500670FBA /* NoteFrequencyTable.swift in Sources */,
 				D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */,
-				D3ED09F9287A2D94004CBC96 /* AudioKitTuner.swift in Sources */,
 				D3F4485B28792C7600670FBA /* Color+Theme.swift in Sources */,
 				D3F4485028792BDC00670FBA /* TunerCoordinating.swift in Sources */,
 				D3F4484628792AE000670FBA /* NoteView.swift in Sources */,
@@ -552,44 +504,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D3F448172877F5F200670FBA /* XCRemoteSwiftPackageReference "AudioKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.4;
-			};
-		};
-		D3F4481A2877F60B00670FBA /* XCRemoteSwiftPackageReference "AudioKitEX" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AudioKit/AudioKitEX.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.1;
-			};
-		};
-		D3F4481D2877F61E00670FBA /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AudioKit/AudioKitUI.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 0.1.5;
-			};
-		};
-		D3F448222877F6AE00670FBA /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AudioKit/SoundpipeAudioKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.3;
-			};
-		};
 		D3F4485D2879392600670FBA /* XCRemoteSwiftPackageReference "UI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/swift-kipple/UI";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 0.0.3;
+				minimumVersion = 0.0.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -606,26 +526,6 @@
 		D3CF2104287B7E37006538CE /* TunerKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TunerKit;
-		};
-		D3F448182877F5F200670FBA /* AudioKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F448172877F5F200670FBA /* XCRemoteSwiftPackageReference "AudioKit" */;
-			productName = AudioKit;
-		};
-		D3F4481B2877F60B00670FBA /* AudioKitEX */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F4481A2877F60B00670FBA /* XCRemoteSwiftPackageReference "AudioKitEX" */;
-			productName = AudioKitEX;
-		};
-		D3F4481E2877F61E00670FBA /* AudioKitUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F4481D2877F61E00670FBA /* XCRemoteSwiftPackageReference "AudioKitUI" */;
-			productName = AudioKitUI;
-		};
-		D3F448232877F6AE00670FBA /* SoundpipeAudioKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F448222877F6AE00670FBA /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
-			productName = SoundpipeAudioKit;
 		};
 		D3F4485E2879392600670FBA /* KippleUI */ = {
 			isa = XCSwiftPackageProductDependency;

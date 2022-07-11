@@ -36,7 +36,7 @@ struct ActiveTuningView_Previews: PreviewProvider {
     static var previews: some View {
         ActiveTuningView(
             selection: .constant(Instrument.guitar.standardTuning),
-            data: .mocked
+            data: .mocked()
         )
         .background(Color.theme.inactiveTunerBackgroundColor)
         .previewMatrix(.sizeThatFits)

@@ -8,14 +8,16 @@ import KippleCore
 import MusicKit
 import SoundpipeAudioKit
 
-final class Tuner: ObservableObject {
+public final class Tuner: ObservableObject {
     // TODO: Make this sensitivity configurable?
     /// The amplitude threshold for when the mic begins to pick up audio, in order to suppress unwanted background noise.
     /// The lower then number, the more sensitive -- meaning that more audio is detected.
     private static let noiseSensitivityThreshold: AUValue = 0.1
 
-    @Published private(set) var data: TunerData
-    @Published private(set) var isListening: Bool
+    @Published public private(set) var data: TunerData
+    
+    #warning("This is a really inaccurate property -- Tuner is listening when it's running, this is should be isActivelyDetectingAudio")
+    @Published public private(set) var isListening: Bool
 
     private var engine = AudioEngine()
 
@@ -25,12 +27,12 @@ final class Tuner: ObservableObject {
 
     private var isInitialized: Bool = false
 
-    init(data: TunerData = .inactive, isListening: Bool = false) {
+    public init(data: TunerData = .inactive, isListening: Bool = false) {
         self.data = data
         self.isListening = isListening
     }
 
-    func initialize() {
+    public func initialize() {
         guard !self.isInitialized else {
             return
         }
@@ -53,19 +55,7 @@ final class Tuner: ObservableObject {
         self.isInitialized = true
     }
 
-    func update(_ frequency: AUValue, _ amplitude: AUValue) {
-        // Reduces sensitivity to background noise to prevent random / fluctuating data.
-        self.isListening = amplitude > Self.noiseSensitivityThreshold
-
-        guard self.isListening else {
-            return
-        }
-
-        let note = MusicMath.noteForFrequency(frequency)
-        self.data = .init(frequency: frequency, amplitude: amplitude, note: note)
-    }
-
-    func start() {
+    public func start() {
         guard !Kipple.isRunningInXcodePreview else {
             return
         }
@@ -80,11 +70,23 @@ final class Tuner: ObservableObject {
         }
     }
 
-    func stop() {
+    public func stop() {
         guard !Kipple.isRunningInXcodePreview else {
             return
         }
 
         self.engine.stop()
+    }
+    
+    private func update(_ frequency: AUValue, _ amplitude: AUValue) {
+        // Reduces sensitivity to background noise to prevent random / fluctuating data.
+        self.isListening = amplitude > Self.noiseSensitivityThreshold
+
+        guard self.isListening else {
+            return
+        }
+
+        let note = MusicMath.noteForFrequency(frequency)
+        self.data = .init(frequency: frequency, amplitude: amplitude, note: note)
     }
 }

@@ -44,7 +44,7 @@ struct ActiveNoteView_Previews: PreviewProvider {
     static var previews: some View {
         ActiveNoteView(
             selection: .constant(.standard),
-            data: .mocked
+            data: .mocked()
         )
         .background(Color.theme.inactiveTunerBackgroundColor)
         .previewMatrix(.sizeThatFits)

@@ -30,7 +30,8 @@ struct TunerView: View {
             }
             
             NoteView(
-                note: self.tuner.data.note,
+                detectedNote: self.tuner.data.note,
+                selectedNote: self.selectedNote,
                 isListening: self.tuner.isListening,
                 displayMode: self.$noteDisplayMode
             )
@@ -55,24 +56,46 @@ struct TunerView: View {
 // MARK: - Previews
 
 struct TunerView_Previews: PreviewProvider {
+    private static let note: Note = .standard
+    
     static var previews: some View {
-        // Inactive, No Note Selected
-        // Active, No Note Selected
-        
-        
-        // Inactive, Note Selected
-        // Active, Note Selected but Inaccurate
-        // Active, Note Selected but Close
-        // Active, Note Selected but Closest
-        
         Group {
-            TunerView(selectedNote: nil)
-            TunerView(selectedNote: .middleA)
+            // No Selected Note, Tuner Inactive
+            TunerView()
+
+            // Selected Note, Tuner Inactive
+            TunerView(selectedNote: Self.note)
+
+            // No Selected Note, Tuner Listening
+            TunerView(tuner: .mockedListening(note: Self.note))
         }
-            .previewMatrix(.sizeThatFits)
+        .previewMatrix(.sizeThatFits)
     }
 }
 
-extension Tuner {
-    static let inactive: Self = .init(data: .inactive, isListening: false)
+struct TunerView_AccuracyPreviews: PreviewProvider {
+    private static let note: Note = .standard
+    
+    static var previews: some View {
+        Group {
+            // Selected Note, Tuner Listening and Inaccurate
+            TunerView(
+                selectedNote: Self.note,
+                tuner: .mockedListening(frequency: Self.note.frequency + 100)
+            )
+
+            // Selected Note, Tuner Listening and Close
+            TunerView(
+                selectedNote: Self.note,
+                tuner: .mockedListening(frequency: Self.note.frequency + 40)
+            )
+
+            // Selected Note, Tuner Listening and Closest
+            TunerView(
+                selectedNote: Self.note,
+                tuner: .mockedListening(frequency: Self.note.frequency + 1)
+            )
+        }
+        .previewMatrix(.sizeThatFits, colorSchemes: [.dark])
+    }
 }
