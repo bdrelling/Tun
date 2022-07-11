@@ -12,16 +12,16 @@ struct TunerView: View {
 
     var body: some View {
         ZStack {
-//            VStack {
-//                ActiveTuningView(
-//                    tuning: .constant(Instrument.guitar.standardTuning),
-//                    data: self.tuner.data
-//                )
-//                .font(.title2)
-//                .padding(.vertical, 48)
-//
-//                Spacer()
-//            }
+            VStack {
+                ActiveTuningView(
+                    tuning: .constant(Instrument.guitar.standardTuning),
+                    data: self.tuner.data
+                )
+                .font(.title2)
+                .padding(.vertical, 48)
+
+                Spacer()
+            }
 
             NoteView(
                 note: self.tuner.data.note,
