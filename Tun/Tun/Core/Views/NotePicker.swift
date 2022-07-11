@@ -4,12 +4,6 @@ import KippleUI
 import MusicKit
 import SwiftUI
 
-struct VisualEffectView: UIViewRepresentable {
-    var effect: UIVisualEffect?
-    func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView { UIVisualEffectView() }
-    func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) { uiView.effect = effect }
-}
-
 struct NotePicker: View {
     @Environment(\.dismiss) private var dismiss
     
@@ -21,16 +15,6 @@ struct NotePicker: View {
     
     @State private var selectedSemitone: Semitone?
     @State private var selectedOctave: Octave?
-    
-//    private static let navigationBarHeight: CGFloat = {
-//        UIApplication.shared.windows
-//        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-//
-//        let navController = UINavigationController()
-//        let navBarHeight = navController.navigationBar.bounds.height
-//
-//        return statusBarHeight + navBarHeight
-//    }()
 
     var body: some View {
         NavigationView {

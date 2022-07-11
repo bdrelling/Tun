@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-kipple/UI",
       "state" : {
-        "revision" : "b73ba61719f00fdcf6312e9232928929d690612c",
-        "version" : "0.0.2"
+        "revision" : "1d31f7583ce9f0083e110aea92bc472381cd3a9e",
+        "version" : "0.0.3"
       }
     },
     {
