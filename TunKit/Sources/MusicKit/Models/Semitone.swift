@@ -2,7 +2,7 @@
 
 import Foundation
 
-public struct Semitone: Equatable {
+public struct Semitone: Equatable, Hashable {
     public let name: String
     public let index: Int
     public let frequency: Float

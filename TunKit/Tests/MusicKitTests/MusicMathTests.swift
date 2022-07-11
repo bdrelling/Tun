@@ -49,8 +49,8 @@ final class MusicMathTests: XCTestCase, MusicMathCalculating {
     // MARK: Note
 
     func testCalculatingNoteForFrequency() {
-        XCTAssertEqual(MusicMath.noteForFrequency(440.0), .a(4))
-        XCTAssertEqual(MusicMath.noteForFrequency(261.6), .c(4))
+        XCTAssertEqual(MusicMath.noteForFrequency(440.0), .middleA)
+        XCTAssertEqual(MusicMath.noteForFrequency(261.6), .middleC)
 
         XCTAssertEqual(MusicMath.noteForFrequency(82.4), .e(2))
         XCTAssertEqual(MusicMath.noteForFrequency(110.0), .a(2))

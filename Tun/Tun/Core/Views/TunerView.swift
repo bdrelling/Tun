@@ -42,8 +42,10 @@ struct TunerView: View {
     }
 
     init(
+        selectedNote: Note? = nil,
         displayMode: Binding<NoteDisplayMode> = .constant(.default)
     ) {
+        self._selectedNote = .init(initialValue: selectedNote)
         self._noteDisplayMode = displayMode
     }
 }
@@ -52,7 +54,19 @@ struct TunerView: View {
 
 struct TunerView_Previews: PreviewProvider {
     static var previews: some View {
-        TunerView()
+        // Inactive, No Note Selected
+        // Active, No Note Selected
+        
+        
+        // Inactive, Note Selected
+        // Active, Note Selected but Inaccurate
+        // Active, Note Selected but Close
+        // Active, Note Selected but Closest
+        
+        Group {
+            TunerView(selectedNote: nil)
+            TunerView(selectedNote: .middleA)
+        }
             .previewMatrix(.sizeThatFits)
     }
 }

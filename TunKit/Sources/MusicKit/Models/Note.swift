@@ -2,7 +2,7 @@
 
 import Foundation
 
-public struct Note: Equatable {
+public struct Note: Equatable, Hashable {
     public let semitone: Semitone
     public let octave: Octave
     public let frequency: Float
@@ -34,33 +34,9 @@ extension Note: Identifiable {
     }
 }
 
-extension Note {
-    //    func halfSteps(from otherNote: Note) -> Int {
-    //        var halfSteps: Int = self.note.index - otherNote.note.index
-    //        halfSteps += Semitone.allCases.count * (self.octave - otherNote.octave)
-    //
-    //        return halfSteps
-    //    }
-    //
-    //    // Returns the number of half-steps away from the standard note, A4.
-    //    var halfStepIntervalFromA4: Int {
-    //        self.halfSteps(from: .standard)
-    //    }
-    //
-    //    // Returns the number of half-steps away from the lowest note, C0.
-    //    var halfStepIntervalFromlowestNote: Int {
-    //        self.halfSteps(from: .c(0))
-    //    }
-    //
-    //    // Returns the number of half-steps away from the highest note, B8.
-    //    var halfStepIntervalFromHighestNote: Int {
-    //        self.halfSteps(from: .b(8))
-    //    }
-    //
-}
-
 // MARK: - Convenience
 
+// TODO: Optimize by making these values static so the math never takes too long. Realistically, though, how often are these used and how long does it take?
 public extension Note {
     static func c(_ octave: Int) -> Self {
         .init(.c, octave: octave)
@@ -118,6 +94,9 @@ public extension Note {
     static let standard: Self = .init(.a, octave: 4, frequency: 440)
     static let lowest: Self = .init(.c, octave: 0, frequency: Semitone.c.frequency)
     static let highest: Self = .init(.b, octave: 8, frequency: 7920.13)
+    
+    static let middleA: Self = .standard
+    static let middleC: Self = .init(.c, octave: 4, frequency: 261.63)
 
     static let inactiveNoteSymbol = "-"
 }

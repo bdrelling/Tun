@@ -6,7 +6,7 @@ import XCTest
 
 final class NoteDisplayModeTests: XCTestCase {
     func testNoteDisplayModeForStandardNote() {
-        let note: Note = .c(4)
+        let note: Note = .middleC
 
         XCTAssertEqual(note.name(for: .both), "C4")
         XCTAssertEqual(note.name(for: .sharps), "C4")

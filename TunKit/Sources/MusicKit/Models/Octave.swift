@@ -1,7 +1,7 @@
 // Copyright © 2022 Brian Drelling. All rights reserved.
 
 
-public struct Octave: RawRepresentable {
+public struct Octave: RawRepresentable, Hashable {
     public let rawValue: Int
     public let name: String?
     
