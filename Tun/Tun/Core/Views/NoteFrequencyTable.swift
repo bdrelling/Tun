@@ -45,8 +45,10 @@ struct NoteFrequencyTable: View {
                     VStack(spacing: 2) {
                         Text("\(octave.rawValue)")
                             .fontWeight(.bold)
-                        Text(octave.name)
-                            .font(.caption)
+                        if let name = octave.name {
+                            Text(name)
+                                .font(.caption)
+                        }
                     }
                     .frame(minWidth: self.frequencyColumnWidth, maxWidth: .infinity)
                 }

@@ -1,18 +1,27 @@
 // Copyright © 2022 Brian Drelling. All rights reserved.
 
-public enum Octave: Int, CaseIterable {
-    case subContra = 0 // A0 is the lowest pitch on a full piano
-    case contra = 1
-    case great = 2
-    case small = 3
-    case secondSmall = 4 // Contains both middle C (C4) and middle a (A4, 440 Hz)
-    case thirdSmall = 5
-    case fourthSmall = 6
-    case fifthSmall = 7
-    case sixthSmall = 8 // C8 is the highest pitch on a full piano
+
+public struct Octave: RawRepresentable {
+    public let rawValue: Int
+    public let name: String?
+    
+    public init(_ rawValue: Int, name: String? = nil) {
+        self.rawValue = rawValue
+        self.name = name
+    }
+    
+    public init?(rawValue: Int) {
+        if let knownOctave = Octave.allCases.first(where: { $0.rawValue == rawValue }) {
+            self = knownOctave
+        } else {
+            self.init(rawValue, name: nil)
+        }
+    }
 }
 
 // MARK: - Extensions
+
+extension Octave: Equatable {}
 
 extension Octave: Identifiable {
     public var id: RawValue {
@@ -20,29 +29,38 @@ extension Octave: Identifiable {
     }
 }
 
-public extension Octave {
-    var name: String {
-        switch self {
-        case .subContra:
-            return "sub-contra"
-        case .contra:
-            return "contra"
-        case .great:
-            return "great"
-        case .small:
-            return "small"
-        case .secondSmall:
-            return "2nd small"
-        case .thirdSmall:
-            return "3rd small"
-        case .fourthSmall:
-            return "4th small"
-        case .fifthSmall:
-            return "5th small"
-        case .sixthSmall:
-            return "6th small"
-        }
+extension Octave: CaseIterable {
+    public static let allCases: [Octave] = [
+        .subContra,
+        .contra,
+        .great,
+        .small,
+        .secondSmall,
+        .thirdSmall,
+        .fourthSmall,
+        .fifthSmall,
+        .sixthSmall,
+    ]
+}
+
+extension Octave: CustomStringConvertible {
+    public var description: String {
+        String(self.rawValue)
     }
+}
+
+// MARK: - Convenience
+
+extension Octave {
+    static let subContra: Self = .init(0, name: "sub-contra") // A0 is the lowest pitch on a full piano
+    static let contra: Self = .init(1, name: "contra")
+    static let great: Self = .init(2, name: "great")
+    static let small: Self = .init(3, name: "small")
+    static let secondSmall: Self = .init(4, name: "2nd small") // Contains both middle C (C4) and middle a (A4, 440 Hz)
+    static let thirdSmall: Self = .init(5, name: "3rd small")
+    static let fourthSmall: Self = .init(6, name: "4th small")
+    static let fifthSmall: Self = .init(7, name: "5th small")
+    static let sixthSmall: Self = .init(8, name: "6th small") // C8 is the highest pitch on a full piano
 }
 
 // MARK: - Aliases

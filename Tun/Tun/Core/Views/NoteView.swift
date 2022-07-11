@@ -57,7 +57,7 @@ private extension Note {
         var octaveAttributes = AttributeContainer()
         octaveAttributes.font = Font.system(size: fontSize * 0.65)
         octaveAttributes.baselineOffset = fontSize * -0.25
-        let octave = AttributedString("\(self.octave)", attributes: octaveAttributes)
+        let octave = AttributedString("\(self.octave.rawValue)", attributes: octaveAttributes)
 
         guard self.semitone.isSharp else {
             return nameWithSharps + octave

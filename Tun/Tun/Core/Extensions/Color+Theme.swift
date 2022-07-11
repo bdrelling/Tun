@@ -11,27 +11,26 @@ extension Color {
 extension Color {
     struct Theme {
         let backgroundColor: Color
+        let cellBackgroundColor: Color
 
-        let inactiveTunerBackgroundColor: Color = .init("InactiveTunerBackground")
-        let closestTunerBackgroundColor: Color = .init("ClosestTunerBackground")
-        let closerTunerBackgroundColor: Color = .init("CloserTunerBackground")
-        let farTunerBackgroundColor: Color = .init("FarTunerBackground")
-        let otherTunerBackgroundColor: Color = .init("OtherTunerBackground")
+        let inactiveTunerBackgroundColor: Color
+        let closestTunerBackgroundColor: Color
+        let closerTunerBackgroundColor: Color
+        let farTunerBackgroundColor: Color
+        let otherTunerBackgroundColor: Color
     }
-}
-
-private extension Color {
-    #if canImport(UIKit)
-        static let universalSystemBackground: Color = .init(UIColor.systemBackground)
-    #elseif canImport(AppKit)
-        static let universalSystemBackground: Color = .init(NSColor.textBackgroundColor)
-    #endif
 }
 
 // MARK: - Convenience
 
 extension Color.Theme {
     static let `default`: Self = .init(
-        backgroundColor: .universalSystemBackground
+        backgroundColor: .init(UIColor.systemBackground),
+        cellBackgroundColor: .init(UIColor.secondarySystemFill),
+        inactiveTunerBackgroundColor: .init("InactiveTunerBackground"),
+        closestTunerBackgroundColor: .init("ClosestTunerBackground"),
+        closerTunerBackgroundColor: .init("CloserTunerBackground"),
+        farTunerBackgroundColor: .init("FarTunerBackground"),
+        otherTunerBackgroundColor: .init("OtherTunerBackground")
     )
 }

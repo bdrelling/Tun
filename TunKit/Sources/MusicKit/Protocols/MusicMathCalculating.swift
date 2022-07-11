@@ -4,6 +4,12 @@ import Foundation
 
 public protocol MusicMathCalculating {}
 
+// MARK: - Supporting Types
+
+public typealias SimpleNote = (semitone: Semitone, octave: Octave)
+
+// MARK: - Extensions
+
 public extension MusicMath {
     static var precision: Float = 100.0
 }
@@ -17,11 +23,11 @@ public extension MusicMathCalculating {
     }
 
     private static func interval(
-        from fromNote: (semitone: Semitone, octave: Int),
-        to toNote: (semitone: Semitone, octave: Int)
+        from fromNote: SimpleNote,
+        to toNote: SimpleNote
     ) -> Int {
         var halfSteps: Int = fromNote.semitone.index - toNote.semitone.index
-        halfSteps += Semitone.allCases.count * (fromNote.octave - toNote.octave)
+        halfSteps += Semitone.allCases.count * (fromNote.octave.rawValue - toNote.octave.rawValue)
 
         return halfSteps
     }
@@ -34,7 +40,7 @@ public extension MusicMathCalculating {
         self.interval(from: note, to: .standard)
     }
 
-    private static func standardInterval(for note: (semitone: Semitone, octave: Int)) -> Int {
+    private static func standardInterval(for note: SimpleNote) -> Int {
         self.interval(from: note, to: (Note.standard.semitone, Note.standard.octave))
     }
 
@@ -42,7 +48,7 @@ public extension MusicMathCalculating {
         self.interval(from: note, to: .lowest)
     }
 
-    private static func baseInterval(for note: (Semitone, Int)) -> Int {
+    private static func baseInterval(for note: SimpleNote) -> Int {
         self.interval(from: note, to: (Note.lowest.semitone, Note.lowest.octave))
     }
 
@@ -55,10 +61,14 @@ public extension MusicMathCalculating {
 
         return round(frequency * MusicMath.precision) / MusicMath.precision
     }
-
-    static func frequencyForNote(_ semitone: Semitone, octave: Int) -> Float {
+    
+    static func frequencyForNote(_ semitone: Semitone, octave: Octave) -> Float {
         let interval = Self.standardInterval(for: (semitone, octave))
         return self.frequencyForInterval(interval)
+    }
+    
+    static func frequencyForNote(_ semitone: Semitone, octave: Int) -> Float {
+        self.frequencyForNote(semitone, octave: .init(octave))
     }
 
     static func frequencyForNote(_ note: Note) -> Float {
@@ -95,8 +105,8 @@ public extension MusicMathCalculating {
 
     static func octaveForInterval(_ interval: Int) -> Int {
         let count = Semitone.count
-        let resNegativeIndex = Note.standard.octave - (abs(interval) + 2) / count
-        let resPositiveIndex = Note.standard.octave + (interval + 9) / count
+        let resNegativeIndex = Note.standard.octave.rawValue - (abs(interval) + 2) / count
+        let resPositiveIndex = Note.standard.octave.rawValue + (interval + 9) / count
 
         return interval < 0
             ? resNegativeIndex

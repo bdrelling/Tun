@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3942974287BE33D008AF700 /* ActiveNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942973287BE33D008AF700 /* ActiveNoteView.swift */; };
+		D3942976287BE342008AF700 /* ActiveTuningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942975287BE342008AF700 /* ActiveTuningView.swift */; };
 		D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2100287B7E37006538CE /* InstrumentKit */; };
 		D3CF2103287B7E37006538CE /* MusicKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2102287B7E37006538CE /* MusicKit */; };
 		D3CF2105287B7E37006538CE /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2104287B7E37006538CE /* TunerKit */; };
@@ -40,6 +42,8 @@
 		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36444CC287B56770031D13B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D36444D0287B5DEF0031D13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3942973287BE33D008AF700 /* ActiveNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNoteView.swift; sourceTree = "<group>"; };
+		D3942975287BE342008AF700 /* ActiveTuningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTuningView.swift; sourceTree = "<group>"; };
 		D3CF2106287B7E66006538CE /* Tun.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tun.xctestplan; sourceTree = "<group>"; };
 		D3CF2107287B7FEC006538CE /* TunKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TunKit.xctestplan; sourceTree = "<group>"; };
 		D3CF2108287BAB3D006538CE /* NotePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePicker.swift; sourceTree = "<group>"; };
@@ -154,11 +158,13 @@
 			children = (
 				D3F44862287941C500670FBA /* InputDevicePicker.swift */,
 				D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */,
+				D3CF2108287BAB3D006538CE /* NotePicker.swift */,
 				D3F4484528792AE000670FBA /* NoteView.swift */,
 				D3F4483D2879281700670FBA /* RootView.swift */,
-				D3F447F32877F01A00670FBA /* TunerView.swift */,
 				D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */,
-				D3CF2108287BAB3D006538CE /* NotePicker.swift */,
+				D3F447F32877F01A00670FBA /* TunerView.swift */,
+				D3942973287BE33D008AF700 /* ActiveNoteView.swift */,
+				D3942975287BE342008AF700 /* ActiveTuningView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,10 +339,12 @@
 				D3F44866287941D500670FBA /* AudioDeviceManager.swift in Sources */,
 				D3F448042877F01A00670FBA /* TunerView.swift in Sources */,
 				D3F44863287941C500670FBA /* InputDevicePicker.swift in Sources */,
+				D3942976287BE342008AF700 /* ActiveTuningView.swift in Sources */,
 				D3F4483328780B0B00670FBA /* TunApp+Constants.swift in Sources */,
 				D3F448022877F01A00670FBA /* TunApp.swift in Sources */,
 				D3F4485728792C4F00670FBA /* TunerView+ViewModel.swift in Sources */,
 				D3F448302877FDEA00670FBA /* AudioManager.swift in Sources */,
+				D3942974287BE33D008AF700 /* ActiveNoteView.swift in Sources */,
 				D3F4483E2879281700670FBA /* RootView.swift in Sources */,
 				D3F44879287A27F500670FBA /* NoteFrequencyTable.swift in Sources */,
 				D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */,

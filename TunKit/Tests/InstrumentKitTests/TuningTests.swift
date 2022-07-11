@@ -18,7 +18,7 @@ final class TuningTests: XCTestCase {
             .e, // E4
         ])
 
-        let octaves = tuning.notes.map(\.octave)
+        let octaves = tuning.notes.map(\.octave.rawValue)
         XCTAssertEqual(octaves, [
             2, // E2
             2, // A2

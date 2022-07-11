@@ -10,9 +10,9 @@ public extension Note {
 
         switch displayMode {
         case .both:
-            return "\(self.semitone.name)\(self.octave) / \(self.semitone.nameWithFlats)\(self.octave)"
+            return "\(self.semitone.name)\(self.octave.rawValue) / \(self.semitone.nameWithFlats)\(self.octave.rawValue)"
         case .flats, .sharps:
-            return "\(self.semitone.name(for: displayMode))\(self.octave)"
+            return "\(self.semitone.name(for: displayMode))\(self.octave.rawValue)"
         }
     }
 }
