@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3350537287BF5BB00A414B8 /* FauxNavigationBarBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350536287BF5BB00A414B8 /* FauxNavigationBarBackground.swift */; };
 		D3942974287BE33D008AF700 /* ActiveNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942973287BE33D008AF700 /* ActiveNoteView.swift */; };
 		D3942976287BE342008AF700 /* ActiveTuningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942975287BE342008AF700 /* ActiveTuningView.swift */; };
 		D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2100287B7E37006538CE /* InstrumentKit */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3350536287BF5BB00A414B8 /* FauxNavigationBarBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FauxNavigationBarBackground.swift; sourceTree = "<group>"; };
 		D36444C6287B41A80031D13B /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36444CC287B56770031D13B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3350535287BF5B200A414B8 /* Kipple */ = {
+			isa = PBXGroup;
+			children = (
+				D3350536287BF5BB00A414B8 /* FauxNavigationBarBackground.swift */,
+			);
+			path = Kipple;
+			sourceTree = "<group>";
+		};
 		D36444C5287B418D0031D13B /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		D3F447F12877F01A00670FBA /* Tun */ = {
 			isa = PBXGroup;
 			children = (
+				D3350535287BF5B200A414B8 /* Kipple */,
 				D3F4487B287A2D2100670FBA /* AudioKitExamples */,
 				D36444C5287B418D0031D13B /* Config */,
 				D3F44836287927D600670FBA /* Core */,
@@ -343,6 +354,7 @@
 				D3F4483328780B0B00670FBA /* TunApp+Constants.swift in Sources */,
 				D3F448022877F01A00670FBA /* TunApp.swift in Sources */,
 				D3F4485728792C4F00670FBA /* TunerView+ViewModel.swift in Sources */,
+				D3350537287BF5BB00A414B8 /* FauxNavigationBarBackground.swift in Sources */,
 				D3F448302877FDEA00670FBA /* AudioManager.swift in Sources */,
 				D3942974287BE33D008AF700 /* ActiveNoteView.swift in Sources */,
 				D3F4483E2879281700670FBA /* RootView.swift in Sources */,

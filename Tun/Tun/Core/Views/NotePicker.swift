@@ -4,6 +4,12 @@ import KippleUI
 import MusicKit
 import SwiftUI
 
+struct VisualEffectView: UIViewRepresentable {
+    var effect: UIVisualEffect?
+    func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView { UIVisualEffectView() }
+    func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) { uiView.effect = effect }
+}
+
 struct NotePicker: View {
     @Environment(\.dismiss) private var dismiss
     
@@ -15,52 +21,58 @@ struct NotePicker: View {
     
     @State private var selectedSemitone: Semitone?
     @State private var selectedOctave: Octave?
+    
+//    private static let navigationBarHeight: CGFloat = {
+//        UIApplication.shared.windows
+//        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+//
+//        let navController = UINavigationController()
+//        let navBarHeight = navController.navigationBar.bounds.height
+//
+//        return statusBarHeight + navBarHeight
+//    }()
 
     var body: some View {
         NavigationView {
-            VStack(spacing: self.itemVerticalSpacing) {
-//                NotePickerItem(action: self.clearSelectedNote) {
-//                    Text("Clear")
-//                }
-//                .frame(height: 60)
-                
-                HStack(spacing: self.itemHorizontalSpacing) {
-                    ScrollViewReader { reader in
-                        ScrollView(showsIndicators: false) {
-                            VStack(spacing: self.itemVerticalSpacing) {
-                                ForEach(Semitone.allCases) { semitone in
-                                    SemitoneItem(semitone: semitone, selection: self.$selectedSemitone)
-                                }
+            HStack(spacing: 0) {
+                ScrollViewReader { reader in
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: self.itemVerticalSpacing) {
+                            ForEach(Semitone.allCases) { semitone in
+                                SemitoneItem(semitone: semitone, selection: self.$selectedSemitone)
                             }
-                            .frame(maxWidth: .infinity)
                         }
-                        .onAppear {
-                            if let selectedSemitone = self.selectedSemitone {
-                                reader.scrollTo(selectedSemitone.id)
-                            }
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, self.itemHorizontalSpacing / 2)
+                        .padding(.top)
+                    }
+                    .onAppear {
+                        if let selectedSemitone = self.selectedSemitone {
+                            reader.scrollTo(selectedSemitone.id)
                         }
                     }
-                    
-                    ScrollViewReader { reader in
-                        ScrollView(showsIndicators: false) {
-                            VStack(spacing: self.itemVerticalSpacing) {
-                                ForEach(Octave.allCases) { octave in
-                                    OctaveItem(octave: octave, selection: self.$selectedOctave)
-                                }
+                }
+
+                ScrollViewReader { reader in
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: self.itemVerticalSpacing) {
+                            ForEach(Octave.allCases) { octave in
+                                OctaveItem(octave: octave, selection: self.$selectedOctave)
                             }
-                            .frame(maxWidth: .infinity)
                         }
-                        .onAppear {
-                            if let selectedOctave = self.selectedOctave {
-                                reader.scrollTo(selectedOctave.id)
-                            }
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, self.itemHorizontalSpacing / 2)
+                        .padding(.top)
+                    }
+                    .onAppear {
+                        if let selectedOctave = self.selectedOctave {
+                            reader.scrollTo(selectedOctave.id)
                         }
                     }
                 }
             }
-            .edgesIgnoringSafeArea(.bottom)
-            .padding(.vertical)
-            .padding(.horizontal, self.itemHorizontalSpacing)
+            .padding(.bottom)
+            .padding(.horizontal, self.itemHorizontalSpacing / 2)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .font(.title)
             .toolbar {
@@ -69,13 +81,15 @@ struct NotePicker: View {
                         Text("Clear")
                     }
                 }
-                
+
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { self.dismiss() }) {
                         Text("Done")
                     }
                 }
             }
+            .edgesIgnoringSafeArea(.bottom)
+            .withFauxNaivgationBarBackground()
             .navigationTitle("Select a Note")
             .navigationBarTitleDisplayMode(.inline)
             .onChange(of: self.selectedSemitone) { _ in
@@ -83,9 +97,6 @@ struct NotePicker: View {
             }
             .onChange(of: self.selectedOctave) { _ in
                 self.updateSelectedNote()
-            }
-            .onAppear {
-                print("Opening NotePicker with selection: \(self.selection?.name ?? "nil")")
             }
         }
     }
