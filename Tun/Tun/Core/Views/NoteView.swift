@@ -6,17 +6,18 @@ import SwiftUI
 import TunerKit
 
 struct NoteView: View {
+    private static let centAccuracyMaxDistance: Float = 4
     private static let fontSize: CGFloat = 96
 
     let detectedNote: Note?
     let selectedNote: Note?
-    let isListening: Bool
+    let isDetectingAudio: Bool
 
     @Binding var displayMode: NoteDisplayMode
 
     private var backgroundColor: Color {
         // If the tuner isn't actively detecting audio, show the inactive background.
-        guard self.isListening else {
+        guard self.isDetectingAudio else {
             return .theme.inactiveTunerBackgroundColor
         }
         
@@ -36,24 +37,24 @@ struct NoteView: View {
         }
         
         // If the distance between the detected and selected note
-        guard let frequencyDelta = frequencyDelta else {
+        guard let centsFromSelectedNote = self.centsFromSelectedNote else {
             return .theme.inactiveTunerBackgroundColor
         }
         
         #warning("A static value here doesn't make sense since frequency is exponential, I need to find out how accuracy should work here.")
-        if abs(frequencyDelta) < 3 {
+        if abs(centsFromSelectedNote) < Self.centAccuracyMaxDistance {
             return .theme.closestTunerBackgroundColor
         } else {
             return .theme.closerTunerBackgroundColor
         }
     }
     
-    private var frequencyDelta: Float? {
+    private var centsFromSelectedNote: Float? {
         guard let detectedNote = self.detectedNote, let selectedNote = self.selectedNote else {
             return nil
         }
         
-        return detectedNote.frequency - selectedNote.frequency
+        return MusicMath.cents(from: detectedNote, to: selectedNote)
     }
 
     var body: some View {
@@ -65,8 +66,8 @@ struct NoteView: View {
                     self.inactiveTextView
                 }
                 
-                if let frequencyDelta = self.frequencyDelta {
-                    Text("\(frequencyDelta, specifier: "%.2f") Hz")
+                if let centsFromSelectedNote = self.centsFromSelectedNote {
+                    Text("\(centsFromSelectedNote, specifier: "%.2f") cents")
                         .font(.body)
                         .opacity(0.35)
                         .padding(.top, 48)
@@ -90,11 +91,11 @@ struct NoteView: View {
     init(
         detectedNote: Note? = nil,
         selectedNote: Note? = nil,
-        isListening: Bool = false,
+        isDetectingAudio: Bool = false,
         displayMode: Binding<NoteDisplayMode> = .constant(.both)
     ) {
         self.detectedNote = detectedNote
-        self.isListening = isListening
+        self.isDetectingAudio = isDetectingAudio
         self.selectedNote = selectedNote
         self._displayMode = displayMode
     }
@@ -140,13 +141,13 @@ struct NoteView_Previews: PreviewProvider {
         Group {
             NoteView(
                 detectedNote: .c(2),
-                isListening: true
+                isDetectingAudio: true
             )
             
             ForEach(NoteDisplayMode.allCases, id: \.self) { displayMode in
                 NoteView(
                     detectedNote: .cSharp(4),
-                    isListening: true,
+                    isDetectingAudio: true,
                     displayMode: .constant(displayMode)
                 )
             }

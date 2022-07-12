@@ -32,7 +32,7 @@ struct TunerView: View {
             NoteView(
                 detectedNote: self.tuner.data.note,
                 selectedNote: self.selectedNote,
-                isListening: self.tuner.isListening,
+                isDetectingAudio: self.tuner.isDetectingAudio,
                 displayMode: self.$noteDisplayMode
             )
             .edgesIgnoringSafeArea(.all)

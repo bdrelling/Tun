@@ -12,12 +12,12 @@ public final class Tuner: ObservableObject {
     // TODO: Make this sensitivity configurable?
     /// The amplitude threshold for when the mic begins to pick up audio, in order to suppress unwanted background noise.
     /// The lower then number, the more sensitive -- meaning that more audio is detected.
-    private static let noiseSensitivityThreshold: AUValue = 0.1
+    private static let noiseSensitivityThreshold: AUValue = 0.15
 
     @Published public private(set) var data: TunerData
     
-    #warning("This is a really inaccurate property -- Tuner is listening when it's running, this is should be isActivelyDetectingAudio")
-    @Published public private(set) var isListening: Bool
+    /// Whether or not the Tuner is actively detecting audio.
+    @Published public private(set) var isDetectingAudio: Bool
 
     private var engine = AudioEngine()
 
@@ -27,9 +27,9 @@ public final class Tuner: ObservableObject {
 
     private var isInitialized: Bool = false
 
-    public init(data: TunerData = .inactive, isListening: Bool = false) {
+    public init(data: TunerData = .inactive, isDetectingAudio: Bool = false) {
         self.data = data
-        self.isListening = isListening
+        self.isDetectingAudio = isDetectingAudio
     }
 
     public func initialize() {
@@ -80,9 +80,9 @@ public final class Tuner: ObservableObject {
     
     private func update(_ frequency: AUValue, _ amplitude: AUValue) {
         // Reduces sensitivity to background noise to prevent random / fluctuating data.
-        self.isListening = amplitude > Self.noiseSensitivityThreshold
+        self.isDetectingAudio = amplitude > Self.noiseSensitivityThreshold
 
-        guard self.isListening else {
+        guard self.isDetectingAudio else {
             return
         }
 

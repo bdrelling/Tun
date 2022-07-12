@@ -3,7 +3,7 @@
 import MusicKit
 import XCTest
 
-final class MusicMathTests: XCTestCase, MusicMathCalculating {
+final class MusicMathTests: XCTestCase {
     // MARK: Frequency
 
     func testCalculatingFrequencyForNoteAndOctave() {
