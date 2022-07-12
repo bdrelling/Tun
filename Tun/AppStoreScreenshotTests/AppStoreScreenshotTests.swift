@@ -6,7 +6,6 @@ class AppStoreScreenshotTests: XCTestCase {
     
     func testTakeAppStoreScreenshots() throws {
         var attachments: [XCTAttachment] = []
-        
         for index in 0 ..< Self.numberOfAppStoreScreenshots {
             let app = XCUIApplication()
             app.launchForTesting(colorScheme: .dark, appStoreScreenshotIndex: index)
