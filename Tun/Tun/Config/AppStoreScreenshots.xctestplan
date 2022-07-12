@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "B4675FBB-ED2C-42DC-B4DF-D51AA4EDBB4C",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Tun.xcodeproj",
+        "identifier" : "D3AF9567287D4B3F00EC819D",
+        "name" : "AppStoreScreenshotTests"
+      }
+    }
+  ],
+  "version" : 1
+}

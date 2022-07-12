@@ -1,6 +1,8 @@
 import Foundation
 
-public struct LaunchEnvironment {
+public struct LaunchEnvironment: Decodable {
+    public let colorScheme: ColorScheme?
+    public let appStoreScreenshotIndex: Int?
     public let isDetectingAudio: Bool?
     public let tunerFrequency: Float?
     public let tunerAmplitude: Float?
@@ -8,12 +10,16 @@ public struct LaunchEnvironment {
     public let selectedOctaveValue: Int?
     
     public init(
+        colorScheme: ColorScheme? = nil,
+        appStoreScreenshotIndex: Int? = nil,
         isDetectingAudio: Bool? = nil,
         tunerFrequency: Float? = nil,
         tunerAmplitude: Float? = nil,
         selectedSemitoneValue: Int? = nil,
         selectedOctaveValue: Int? = nil
     ) {
+        self.colorScheme = colorScheme
+        self.appStoreScreenshotIndex = appStoreScreenshotIndex
         self.isDetectingAudio = isDetectingAudio
         self.tunerFrequency = tunerFrequency
         self.tunerAmplitude = tunerAmplitude
@@ -26,6 +32,8 @@ public struct LaunchEnvironment {
 
 extension LaunchEnvironment {
     enum Key: String, CaseIterable {
+        case colorScheme
+        case appStoreScreenshotIndex
         case isDetectingAudio
         case tunerFrequency
         case tunerAmplitude
@@ -34,11 +42,25 @@ extension LaunchEnvironment {
     }
 }
 
+public extension LaunchEnvironment {
+    enum ColorScheme: String, Decodable {
+        case light = "Light"
+        case dark = "Dark"
+    }
+}
+
 // MARK: - Extensions
 
 public extension LaunchEnvironment {
     init(from launchDictionary: [String: String]) {
-        self.isDetectingAudio = launchDictionary.bool(for: .isDetectingAudio) ?? false
+        if let colorSchemeValue = launchDictionary.string(for: .colorScheme) {
+            self.colorScheme = .init(rawValue: colorSchemeValue)
+        } else {
+            self.colorScheme = nil
+        }
+        
+        self.appStoreScreenshotIndex = launchDictionary.int(for: .appStoreScreenshotIndex)
+        self.isDetectingAudio = launchDictionary.bool(for: .isDetectingAudio)
         self.tunerFrequency = launchDictionary.float(for: .tunerFrequency)
         self.tunerAmplitude = launchDictionary.float(for: .tunerAmplitude)
         self.selectedSemitoneValue = launchDictionary.int(for: .selectedSemitone)
@@ -47,6 +69,14 @@ public extension LaunchEnvironment {
     
     private func stringValue(for key: Key) -> String? {
         switch key {
+        case .colorScheme:
+            if let colorScheme = self.colorScheme {
+                return "\(colorScheme.rawValue)"
+            }
+        case .appStoreScreenshotIndex:
+            if let appStoreScreenshotIndex = self.appStoreScreenshotIndex {
+                return "\(appStoreScreenshotIndex)"
+            }
         case .isDetectingAudio:
             if let isDetectingAudio = self.isDetectingAudio {
                 return isDetectingAudio ? "true" : "false"
@@ -86,6 +116,8 @@ public extension LaunchEnvironment {
         return dictionary
     }
 }
+
+// MARK: - Extensions
 
 extension Dictionary where Key == String, Value == String {
     subscript(_ key: LaunchEnvironment.Key) -> String? {

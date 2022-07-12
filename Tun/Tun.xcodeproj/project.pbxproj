@@ -11,15 +11,20 @@
 		D303D094287D1A6800E87540 /* TestKit in Frameworks */ = {isa = PBXBuildFile; productRef = D303D093287D1A6800E87540 /* TestKit */; };
 		D303D096287D1AC100E87540 /* KippleUI in Frameworks */ = {isa = PBXBuildFile; productRef = D303D095287D1AC100E87540 /* KippleUI */; };
 		D303D099287D245700E87540 /* LaunchEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D303D098287D245700E87540 /* LaunchEnvironmentKey.swift */; };
-		D3350547287D0DFB00A414B8 /* AppStoreScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350546287D0DFB00A414B8 /* AppStoreScreenshotTests.swift */; };
 		D3350550287D117700A414B8 /* LaunchPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D335054F287D117700A414B8 /* LaunchPerformanceTests.swift */; };
 		D3942974287BE33D008AF700 /* NotePickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942973287BE33D008AF700 /* NotePickerButton.swift */; };
 		D3942976287BE342008AF700 /* ActiveTuningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942975287BE342008AF700 /* ActiveTuningView.swift */; };
+		D3AF956B287D4B3F00EC819D /* AppStoreScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF956A287D4B3F00EC819D /* AppStoreScreenshotTests.swift */; };
+		D3AF9574287D4B5900EC819D /* TestKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF9573287D4B5900EC819D /* TestKit */; };
+		D3AF9576287D4B6100EC819D /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF9575287D4B6100EC819D /* InstrumentKit */; };
+		D3AF9578287D4B6100EC819D /* MusicKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF9577287D4B6100EC819D /* MusicKit */; };
+		D3AF957A287D4B6100EC819D /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF9579287D4B6100EC819D /* TunerKit */; };
 		D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2100287B7E37006538CE /* InstrumentKit */; };
 		D3CF2103287B7E37006538CE /* MusicKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2102287B7E37006538CE /* MusicKit */; };
 		D3CF2105287B7E37006538CE /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2104287B7E37006538CE /* TunerKit */; };
 		D3CF2109287BAB3D006538CE /* NotePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF2108287BAB3D006538CE /* NotePicker.swift */; };
 		D3E7B740287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7B73F287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift */; };
+		D3E7B742287D321D00CF6770 /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7B741287D321D00CF6770 /* TestCoordinator.swift */; };
 		D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */; };
 		D3F448022877F01A00670FBA /* TunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* TunApp.swift */; };
 		D3F448042877F01A00670FBA /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F32877F01A00670FBA /* TunerView.swift */; };
@@ -41,12 +46,18 @@
 			remoteGlobalIDString = D3F447F82877F01A00670FBA;
 			remoteInfo = "Tün";
 		};
+		D3AF956E287D4B3F00EC819D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3F447ED2877F01900670FBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3F447F82877F01A00670FBA;
+			remoteInfo = "Tün";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D303D098287D245700E87540 /* LaunchEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchEnvironmentKey.swift; sourceTree = "<group>"; };
 		D3350544287D0DFB00A414B8 /* TunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3350546287D0DFB00A414B8 /* AppStoreScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshotTests.swift; sourceTree = "<group>"; };
 		D335054F287D117700A414B8 /* LaunchPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPerformanceTests.swift; sourceTree = "<group>"; };
 		D36444C6287B41A80031D13B /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,10 +65,14 @@
 		D36444D0287B5DEF0031D13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3942973287BE33D008AF700 /* NotePickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePickerButton.swift; sourceTree = "<group>"; };
 		D3942975287BE342008AF700 /* ActiveTuningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTuningView.swift; sourceTree = "<group>"; };
+		D3AF9563287D4ADA00EC819D /* AppStoreScreenshots.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppStoreScreenshots.xctestplan; sourceTree = "<group>"; };
+		D3AF9568287D4B3F00EC819D /* AppStoreScreenshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppStoreScreenshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AF956A287D4B3F00EC819D /* AppStoreScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshotTests.swift; sourceTree = "<group>"; };
 		D3CF2106287B7E66006538CE /* Tun.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tun.xctestplan; sourceTree = "<group>"; };
 		D3CF2107287B7FEC006538CE /* TunKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TunKit.xctestplan; sourceTree = "<group>"; };
 		D3CF2108287BAB3D006538CE /* NotePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePicker.swift; sourceTree = "<group>"; };
 		D3E7B73F287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchEnvironment+Convenience.swift"; sourceTree = "<group>"; };
+		D3E7B741287D321D00CF6770 /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
 		D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerScreen.swift; sourceTree = "<group>"; };
 		D3F447F22877F01A00670FBA /* TunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunApp.swift; sourceTree = "<group>"; };
 		D3F447F32877F01A00670FBA /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
@@ -82,6 +97,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3AF9565287D4B3F00EC819D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AF9578287D4B6100EC819D /* MusicKit in Frameworks */,
+				D3AF9576287D4B6100EC819D /* InstrumentKit in Frameworks */,
+				D3AF957A287D4B6100EC819D /* TunerKit in Frameworks */,
+				D3AF9574287D4B5900EC819D /* TestKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3F447F62877F01A00670FBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,8 +126,9 @@
 		D303D097287D244C00E87540 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
-				D303D098287D245700E87540 /* LaunchEnvironmentKey.swift */,
 				D3E7B73F287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift */,
+				D303D098287D245700E87540 /* LaunchEnvironmentKey.swift */,
+				D3E7B741287D321D00CF6770 /* TestCoordinator.swift */,
 			);
 			path = Testing;
 			sourceTree = "<group>";
@@ -109,7 +136,6 @@
 		D3350545287D0DFB00A414B8 /* TunUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D3350546287D0DFB00A414B8 /* AppStoreScreenshotTests.swift */,
 				D335054F287D117700A414B8 /* LaunchPerformanceTests.swift */,
 			);
 			path = TunUITests;
@@ -122,6 +148,7 @@
 				D36444C6287B41A80031D13B /* Shared.xcconfig */,
 				D3CF2106287B7E66006538CE /* Tun.xctestplan */,
 				D3CF2107287B7FEC006538CE /* TunKit.xctestplan */,
+				D3AF9563287D4ADA00EC819D /* AppStoreScreenshots.xctestplan */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -143,12 +170,21 @@
 			path = Menus;
 			sourceTree = "<group>";
 		};
+		D3AF9569287D4B3F00EC819D /* AppStoreScreenshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF956A287D4B3F00EC819D /* AppStoreScreenshotTests.swift */,
+			);
+			path = AppStoreScreenshotTests;
+			sourceTree = "<group>";
+		};
 		D3F447EC2877F01900670FBA = {
 			isa = PBXGroup;
 			children = (
 				D3F448352879268200670FBA /* README.md */,
 				D3F447F12877F01A00670FBA /* Tun */,
 				D3350545287D0DFB00A414B8 /* TunUITests */,
+				D3AF9569287D4B3F00EC819D /* AppStoreScreenshotTests */,
 				D3F447FA2877F01A00670FBA /* Products */,
 				D3F448252877F6BD00670FBA /* Frameworks */,
 			);
@@ -171,6 +207,7 @@
 			children = (
 				D3F447F92877F01A00670FBA /* Tün.app */,
 				D3350544287D0DFB00A414B8 /* TunUITests.xctest */,
+				D3AF9568287D4B3F00EC819D /* AppStoreScreenshotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,6 +311,30 @@
 			productReference = D3350544287D0DFB00A414B8 /* TunUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D3AF9567287D4B3F00EC819D /* AppStoreScreenshotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3AF9570287D4B3F00EC819D /* Build configuration list for PBXNativeTarget "AppStoreScreenshotTests" */;
+			buildPhases = (
+				D3AF9564287D4B3F00EC819D /* Sources */,
+				D3AF9565287D4B3F00EC819D /* Frameworks */,
+				D3AF9566287D4B3F00EC819D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3AF956F287D4B3F00EC819D /* PBXTargetDependency */,
+			);
+			name = AppStoreScreenshotTests;
+			packageProductDependencies = (
+				D3AF9573287D4B5900EC819D /* TestKit */,
+				D3AF9575287D4B6100EC819D /* InstrumentKit */,
+				D3AF9577287D4B6100EC819D /* MusicKit */,
+				D3AF9579287D4B6100EC819D /* TunerKit */,
+			);
+			productName = AppStoreScreenshotTests;
+			productReference = D3AF9568287D4B3F00EC819D /* AppStoreScreenshotTests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D3F447F82877F01A00670FBA /* Tün */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tün" */;
@@ -312,6 +373,10 @@
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = D3F447F82877F01A00670FBA;
 					};
+					D3AF9567287D4B3F00EC819D = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D3F447F82877F01A00670FBA;
+					};
 					D3F447F82877F01A00670FBA = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -335,12 +400,20 @@
 			targets = (
 				D3F447F82877F01A00670FBA /* Tün */,
 				D3350543287D0DFB00A414B8 /* TunUITests */,
+				D3AF9567287D4B3F00EC819D /* AppStoreScreenshotTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D3350542287D0DFB00A414B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AF9566287D4B3F00EC819D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,8 +436,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3350547287D0DFB00A414B8 /* AppStoreScreenshotTests.swift in Sources */,
 				D3350550287D117700A414B8 /* LaunchPerformanceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AF9564287D4B3F00EC819D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AF956B287D4B3F00EC819D /* AppStoreScreenshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +459,7 @@
 				D3F448022877F01A00670FBA /* TunApp.swift in Sources */,
 				D3942974287BE33D008AF700 /* NotePickerButton.swift in Sources */,
 				D3F4483E2879281700670FBA /* RootView.swift in Sources */,
+				D3E7B742287D321D00CF6770 /* TestCoordinator.swift in Sources */,
 				D3F44879287A27F500670FBA /* NoteFrequencyTable.swift in Sources */,
 				D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */,
 				D3F4485B28792C7600670FBA /* Color+Theme.swift in Sources */,
@@ -396,6 +477,11 @@
 			isa = PBXTargetDependency;
 			target = D3F447F82877F01A00670FBA /* Tün */;
 			targetProxy = D335054A287D0DFB00A414B8 /* PBXContainerItemProxy */;
+		};
+		D3AF956F287D4B3F00EC819D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3F447F82877F01A00670FBA /* Tün */;
+			targetProxy = D3AF956E287D4B3F00EC819D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -429,6 +515,45 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.TunUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tün";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3AF9571287D4B3F00EC819D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79E585EFP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.AppStoreScreenshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tün";
+			};
+			name = Debug;
+		};
+		D3AF9572287D4B3F00EC819D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79E585EFP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.AppStoreScreenshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -625,6 +750,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D3AF9570287D4B3F00EC819D /* Build configuration list for PBXNativeTarget "AppStoreScreenshotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3AF9571287D4B3F00EC819D /* Debug */,
+				D3AF9572287D4B3F00EC819D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D3F447F02877F01900670FBA /* Build configuration list for PBXProject "Tun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -669,6 +803,22 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3F4485D2879392600670FBA /* XCRemoteSwiftPackageReference "UI" */;
 			productName = KippleUI;
+		};
+		D3AF9573287D4B5900EC819D /* TestKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TestKit;
+		};
+		D3AF9575287D4B6100EC819D /* InstrumentKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InstrumentKit;
+		};
+		D3AF9577287D4B6100EC819D /* MusicKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MusicKit;
+		};
+		D3AF9579287D4B6100EC819D /* TunerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TunerKit;
 		};
 		D3CF2100287B7E37006538CE /* InstrumentKit */ = {
 			isa = XCSwiftPackageProductDependency;

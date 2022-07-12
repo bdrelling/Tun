@@ -5,15 +5,15 @@ public extension Tuner {
         .init(data: data, isDetectingAudio: isDetectingAudio)
     }
     
-    static func mockedListening(data: TunerData = .inactive) -> Self {
+    static func mockedDetecting(data: TunerData = .inactive) -> Self {
         .mocked(data: data, isDetectingAudio: true)
     }
     
-    static func mockedListening(note: Note) -> Self {
+    static func mockedDetecting(note: Note) -> Self {
         .mocked(data: .mocked(note), isDetectingAudio: true)
     }
     
-    static func mockedListening(frequency: Float) -> Self {
+    static func mockedDetecting(frequency: Float) -> Self {
         .mocked(data: .mocked(frequency: frequency), isDetectingAudio: true)
     }
 }

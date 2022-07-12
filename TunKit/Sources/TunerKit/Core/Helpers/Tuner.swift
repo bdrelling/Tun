@@ -14,7 +14,7 @@ public final class Tuner: ObservableObject {
     /// The lower then number, the more sensitive -- meaning that more audio is detected.
     private static let noiseSensitivityThreshold: AUValue = 0.15
 
-    @Published public private(set) var data: TunerData
+    @Published public private(set) var data: TunerData 
     
     /// Whether or not the Tuner is actively detecting audio.
     @Published public private(set) var isDetectingAudio: Bool
@@ -56,10 +56,6 @@ public final class Tuner: ObservableObject {
     }
 
     public func start() {
-        guard !Kipple.isRunningInXcodePreview else {
-            return
-        }
-
         self.initialize()
 
         do {
@@ -71,10 +67,6 @@ public final class Tuner: ObservableObject {
     }
 
     public func stop() {
-        guard !Kipple.isRunningInXcodePreview else {
-            return
-        }
-
         self.engine.stop()
     }
     

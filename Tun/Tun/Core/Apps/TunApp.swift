@@ -1,6 +1,7 @@
 // Copyright © 2022 Brian Drelling. All rights reserved.
 
 import AudioKitAdapter
+import KippleCore
 import SwiftUI
 import TestKit
 
@@ -11,13 +12,30 @@ struct TunApp: App {
     /// For more information, see [Apple Documentation](https://developer.apple.com/documentation/swiftui/scenephase).
     @Environment(\.scenePhase) var scenePhase
     
+    private var audioRecordingEnabled: Bool {
+        !(Self.isRunningTests || Kipple.isRunningInXcodePreview)
+    }
+    
+    private var networkingEnabled: Bool {
+        !(Self.isRunningTests || Kipple.isRunningInXcodePreview)
+    }
+    
     var body: some Scene {
         WindowGroup {
-            RootView()
-                // This will override the entire application with Dark Mode settings.
-                // This is temporarily in place until support for both modes is properly implemented.
-                .preferredColorScheme(.dark)
-                .environment(\.launchEnvironment, ProcessInfo.processInfo.launchEnvironment)
+            Group {
+                if Self.isRunningUITests {
+                    TestCoordinator {
+                        RootView()
+                    }
+                } else {
+                    RootView()
+                    // This will override the entire application with Dark Mode settings.
+                    // This is temporarily in place until support for both modes is properly implemented.
+                    .preferredColorScheme(.dark)
+                }
+            }
+            .environment(\.audioRecordingEnabled, self.audioRecordingEnabled)
+            .environment(\.networkingEnabled, self.networkingEnabled)
         }
         .onChange(of: self.scenePhase) { newScenePhase in
             switch newScenePhase {
@@ -37,10 +55,38 @@ struct TunApp: App {
     }
 
     init() {
+        guard self.audioRecordingEnabled else {
+            return
+        }
+        
         do {
             try AudioManager.shared.start()
         } catch {
             print(error.localizedDescription)
         }
     }
+}
+
+// MARK: - Supporting Types
+
+private struct AudioRecordingEnabledKey: EnvironmentKey {
+    static let defaultValue: Bool = true
+}
+
+extension EnvironmentValues {
+  var audioRecordingEnabled: Bool {
+    get { self[AudioRecordingEnabledKey.self] }
+    set { self[AudioRecordingEnabledKey.self] = newValue }
+  }
+}
+
+private struct NetworkingEnabledKey: EnvironmentKey {
+    static let defaultValue: Bool = true
+}
+
+extension EnvironmentValues {
+  var networkingEnabled: Bool {
+    get { self[NetworkingEnabledKey.self] }
+    set { self[NetworkingEnabledKey.self] = newValue }
+  }
 }

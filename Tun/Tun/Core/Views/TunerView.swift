@@ -7,6 +7,8 @@ import SwiftUI
 import TunerKit
 
 struct TunerView: View {
+    @Environment(\.audioRecordingEnabled) var audioRecordingEnabled
+    
     @StateObject var tuner: Tuner
     
     @State var selectedNote: Note?
@@ -38,8 +40,16 @@ struct TunerView: View {
             .edgesIgnoringSafeArea(.all)
             .zIndex(-100)
         }
-        .onAppear(perform: self.tuner.start)
-        .onDisappear(perform: self.tuner.stop)
+        .onAppear {
+            if self.audioRecordingEnabled {
+                self.tuner.start()
+            }
+        }
+        .onDisappear {
+            if self.audioRecordingEnabled {
+                self.tuner.stop()
+            }
+        }
     }
 
     init(
@@ -67,7 +77,7 @@ struct TunerView_Previews: PreviewProvider {
             TunerView(selectedNote: Self.note)
 
             // No Selected Note, Tuner Listening
-            TunerView(tuner: .mockedListening(note: Self.note))
+            TunerView(tuner: .mockedDetecting(note: Self.note))
         }
         .previewMatrix(.sizeThatFits)
     }
@@ -81,19 +91,19 @@ struct TunerView_AccuracyPreviews: PreviewProvider {
             // Selected Note, Tuner Listening and Inaccurate
             TunerView(
                 selectedNote: Self.note,
-                tuner: .mockedListening(frequency: Self.note.frequency + 100)
+                tuner: .mockedDetecting(frequency: Self.note.frequency + 100)
             )
 
             // Selected Note, Tuner Listening and Close
             TunerView(
                 selectedNote: Self.note,
-                tuner: .mockedListening(frequency: Self.note.frequency + 40)
+                tuner: .mockedDetecting(frequency: Self.note.frequency + 40)
             )
 
             // Selected Note, Tuner Listening and Closest
             TunerView(
                 selectedNote: Self.note,
-                tuner: .mockedListening(frequency: Self.note.frequency + 1)
+                tuner: .mockedDetecting(frequency: Self.note.frequency + 1)
             )
         }
         .previewMatrix(.sizeThatFits, colorSchemes: [.dark])
