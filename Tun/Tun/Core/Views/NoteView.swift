@@ -36,8 +36,12 @@ struct NoteView: View {
         }
         
         // If the distance between the detected and selected note
+        guard let frequencyDelta = frequencyDelta else {
+            return .theme.inactiveTunerBackgroundColor
+        }
+        
         #warning("A static value here doesn't make sense since frequency is exponential, I need to find out how accuracy should work here.")
-        if abs(detectedNote.frequency - selectedNote.frequency) < 3 {
+        if abs(frequencyDelta) < 3 {
             return .theme.closestTunerBackgroundColor
         } else {
             return .theme.closerTunerBackgroundColor
@@ -49,8 +53,7 @@ struct NoteView: View {
             return nil
         }
         
-        #warning("For some reason this is always 0 or the difference between notes. Something is being truncated or rounded maybe? Need raw frequency.")
-        return abs(detectedNote.frequency - selectedNote.frequency)
+        return detectedNote.frequency - selectedNote.frequency
     }
 
     var body: some View {
@@ -63,8 +66,10 @@ struct NoteView: View {
                 }
                 
                 if let frequencyDelta = self.frequencyDelta {
-                    Text("Delta: \(frequencyDelta) Hz")
-                        .font(.caption)
+                    Text("\(frequencyDelta, specifier: "%.2f") Hz")
+                        .font(.body)
+                        .opacity(0.35)
+                        .padding(.top, 48)
                 }
             }
         }

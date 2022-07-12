@@ -130,6 +130,12 @@ public extension MusicMathCalculating {
 
     static func noteForFrequency(_ frequency: Float) -> Note {
         let interval = self.intervalForFrequency(frequency)
-        return self.noteForInterval(interval)
+        return self.noteForInterval(interval).with(frequency: frequency)
+    }
+}
+
+private extension Note {
+    func with(frequency: Float) -> Self {
+        .init(self.semitone, octave: self.octave, frequency: frequency)
     }
 }
