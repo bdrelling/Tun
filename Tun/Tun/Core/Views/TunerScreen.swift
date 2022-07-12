@@ -6,13 +6,13 @@ struct TunerScreen: View {
     var body: some View {
         NavigationView {
             TunerView()
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: Text("Wow")) {
-                            Image(systemName: "gearshape")
-                        }
-                    }
-                }
+//                .toolbar {
+//                    ToolbarItem(placement: .navigationBarTrailing) {
+//                        NavigationLink(destination: Text("Wow")) {
+//                            Image(systemName: "gearshape")
+//                        }
+//                    }
+//                }
                 .navigationBarTitleDisplayMode(.inline)
                 .configureNavigation(.transparent())
         }

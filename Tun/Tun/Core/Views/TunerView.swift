@@ -15,7 +15,7 @@ struct TunerView: View {
     var body: some View {
         ZStack {
             VStack {
-                ActiveNoteView(
+                NotePickerButton(
                     selection: self.$selectedNote,
                     data: self.tuner.data
                 )

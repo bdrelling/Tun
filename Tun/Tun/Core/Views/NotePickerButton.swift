@@ -3,7 +3,7 @@ import MusicKit
 import SwiftUI
 import TunerKit
 
-struct ActiveNoteView: View {
+struct NotePickerButton: View {
     @Binding var selection: Note?
     
     let data: TunerData
@@ -42,7 +42,7 @@ struct ActiveNoteView: View {
 
 struct ActiveNoteView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveNoteView(
+        NotePickerButton(
             selection: .constant(.standard),
             data: .mocked()
         )

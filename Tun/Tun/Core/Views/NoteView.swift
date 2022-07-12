@@ -15,6 +15,75 @@ struct NoteView: View {
 
     @Binding var displayMode: NoteDisplayMode
 
+//    @State private(set) var backgroundColor: Color = .theme.inactiveTunerBackgroundColor
+    
+    private var centsFromSelectedNote: Float? {
+        guard let detectedNote = self.detectedNote, let selectedNote = self.selectedNote else {
+            return nil
+        }
+        
+        return MusicMath.cents(from: detectedNote, to: selectedNote)
+    }
+
+    var body: some View {
+        Group {
+            VStack {
+                if let note = self.detectedNote {
+                    Text(note.attributedName(for: self.displayMode, fontSize: Self.fontSize))
+                } else {
+                    self.inactiveTextView
+                }
+                
+                if let centsFromSelectedNote = self.centsFromSelectedNote {
+                    Text("\(centsFromSelectedNote, specifier: "%.2f") cents")
+                        .font(.body)
+                        .opacity(self.isDetectingAudio ? 0.65 : 0.35)
+                        .padding(.top, 48)
+                }
+            }
+        }
+        .font(.system(size: Self.fontSize))
+        .foregroundColor(.white)
+        .minimumScaleFactor(0.25)
+        .lineLimit(1)
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            self.backgroundColor
+                .animation(.linear, value: self.detectedNote)
+                .animation(.easeInOut, value: self.isDetectingAudio)
+        )
+//        .onChange(of: self.detectedNote) { _ in
+//            self.updateBackgroundColor()
+//        }
+//        .onChange(of: self.isDetectingAudio) { _ in
+//            self.updateBackgroundColor()
+//        }
+    }
+
+    private var inactiveTextView: some View {
+        Image(systemName: "zzz")
+            .opacity(0.35)
+    }
+    
+    init(
+        detectedNote: Note? = nil,
+        selectedNote: Note? = nil,
+        isDetectingAudio: Bool = false,
+        displayMode: Binding<NoteDisplayMode> = .constant(.both)
+    ) {
+        self.detectedNote = detectedNote
+        self.isDetectingAudio = isDetectingAudio
+        self.selectedNote = selectedNote
+        self._displayMode = displayMode
+    }
+    
+//    private func updateBackgroundColor() {
+//        withAnimation {
+//            self.backgroundColor = self.getBackgroundColor()
+//        }
+//    }
+    
     private var backgroundColor: Color {
         // If the tuner isn't actively detecting audio, show the inactive background.
         guard self.isDetectingAudio else {
@@ -47,57 +116,6 @@ struct NoteView: View {
         } else {
             return .theme.closerTunerBackgroundColor
         }
-    }
-    
-    private var centsFromSelectedNote: Float? {
-        guard let detectedNote = self.detectedNote, let selectedNote = self.selectedNote else {
-            return nil
-        }
-        
-        return MusicMath.cents(from: detectedNote, to: selectedNote)
-    }
-
-    var body: some View {
-        Group {
-            VStack {
-                if let note = self.detectedNote {
-                    Text(note.attributedName(for: self.displayMode, fontSize: Self.fontSize))
-                } else {
-                    self.inactiveTextView
-                }
-                
-                if let centsFromSelectedNote = self.centsFromSelectedNote {
-                    Text("\(centsFromSelectedNote, specifier: "%.2f") cents")
-                        .font(.body)
-                        .opacity(0.35)
-                        .padding(.top, 48)
-                }
-            }
-        }
-        .font(.system(size: Self.fontSize))
-        .foregroundColor(.white)
-        .minimumScaleFactor(0.25)
-        .lineLimit(1)
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(self.backgroundColor)
-    }
-
-    private var inactiveTextView: some View {
-        Image(systemName: "zzz")
-            .opacity(0.35)
-    }
-    
-    init(
-        detectedNote: Note? = nil,
-        selectedNote: Note? = nil,
-        isDetectingAudio: Bool = false,
-        displayMode: Binding<NoteDisplayMode> = .constant(.both)
-    ) {
-        self.detectedNote = detectedNote
-        self.isDetectingAudio = isDetectingAudio
-        self.selectedNote = selectedNote
-        self._displayMode = displayMode
     }
 }
 
