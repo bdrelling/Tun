@@ -14,8 +14,40 @@ struct NoteView: View {
     let isDetectingAudio: Bool
 
     @Binding var displayMode: NoteDisplayMode
+    
+    private var backgroundColor: Color {
+        // If the tuner isn't actively detecting audio, show the inactive background.
+        guard self.isDetectingAudio else {
+            return .theme.inactiveTunerBackgroundColor
+        }
+        
+        // If the tuner has never detected audio, show the inactive background.
+        guard let detectedNote = self.detectedNote else {
+            return .theme.inactiveTunerBackgroundColor
+        }
 
-//    @State private(set) var backgroundColor: Color = .theme.inactiveTunerBackgroundColor
+        // If no note is selected, show the accurate background to indicate audio detection.
+        guard let selectedNote = self.selectedNote else {
+            return .theme.closestTunerBackgroundColor
+        }
+        
+        // If the note isn't registering as the same semitone and octave, show the inaccurate background.
+        guard detectedNote.semitone == selectedNote.semitone, detectedNote.octave == selectedNote.octave else {
+            return .theme.farTunerBackgroundColor
+        }
+        
+        // If the distance between the detected and selected note
+        guard let centsFromSelectedNote = self.centsFromSelectedNote else {
+            return .theme.inactiveTunerBackgroundColor
+        }
+        
+        #warning("A static value here doesn't make sense since frequency is exponential, I need to find out how accuracy should work here.")
+        if abs(centsFromSelectedNote) < Self.centAccuracyMaxDistance {
+            return .theme.closestTunerBackgroundColor
+        } else {
+            return .theme.closerTunerBackgroundColor
+        }
+    }
     
     private var centsFromSelectedNote: Float? {
         guard let detectedNote = self.detectedNote, let selectedNote = self.selectedNote else {
@@ -53,12 +85,6 @@ struct NoteView: View {
                 .animation(.linear, value: self.detectedNote)
                 .animation(.easeInOut, value: self.isDetectingAudio)
         )
-//        .onChange(of: self.detectedNote) { _ in
-//            self.updateBackgroundColor()
-//        }
-//        .onChange(of: self.isDetectingAudio) { _ in
-//            self.updateBackgroundColor()
-//        }
     }
 
     private var inactiveTextView: some View {
@@ -76,46 +102,6 @@ struct NoteView: View {
         self.isDetectingAudio = isDetectingAudio
         self.selectedNote = selectedNote
         self._displayMode = displayMode
-    }
-    
-//    private func updateBackgroundColor() {
-//        withAnimation {
-//            self.backgroundColor = self.getBackgroundColor()
-//        }
-//    }
-    
-    private var backgroundColor: Color {
-        // If the tuner isn't actively detecting audio, show the inactive background.
-        guard self.isDetectingAudio else {
-            return .theme.inactiveTunerBackgroundColor
-        }
-        
-        // If the tuner has never detected audio, show the inactive background.
-        guard let detectedNote = self.detectedNote else {
-            return .theme.inactiveTunerBackgroundColor
-        }
-
-        // If no note is selected, show the accurate background to indicate audio detection.
-        guard let selectedNote = self.selectedNote else {
-            return .theme.closestTunerBackgroundColor
-        }
-        
-        // If the note isn't registering as the same semitone and octave, show the inaccurate background.
-        guard detectedNote.semitone == selectedNote.semitone, detectedNote.octave == selectedNote.octave else {
-            return .theme.farTunerBackgroundColor
-        }
-        
-        // If the distance between the detected and selected note
-        guard let centsFromSelectedNote = self.centsFromSelectedNote else {
-            return .theme.inactiveTunerBackgroundColor
-        }
-        
-        #warning("A static value here doesn't make sense since frequency is exponential, I need to find out how accuracy should work here.")
-        if abs(centsFromSelectedNote) < Self.centAccuracyMaxDistance {
-            return .theme.closestTunerBackgroundColor
-        } else {
-            return .theme.closerTunerBackgroundColor
-        }
     }
 }
 
