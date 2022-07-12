@@ -13,6 +13,7 @@ let package = Package(
     products: [
         .library(name: "InstrumentKit", targets: ["InstrumentKit"]),
         .library(name: "MusicKit", targets: ["MusicKit"]),
+        .library(name: "TestKit", targets: ["TestKit"]),
         .library(name: "TunerKit", targets: ["TunerKit"]),
     ],
     dependencies: [
@@ -42,6 +43,10 @@ let package = Package(
         ),
         .target(
             name: "MusicKit",
+            dependencies: []
+        ),
+        .target(
+            name: "TestKit",
             dependencies: []
         ),
         .target(

@@ -36,6 +36,13 @@
         "identifier" : "TunerKitTests",
         "name" : "TunerKitTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Tun.xcodeproj",
+        "identifier" : "D3350543287D0DFB00A414B8",
+        "name" : "TunUITests"
+      }
     }
   ],
   "version" : 1

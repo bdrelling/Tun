@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D303D092287D1A1500E87540 /* TestKit in Frameworks */ = {isa = PBXBuildFile; productRef = D303D091287D1A1500E87540 /* TestKit */; };
+		D303D094287D1A6800E87540 /* TestKit in Frameworks */ = {isa = PBXBuildFile; productRef = D303D093287D1A6800E87540 /* TestKit */; };
+		D303D096287D1AC100E87540 /* KippleUI in Frameworks */ = {isa = PBXBuildFile; productRef = D303D095287D1AC100E87540 /* KippleUI */; };
+		D303D099287D245700E87540 /* LaunchEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D303D098287D245700E87540 /* LaunchEnvironmentKey.swift */; };
+		D3350547287D0DFB00A414B8 /* AppStoreScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350546287D0DFB00A414B8 /* AppStoreScreenshotTests.swift */; };
+		D3350550287D117700A414B8 /* LaunchPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D335054F287D117700A414B8 /* LaunchPerformanceTests.swift */; };
 		D3942974287BE33D008AF700 /* NotePickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942973287BE33D008AF700 /* NotePickerButton.swift */; };
 		D3942976287BE342008AF700 /* ActiveTuningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3942975287BE342008AF700 /* ActiveTuningView.swift */; };
 		D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2100287B7E37006538CE /* InstrumentKit */; };
 		D3CF2103287B7E37006538CE /* MusicKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2102287B7E37006538CE /* MusicKit */; };
 		D3CF2105287B7E37006538CE /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2104287B7E37006538CE /* TunerKit */; };
 		D3CF2109287BAB3D006538CE /* NotePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF2108287BAB3D006538CE /* NotePicker.swift */; };
+		D3E7B740287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7B73F287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift */; };
 		D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */; };
 		D3F448022877F01A00670FBA /* TunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* TunApp.swift */; };
 		D3F448042877F01A00670FBA /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F32877F01A00670FBA /* TunerView.swift */; };
@@ -23,11 +30,24 @@
 		D3F4484628792AE000670FBA /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4484528792AE000670FBA /* NoteView.swift */; };
 		D3F4485028792BDC00670FBA /* TunerCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4484F28792BDC00670FBA /* TunerCoordinating.swift */; };
 		D3F4485B28792C7600670FBA /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4485A28792C7600670FBA /* Color+Theme.swift */; };
-		D3F4485F2879392600670FBA /* KippleUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3F4485E2879392600670FBA /* KippleUI */; };
 		D3F44879287A27F500670FBA /* NoteFrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D335054A287D0DFB00A414B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3F447ED2877F01900670FBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3F447F82877F01A00670FBA;
+			remoteInfo = "Tün";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D303D098287D245700E87540 /* LaunchEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchEnvironmentKey.swift; sourceTree = "<group>"; };
+		D3350544287D0DFB00A414B8 /* TunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3350546287D0DFB00A414B8 /* AppStoreScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshotTests.swift; sourceTree = "<group>"; };
+		D335054F287D117700A414B8 /* LaunchPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPerformanceTests.swift; sourceTree = "<group>"; };
 		D36444C6287B41A80031D13B /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36444CC287B56770031D13B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
@@ -37,6 +57,7 @@
 		D3CF2106287B7E66006538CE /* Tun.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tun.xctestplan; sourceTree = "<group>"; };
 		D3CF2107287B7FEC006538CE /* TunKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TunKit.xctestplan; sourceTree = "<group>"; };
 		D3CF2108287BAB3D006538CE /* NotePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePicker.swift; sourceTree = "<group>"; };
+		D3E7B73F287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchEnvironment+Convenience.swift"; sourceTree = "<group>"; };
 		D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerScreen.swift; sourceTree = "<group>"; };
 		D3F447F22877F01A00670FBA /* TunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunApp.swift; sourceTree = "<group>"; };
 		D3F447F32877F01A00670FBA /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
@@ -53,20 +74,47 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D3350541287D0DFB00A414B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D303D092287D1A1500E87540 /* TestKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3F447F62877F01A00670FBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D3CF2103287B7E37006538CE /* MusicKit in Frameworks */,
+				D303D096287D1AC100E87540 /* KippleUI in Frameworks */,
 				D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */,
-				D3F4485F2879392600670FBA /* KippleUI in Frameworks */,
 				D3CF2105287B7E37006538CE /* TunerKit in Frameworks */,
+				D303D094287D1A6800E87540 /* TestKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D303D097287D244C00E87540 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				D303D098287D245700E87540 /* LaunchEnvironmentKey.swift */,
+				D3E7B73F287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		D3350545287D0DFB00A414B8 /* TunUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3350546287D0DFB00A414B8 /* AppStoreScreenshotTests.swift */,
+				D335054F287D117700A414B8 /* LaunchPerformanceTests.swift */,
+			);
+			path = TunUITests;
+			sourceTree = "<group>";
+		};
 		D36444C5287B418D0031D13B /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +148,7 @@
 			children = (
 				D3F448352879268200670FBA /* README.md */,
 				D3F447F12877F01A00670FBA /* Tun */,
+				D3350545287D0DFB00A414B8 /* TunUITests */,
 				D3F447FA2877F01A00670FBA /* Products */,
 				D3F448252877F6BD00670FBA /* Frameworks */,
 			);
@@ -108,6 +157,7 @@
 		D3F447F12877F01A00670FBA /* Tun */ = {
 			isa = PBXGroup;
 			children = (
+				D303D097287D244C00E87540 /* Testing */,
 				D36444C5287B418D0031D13B /* Config */,
 				D3F44836287927D600670FBA /* Core */,
 				D36444CB287B56700031D13B /* Experimental */,
@@ -120,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F447F92877F01A00670FBA /* Tün.app */,
+				D3350544287D0DFB00A414B8 /* TunUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,6 +253,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D3350543287D0DFB00A414B8 /* TunUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D335054C287D0DFB00A414B8 /* Build configuration list for PBXNativeTarget "TunUITests" */;
+			buildPhases = (
+				D3350540287D0DFB00A414B8 /* Sources */,
+				D3350541287D0DFB00A414B8 /* Frameworks */,
+				D3350542287D0DFB00A414B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D335054B287D0DFB00A414B8 /* PBXTargetDependency */,
+			);
+			name = TunUITests;
+			packageProductDependencies = (
+				D303D091287D1A1500E87540 /* TestKit */,
+			);
+			productName = TunUITests;
+			productReference = D3350544287D0DFB00A414B8 /* TunUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D3F447F82877F01A00670FBA /* Tün */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tün" */;
@@ -216,10 +288,11 @@
 			);
 			name = "Tün";
 			packageProductDependencies = (
-				D3F4485E2879392600670FBA /* KippleUI */,
 				D3CF2100287B7E37006538CE /* InstrumentKit */,
 				D3CF2102287B7E37006538CE /* MusicKit */,
 				D3CF2104287B7E37006538CE /* TunerKit */,
+				D303D093287D1A6800E87540 /* TestKit */,
+				D303D095287D1AC100E87540 /* KippleUI */,
 			);
 			productName = "Synth (iOS)";
 			productReference = D3F447F92877F01A00670FBA /* Tün.app */;
@@ -235,6 +308,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					D3350543287D0DFB00A414B8 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D3F447F82877F01A00670FBA;
+					};
 					D3F447F82877F01A00670FBA = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -257,11 +334,19 @@
 			projectRoot = "";
 			targets = (
 				D3F447F82877F01A00670FBA /* Tün */,
+				D3350543287D0DFB00A414B8 /* TunUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D3350542287D0DFB00A414B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3F447F72877F01A00670FBA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,10 +359,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D3350540287D0DFB00A414B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3350547287D0DFB00A414B8 /* AppStoreScreenshotTests.swift in Sources */,
+				D3350550287D117700A414B8 /* LaunchPerformanceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3F447F52877F01A00670FBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E7B740287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift in Sources */,
 				D3F448042877F01A00670FBA /* TunerView.swift in Sources */,
 				D3942976287BE342008AF700 /* ActiveTuningView.swift in Sources */,
 				D3F4483328780B0B00670FBA /* TunApp+Constants.swift in Sources */,
@@ -288,6 +383,7 @@
 				D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */,
 				D3F4485B28792C7600670FBA /* Color+Theme.swift in Sources */,
 				D3F4485028792BDC00670FBA /* TunerCoordinating.swift in Sources */,
+				D303D099287D245700E87540 /* LaunchEnvironmentKey.swift in Sources */,
 				D3F4484628792AE000670FBA /* NoteView.swift in Sources */,
 				D3CF2109287BAB3D006538CE /* NotePicker.swift in Sources */,
 			);
@@ -295,7 +391,54 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D335054B287D0DFB00A414B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3F447F82877F01A00670FBA /* Tün */;
+			targetProxy = D335054A287D0DFB00A414B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D335054D287D0DFB00A414B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79E585EFP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.TunUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tün";
+			};
+			name = Debug;
+		};
+		D335054E287D0DFB00A414B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79E585EFP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.TunUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tün";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		D3F448082877F01A00670FBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D36444C6287B41A80031D13B /* Shared.xcconfig */;
@@ -433,6 +576,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PRODUCT_MODULE_NAME = Tun;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -460,6 +604,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PRODUCT_MODULE_NAME = Tun;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -471,6 +616,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D335054C287D0DFB00A414B8 /* Build configuration list for PBXNativeTarget "TunUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D335054D287D0DFB00A414B8 /* Debug */,
+				D335054E287D0DFB00A414B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D3F447F02877F01900670FBA /* Build configuration list for PBXProject "Tun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -503,6 +657,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D303D091287D1A1500E87540 /* TestKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TestKit;
+		};
+		D303D093287D1A6800E87540 /* TestKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TestKit;
+		};
+		D303D095287D1AC100E87540 /* KippleUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3F4485D2879392600670FBA /* XCRemoteSwiftPackageReference "UI" */;
+			productName = KippleUI;
+		};
 		D3CF2100287B7E37006538CE /* InstrumentKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = InstrumentKit;
@@ -514,11 +681,6 @@
 		D3CF2104287B7E37006538CE /* TunerKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TunerKit;
-		};
-		D3F4485E2879392600670FBA /* KippleUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3F4485D2879392600670FBA /* XCRemoteSwiftPackageReference "UI" */;
-			productName = KippleUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

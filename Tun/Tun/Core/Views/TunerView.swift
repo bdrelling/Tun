@@ -8,7 +8,7 @@ import TunerKit
 
 struct TunerView: View {
     @StateObject var tuner: Tuner
-
+    
     @State var selectedNote: Note?
     @Binding var noteDisplayMode: NoteDisplayMode
 
