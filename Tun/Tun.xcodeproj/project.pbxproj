@@ -19,6 +19,16 @@
 		D3AF9576287D4B6100EC819D /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF9575287D4B6100EC819D /* InstrumentKit */; };
 		D3AF9578287D4B6100EC819D /* MusicKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF9577287D4B6100EC819D /* MusicKit */; };
 		D3AF957A287D4B6100EC819D /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF9579287D4B6100EC819D /* TunerKit */; };
+		D3AF9581287F9A6300EC819D /* Tün.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D3AF9580287F9A6300EC819D /* Tün.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3AF9586287F9A6400EC819D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AF9585287F9A6400EC819D /* Assets.xcassets */; };
+		D3AF958C287F9A6400EC819D /* Tün.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3AF958B287F9A6400EC819D /* Tün.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3AF9591287F9A6400EC819D /* TunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9590287F9A6400EC819D /* TunApp.swift */; };
+		D3AF9593287F9A6400EC819D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9592287F9A6400EC819D /* ContentView.swift */; };
+		D3AF9595287F9A6400EC819D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9594287F9A6400EC819D /* NotificationController.swift */; };
+		D3AF9597287F9A6400EC819D /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9596287F9A6400EC819D /* NotificationView.swift */; };
+		D3AF9599287F9A6400EC819D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9598287F9A6400EC819D /* ComplicationController.swift */; };
+		D3AF959B287F9A6400EC819D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AF959A287F9A6400EC819D /* Assets.xcassets */; };
+		D3AF959E287F9A6400EC819D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AF959D287F9A6400EC819D /* Preview Assets.xcassets */; };
 		D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2100287B7E37006538CE /* InstrumentKit */; };
 		D3CF2103287B7E37006538CE /* MusicKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2102287B7E37006538CE /* MusicKit */; };
 		D3CF2105287B7E37006538CE /* TunerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2104287B7E37006538CE /* TunerKit */; };
@@ -53,21 +63,71 @@
 			remoteGlobalIDString = D3F447F82877F01A00670FBA;
 			remoteInfo = "Tün";
 		};
+		D3AF9582287F9A6300EC819D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3F447ED2877F01900670FBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3AF957F287F9A6300EC819D;
+			remoteInfo = "TunWatch WatchKit App";
+		};
+		D3AF958D287F9A6400EC819D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3F447ED2877F01900670FBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3AF958A287F9A6400EC819D;
+			remoteInfo = "TunWatch WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3AF95A3287F9A6400EC819D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D3AF9581287F9A6300EC819D /* Tün.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AF95A6287F9A6400EC819D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D3AF958C287F9A6400EC819D /* Tün.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D303D098287D245700E87540 /* LaunchEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchEnvironmentKey.swift; sourceTree = "<group>"; };
 		D3350544287D0DFB00A414B8 /* TunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D335054F287D117700A414B8 /* LaunchPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPerformanceTests.swift; sourceTree = "<group>"; };
 		D36444C6287B41A80031D13B /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
-		D36444C8287B518A0031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D36444CC287B56770031D13B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D36444D0287B5DEF0031D13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3942973287BE33D008AF700 /* NotePickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePickerButton.swift; sourceTree = "<group>"; };
 		D3942975287BE342008AF700 /* ActiveTuningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTuningView.swift; sourceTree = "<group>"; };
 		D3AF9563287D4ADA00EC819D /* AppStoreScreenshots.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppStoreScreenshots.xctestplan; sourceTree = "<group>"; };
 		D3AF9568287D4B3F00EC819D /* AppStoreScreenshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppStoreScreenshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AF956A287D4B3F00EC819D /* AppStoreScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshotTests.swift; sourceTree = "<group>"; };
+		D3AF957D287F9A6300EC819D /* Tün.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tün.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AF9580287F9A6300EC819D /* Tün.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tün.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AF9585287F9A6400EC819D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3AF958B287F9A6400EC819D /* Tün.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tün.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AF9590287F9A6400EC819D /* TunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunApp.swift; sourceTree = "<group>"; };
+		D3AF9592287F9A6400EC819D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D3AF9594287F9A6400EC819D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D3AF9596287F9A6400EC819D /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D3AF9598287F9A6400EC819D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D3AF959A287F9A6400EC819D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3AF959D287F9A6400EC819D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3AF959F287F9A6400EC819D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3AF95A0287F9A6400EC819D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		D3CF2106287B7E66006538CE /* Tun.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tun.xctestplan; sourceTree = "<group>"; };
 		D3CF2107287B7FEC006538CE /* TunKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TunKit.xctestplan; sourceTree = "<group>"; };
 		D3CF2108287BAB3D006538CE /* NotePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePicker.swift; sourceTree = "<group>"; };
@@ -108,6 +168,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3AF9588287F9A6400EC819D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3F447F62877F01A00670FBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,7 +211,6 @@
 		D36444C5287B418D0031D13B /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				D36444D0287B5DEF0031D13B /* Info.plist */,
 				D36444C6287B41A80031D13B /* Shared.xcconfig */,
 				D3CF2106287B7E66006538CE /* Tun.xctestplan */,
 				D3CF2107287B7FEC006538CE /* TunKit.xctestplan */,
@@ -153,29 +219,120 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		D36444CB287B56700031D13B /* Experimental */ = {
-			isa = PBXGroup;
-			children = (
-				D36444CF287B56970031D13B /* Menus */,
-			);
-			path = Experimental;
-			sourceTree = "<group>";
-		};
-		D36444CF287B56970031D13B /* Menus */ = {
-			isa = PBXGroup;
-			children = (
-				D36444C8287B518A0031D13B /* AppDelegate.swift */,
-				D36444CC287B56770031D13B /* MenuController.swift */,
-			);
-			path = Menus;
-			sourceTree = "<group>";
-		};
 		D3AF9569287D4B3F00EC819D /* AppStoreScreenshotTests */ = {
 			isa = PBXGroup;
 			children = (
 				D3AF956A287D4B3F00EC819D /* AppStoreScreenshotTests.swift */,
 			);
 			path = AppStoreScreenshotTests;
+			sourceTree = "<group>";
+		};
+		D3AF9584287F9A6300EC819D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF9585287F9A6400EC819D /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D3AF958F287F9A6400EC819D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF95B4287F9F0600EC819D /* Apps */,
+				D3AF95B0287F9DE300EC819D /* Config */,
+				D3AF95B3287F9EFE00EC819D /* Controllers */,
+				D3AF959C287F9A6400EC819D /* Previews */,
+				D3AF95B1287F9E9E00EC819D /* Resources */,
+				D3AF95B2287F9EE800EC819D /* Views */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D3AF959C287F9A6400EC819D /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF959D287F9A6400EC819D /* Preview Assets.xcassets */,
+			);
+			path = Previews;
+			sourceTree = "<group>";
+		};
+		D3AF95AC287F9AA600EC819D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D36444C5287B418D0031D13B /* Config */,
+				D303D097287D244C00E87540 /* Testing */,
+				D3F44836287927D600670FBA /* Core */,
+				D3F448132877F2C400670FBA /* Resources */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D3AF95AD287F9AF200EC819D /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF958F287F9A6400EC819D /* Extension */,
+				D3AF9584287F9A6300EC819D /* App */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		D3AF95AE287F9B5E00EC819D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF95AF287F9B9000EC819D /* Config */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		D3AF95AF287F9B9000EC819D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D36444D0287B5DEF0031D13B /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D3AF95B0287F9DE300EC819D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF959F287F9A6400EC819D /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D3AF95B1287F9E9E00EC819D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF95A0287F9A6400EC819D /* PushNotificationPayload.apns */,
+				D3AF959A287F9A6400EC819D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3AF95B2287F9EE800EC819D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF9592287F9A6400EC819D /* ContentView.swift */,
+				D3AF9596287F9A6400EC819D /* NotificationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3AF95B3287F9EFE00EC819D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF9598287F9A6400EC819D /* ComplicationController.swift */,
+				D3AF9594287F9A6400EC819D /* NotificationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D3AF95B4287F9F0600EC819D /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF9590287F9A6400EC819D /* TunApp.swift */,
+			);
+			path = Apps;
 			sourceTree = "<group>";
 		};
 		D3F447EC2877F01900670FBA = {
@@ -193,11 +350,9 @@
 		D3F447F12877F01A00670FBA /* Tun */ = {
 			isa = PBXGroup;
 			children = (
-				D303D097287D244C00E87540 /* Testing */,
-				D36444C5287B418D0031D13B /* Config */,
-				D3F44836287927D600670FBA /* Core */,
-				D36444CB287B56700031D13B /* Experimental */,
-				D3F448132877F2C400670FBA /* Resources */,
+				D3AF95AE287F9B5E00EC819D /* iOS */,
+				D3AF95AC287F9AA600EC819D /* Shared */,
+				D3AF95AD287F9AF200EC819D /* watchOS */,
 			);
 			path = Tun;
 			sourceTree = "<group>";
@@ -208,6 +363,9 @@
 				D3F447F92877F01A00670FBA /* Tün.app */,
 				D3350544287D0DFB00A414B8 /* TunUITests.xctest */,
 				D3AF9568287D4B3F00EC819D /* AppStoreScreenshotTests.xctest */,
+				D3AF957D287F9A6300EC819D /* Tün.app */,
+				D3AF9580287F9A6300EC819D /* Tün.app */,
+				D3AF958B287F9A6400EC819D /* Tün.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,6 +493,57 @@
 			productReference = D3AF9568287D4B3F00EC819D /* AppStoreScreenshotTests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D3AF957C287F9A6300EC819D /* Tün-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3AF95AB287F9A6400EC819D /* Build configuration list for PBXNativeTarget "Tün-watchOS" */;
+			buildPhases = (
+				D3AF957B287F9A6300EC819D /* Resources */,
+				D3AF95A3287F9A6400EC819D /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3AF9583287F9A6300EC819D /* PBXTargetDependency */,
+			);
+			name = "Tün-watchOS";
+			productName = TunWatch;
+			productReference = D3AF957D287F9A6300EC819D /* Tün.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		D3AF957F287F9A6300EC819D /* Tün-watchOS (App) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3AF95AA287F9A6400EC819D /* Build configuration list for PBXNativeTarget "Tün-watchOS (App)" */;
+			buildPhases = (
+				D3AF957E287F9A6300EC819D /* Resources */,
+				D3AF95A6287F9A6400EC819D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3AF958E287F9A6400EC819D /* PBXTargetDependency */,
+			);
+			name = "Tün-watchOS (App)";
+			productName = "TunWatch WatchKit App";
+			productReference = D3AF9580287F9A6300EC819D /* Tün.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D3AF958A287F9A6400EC819D /* Tün-watchOS (Extension) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3AF95A9287F9A6400EC819D /* Build configuration list for PBXNativeTarget "Tün-watchOS (Extension)" */;
+			buildPhases = (
+				D3AF9587287F9A6400EC819D /* Sources */,
+				D3AF9588287F9A6400EC819D /* Frameworks */,
+				D3AF9589287F9A6400EC819D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tün-watchOS (Extension)";
+			productName = "TunWatch WatchKit Extension";
+			productReference = D3AF958B287F9A6400EC819D /* Tün.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		D3F447F82877F01A00670FBA /* Tün */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F4480A2877F01A00670FBA /* Build configuration list for PBXNativeTarget "Tün" */;
@@ -377,6 +586,15 @@
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = D3F447F82877F01A00670FBA;
 					};
+					D3AF957C287F9A6300EC819D = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					D3AF957F287F9A6300EC819D = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					D3AF958A287F9A6400EC819D = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					D3F447F82877F01A00670FBA = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -401,6 +619,9 @@
 				D3F447F82877F01A00670FBA /* Tün */,
 				D3350543287D0DFB00A414B8 /* TunUITests */,
 				D3AF9567287D4B3F00EC819D /* AppStoreScreenshotTests */,
+				D3AF957C287F9A6300EC819D /* Tün-watchOS */,
+				D3AF957F287F9A6300EC819D /* Tün-watchOS (App) */,
+				D3AF958A287F9A6400EC819D /* Tün-watchOS (Extension) */,
 			);
 		};
 /* End PBXProject section */
@@ -417,6 +638,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AF957B287F9A6300EC819D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AF957E287F9A6300EC819D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AF9586287F9A6400EC819D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AF9589287F9A6400EC819D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AF959E287F9A6400EC819D /* Preview Assets.xcassets in Resources */,
+				D3AF959B287F9A6400EC819D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +690,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3AF956B287D4B3F00EC819D /* AppStoreScreenshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AF9587287F9A6400EC819D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AF9595287F9A6400EC819D /* NotificationController.swift in Sources */,
+				D3AF9593287F9A6400EC819D /* ContentView.swift in Sources */,
+				D3AF9599287F9A6400EC819D /* ComplicationController.swift in Sources */,
+				D3AF9591287F9A6400EC819D /* TunApp.swift in Sources */,
+				D3AF9597287F9A6400EC819D /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +739,16 @@
 			isa = PBXTargetDependency;
 			target = D3F447F82877F01A00670FBA /* Tün */;
 			targetProxy = D3AF956E287D4B3F00EC819D /* PBXContainerItemProxy */;
+		};
+		D3AF9583287F9A6300EC819D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3AF957F287F9A6300EC819D /* Tün-watchOS (App) */;
+			targetProxy = D3AF9582287F9A6300EC819D /* PBXContainerItemProxy */;
+		};
+		D3AF958E287F9A6400EC819D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3AF958A287F9A6400EC819D /* Tün-watchOS (Extension) */;
+			targetProxy = D3AF958D287F9A6400EC819D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -561,6 +828,113 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Tün";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3AF95A1287F9A6400EC819D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D3AF95A2287F9A6400EC819D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3AF95A4287F9A6400EC819D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = TunWatch_WatchKit_Extension;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		D3AF95A5287F9A6400EC819D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = TunWatch_WatchKit_Extension;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		D3AF95A7287F9A6400EC819D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_ASSET_PATHS = "\"Tun/watchOS/Extension/Previews\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tun/watchOS/Extension/Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tün";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "Tün.ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).watchkitapp.watchkitextension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		D3AF95A8287F9A6400EC819D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_ASSET_PATHS = "\"Tun/watchOS/Extension/Previews\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tun/watchOS/Extension/Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tün";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "Tün.ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).watchkitapp.watchkitextension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
 			};
 			name = Release;
 		};
@@ -686,12 +1060,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = 79E585EFP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tun/Config/Info.plist;
+				INFOPLIST_FILE = Tun/iOS/Config/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your instrument or voice.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -704,7 +1075,6 @@
 				PRODUCT_MODULE_NAME = Tun;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -714,12 +1084,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = 79E585EFP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tun/Config/Info.plist;
+				INFOPLIST_FILE = Tun/iOS/Config/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone in order to detect the frequency of your instrument or voice.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -732,7 +1099,6 @@
 				PRODUCT_MODULE_NAME = Tun;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -755,6 +1121,33 @@
 			buildConfigurations = (
 				D3AF9571287D4B3F00EC819D /* Debug */,
 				D3AF9572287D4B3F00EC819D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3AF95A9287F9A6400EC819D /* Build configuration list for PBXNativeTarget "Tün-watchOS (Extension)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3AF95A7287F9A6400EC819D /* Debug */,
+				D3AF95A8287F9A6400EC819D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3AF95AA287F9A6400EC819D /* Build configuration list for PBXNativeTarget "Tün-watchOS (App)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3AF95A4287F9A6400EC819D /* Debug */,
+				D3AF95A5287F9A6400EC819D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3AF95AB287F9A6400EC819D /* Build configuration list for PBXNativeTarget "Tün-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3AF95A1287F9A6400EC819D /* Debug */,
+				D3AF95A2287F9A6400EC819D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
