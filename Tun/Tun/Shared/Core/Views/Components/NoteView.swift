@@ -10,10 +10,10 @@ struct NoteView: View {
     private static let fontSize: CGFloat = 96
 
     let detectedNote: Note?
+    let displayMode: NoteDisplayMode
+    
     let selectedNote: Note?
     let isDetectingAudio: Bool
-
-    @Binding var displayMode: NoteDisplayMode
     
     private var backgroundColor: Color {
         // If the tuner isn't actively detecting audio, show the inactive background.
@@ -96,12 +96,12 @@ struct NoteView: View {
         detectedNote: Note? = nil,
         selectedNote: Note? = nil,
         isDetectingAudio: Bool = false,
-        displayMode: Binding<NoteDisplayMode> = .constant(.both)
+        displayMode: NoteDisplayMode = .both
     ) {
         self.detectedNote = detectedNote
         self.isDetectingAudio = isDetectingAudio
         self.selectedNote = selectedNote
-        self._displayMode = displayMode
+        self.displayMode = displayMode
     }
 }
 
@@ -152,7 +152,7 @@ struct NoteView_Previews: PreviewProvider {
                 NoteView(
                     detectedNote: .cSharp(4),
                     isDetectingAudio: true,
-                    displayMode: .constant(displayMode)
+                    displayMode: displayMode
                 )
             }
         }

@@ -2,7 +2,7 @@ import MusicKit
 
 public extension Tuner {
     static func mocked(data: TunerData = .inactive, isDetectingAudio: Bool = false) -> Self {
-        .init(data: data, isDetectingAudio: isDetectingAudio)
+        .init(audioSettings: .mocked, data: data, isDetectingAudio: isDetectingAudio)
     }
     
     static func mockedDetecting(data: TunerData = .inactive) -> Self {

@@ -25,24 +25,24 @@ struct TestCoordinator<Content>: View where Content: View {
                 switch appStoreScreenshot {
                 case .first:
                     TunerView(
-                        selectedNote: .standard,
-                        tuner: .mockedDetecting(note: .standard)
+                        tuner: .mockedDetecting(note: .standard),
+                        selectedNote: .standard
                     )
                 case .second:
                     TunerView(
-                        selectedNote: .standard,
-                        tuner: .mockedDetecting(frequency: 450)
+                        tuner: .mockedDetecting(frequency: 450),
+                        selectedNote: .standard
                     )
                 case .third:
                     TunerView(
+                        tuner: .mockedDetecting(note: .gSharp(4)),
                         selectedNote: .standard,
-                        displayMode: .constant(.both),
-                        tuner: .mockedDetecting(note: .gSharp(4))
+                        displayMode: .constant(.both)
                     )
                 case .fourth:
                     TunerView(
-                        selectedNote: .standard,
-                        tuner: .mockedDetecting()
+                        tuner: .mockedDetecting(),
+                        selectedNote: .standard
                     ).sheet(isPresented: .constant(true)) {
                         NotePicker(selection: .constant(.g(3)))
                             .preferredColorScheme(self.preferredColorScheme)

@@ -7,9 +7,7 @@ import SwiftUI
 import TunerKit
 
 struct TunerView: View {
-    @Environment(\.audioRecordingEnabled) var audioRecordingEnabled
-    
-    @StateObject var tuner: Tuner
+    @StateObject private var viewModel: ViewModel
     
     @State var selectedNote: Note?
     @Binding var noteDisplayMode: NoteDisplayMode
@@ -19,7 +17,7 @@ struct TunerView: View {
             VStack {
                 NotePickerButton(
                     selection: self.$selectedNote,
-                    data: self.tuner.data
+                    data: self.viewModel.tunerData
                 )
                 .padding(.vertical, 48)
 
@@ -32,34 +30,52 @@ struct TunerView: View {
             }
             
             NoteView(
-                detectedNote: self.tuner.data.note,
+                detectedNote: self.viewModel.tunerData.note,
                 selectedNote: self.selectedNote,
-                isDetectingAudio: self.tuner.isDetectingAudio,
-                displayMode: self.$noteDisplayMode
+                isDetectingAudio: self.viewModel.isDetectingAudio,
+                displayMode: self.noteDisplayMode
             )
             .edgesIgnoringSafeArea(.all)
             .zIndex(-100)
         }
-        .onAppear {
-            if self.audioRecordingEnabled {
-                self.tuner.start()
-            }
-        }
-        .onDisappear {
-            if self.audioRecordingEnabled {
-                self.tuner.stop()
-            }
-        }
+        .onAppear(perform: self.viewModel.start)
+        .onDisappear(perform: self.viewModel.stop)
     }
 
     init(
+        tuner: Tuner,
         selectedNote: Note? = nil,
-        displayMode: Binding<NoteDisplayMode> = .constant(.default),
-        tuner: Tuner = .init()
+        displayMode: Binding<NoteDisplayMode> = .constant(.default)
     ) {
         self._selectedNote = .init(initialValue: selectedNote)
         self._noteDisplayMode = displayMode
-        self._tuner = .init(wrappedValue: tuner)
+        self._viewModel = .init(wrappedValue: .init(tuner: tuner))
+    }
+}
+
+// MARK: - View Model
+
+private extension TunerView {
+    final class ViewModel: ObservableObject {
+        private let tuner: Tuner
+        
+        @Published var tunerData: TunerData = .inactive
+        @Published var isDetectingAudio: Bool = false
+        
+        init(tuner: Tuner) {
+            self.tuner = tuner
+            
+            self.tuner.$data.assign(to: &self.$tunerData)
+            self.tuner.$isDetectingAudio.assign(to: &self.$isDetectingAudio)
+        }
+        
+        func start() {
+            self.tuner.start()
+        }
+        
+        func stop() {
+            self.tuner.stop()
+        }
     }
 }
 
@@ -71,10 +87,10 @@ struct TunerView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             // No Selected Note, Tuner Inactive
-            TunerView()
+            TunerView(tuner: .mocked())
 
             // Selected Note, Tuner Inactive
-            TunerView(selectedNote: Self.note)
+            TunerView(tuner: .mocked(), selectedNote: Self.note)
 
             // No Selected Note, Tuner Listening
             TunerView(tuner: .mockedDetecting(note: Self.note))
@@ -90,20 +106,20 @@ struct TunerView_AccuracyPreviews: PreviewProvider {
         Group {
             // Selected Note, Tuner Listening and Inaccurate
             TunerView(
-                selectedNote: Self.note,
-                tuner: .mockedDetecting(frequency: Self.note.frequency + 100)
+                tuner: .mockedDetecting(frequency: Self.note.frequency + 100),
+                selectedNote: Self.note
             )
 
             // Selected Note, Tuner Listening and Close
             TunerView(
-                selectedNote: Self.note,
-                tuner: .mockedDetecting(frequency: Self.note.frequency + 40)
+                tuner: .mockedDetecting(frequency: Self.note.frequency + 40),
+                selectedNote: Self.note
             )
 
             // Selected Note, Tuner Listening and Closest
             TunerView(
-                selectedNote: Self.note,
-                tuner: .mockedDetecting(frequency: Self.note.frequency + 1)
+                tuner: .mockedDetecting(frequency: Self.note.frequency + 1),
+                selectedNote: Self.note
             )
         }
         .previewMatrix(.sizeThatFits, colorSchemes: [.dark])

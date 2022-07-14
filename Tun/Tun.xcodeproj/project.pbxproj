@@ -27,6 +27,9 @@
 		D3CF2109287BAB3D006538CE /* NotePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF2108287BAB3D006538CE /* NotePicker.swift */; };
 		D3E7B740287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7B73F287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift */; };
 		D3E7B742287D321D00CF6770 /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7B741287D321D00CF6770 /* TestCoordinator.swift */; };
+		D3EB4F4E287FB0AC0032A4BA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB4F4D287FB0AC0032A4BA /* SettingsView.swift */; };
+		D3EB4F52287FB1160032A4BA /* EnvironmentValues+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB4F51287FB1160032A4BA /* EnvironmentValues+Custom.swift */; };
+		D3EB4F5D287FBA1D0032A4BA /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB4F5C287FBA1D0032A4BA /* AppSettings.swift */; };
 		D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */; };
 		D3F448022877F01A00670FBA /* TunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F22877F01A00670FBA /* TunApp.swift */; };
 		D3F448042877F01A00670FBA /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F447F32877F01A00670FBA /* TunerView.swift */; };
@@ -115,6 +118,9 @@
 		D3CF2108287BAB3D006538CE /* NotePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePicker.swift; sourceTree = "<group>"; };
 		D3E7B73F287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchEnvironment+Convenience.swift"; sourceTree = "<group>"; };
 		D3E7B741287D321D00CF6770 /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
+		D3EB4F4D287FB0AC0032A4BA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D3EB4F51287FB1160032A4BA /* EnvironmentValues+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Custom.swift"; sourceTree = "<group>"; };
+		D3EB4F5C287FBA1D0032A4BA /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerScreen.swift; sourceTree = "<group>"; };
 		D3F447F22877F01A00670FBA /* TunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunApp.swift; sourceTree = "<group>"; };
 		D3F447F32877F01A00670FBA /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
@@ -236,6 +242,35 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		D3EB4F4F287FB0CF0032A4BA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D3EB4F50287FB0D40032A4BA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D3942975287BE342008AF700 /* ActiveTuningView.swift */,
+				D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */,
+				D3CF2108287BAB3D006538CE /* NotePicker.swift */,
+				D3942973287BE33D008AF700 /* NotePickerButton.swift */,
+				D3F4484528792AE000670FBA /* NoteView.swift */,
+				D3F447F32877F01A00670FBA /* TunerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D3EB4F5B287FBA110032A4BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3EB4F5C287FBA1D0032A4BA /* AppSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D3F447EC2877F01900670FBA = {
 			isa = PBXGroup;
 			children = (
@@ -281,14 +316,10 @@
 		D3F448202877F67800670FBA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D3942975287BE342008AF700 /* ActiveTuningView.swift */,
-				D3F44878287A27F500670FBA /* NoteFrequencyTable.swift */,
-				D3CF2108287BAB3D006538CE /* NotePicker.swift */,
-				D3942973287BE33D008AF700 /* NotePickerButton.swift */,
-				D3F4484528792AE000670FBA /* NoteView.swift */,
+				D3EB4F50287FB0D40032A4BA /* Components */,
+				D3EB4F4F287FB0CF0032A4BA /* Screens */,
 				D3F4483D2879281700670FBA /* RootView.swift */,
-				D3ED09FE287AA60D004CBC96 /* TunerScreen.swift */,
-				D3F447F32877F01A00670FBA /* TunerView.swift */,
+				D3EB4F4D287FB0AC0032A4BA /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +343,7 @@
 		D3F44836287927D600670FBA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D3EB4F5B287FBA110032A4BA /* Models */,
 				D3F448212877F67E00670FBA /* Apps */,
 				D3F4485928792C6F00670FBA /* Extensions */,
 				D3F4484E28792BC800670FBA /* Protocols */,
@@ -332,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F4485A28792C7600670FBA /* Color+Theme.swift */,
+				D3EB4F51287FB1160032A4BA /* EnvironmentValues+Custom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -601,15 +634,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EB4F5D287FBA1D0032A4BA /* AppSettings.swift in Sources */,
 				D3E7B740287D2A4400CF6770 /* LaunchEnvironment+Convenience.swift in Sources */,
 				D3F448042877F01A00670FBA /* TunerView.swift in Sources */,
 				D3942976287BE342008AF700 /* ActiveTuningView.swift in Sources */,
 				D3F4483328780B0B00670FBA /* TunApp+Constants.swift in Sources */,
 				D3F448022877F01A00670FBA /* TunApp.swift in Sources */,
 				D3942974287BE33D008AF700 /* NotePickerButton.swift in Sources */,
+				D3EB4F52287FB1160032A4BA /* EnvironmentValues+Custom.swift in Sources */,
 				D3F4483E2879281700670FBA /* RootView.swift in Sources */,
 				D3E7B742287D321D00CF6770 /* TestCoordinator.swift in Sources */,
 				D3F44879287A27F500670FBA /* NoteFrequencyTable.swift in Sources */,
+				D3EB4F4E287FB0AC0032A4BA /* SettingsView.swift in Sources */,
 				D3ED09FF287AA60D004CBC96 /* TunerScreen.swift in Sources */,
 				D3F4485B28792C7600670FBA /* Color+Theme.swift in Sources */,
 				D3F4485028792BDC00670FBA /* TunerCoordinating.swift in Sources */,

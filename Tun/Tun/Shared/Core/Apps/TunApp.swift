@@ -4,6 +4,7 @@ import AudioKitAdapter
 import KippleCore
 import SwiftUI
 import TestKit
+import TunerKit
 
 @main
 struct TunApp: App {
@@ -12,15 +13,8 @@ struct TunApp: App {
     /// For more information, see [Apple Documentation](https://developer.apple.com/documentation/swiftui/scenephase).
     @Environment(\.scenePhase) var scenePhase
     
+    private let appSettings: AppSettings = Self.shouldMockExternalServices ? .mocked : .default
     private let audioManager = AudioManager()
-    
-    private var audioRecordingEnabled: Bool {
-        !(Self.isRunningTests || Kipple.isRunningInXcodePreview)
-    }
-    
-    private var networkingEnabled: Bool {
-        !(Self.isRunningTests || Kipple.isRunningInXcodePreview)
-    }
     
     var body: some Scene {
         WindowGroup {
@@ -36,8 +30,7 @@ struct TunApp: App {
                     .preferredColorScheme(.dark)
                 }
             }
-            .environment(\.audioRecordingEnabled, self.audioRecordingEnabled)
-            .environment(\.networkingEnabled, self.networkingEnabled)
+            .environmentObject(self.appSettings)
         }
         .onChange(of: self.scenePhase) { newScenePhase in
             switch newScenePhase {
@@ -57,7 +50,7 @@ struct TunApp: App {
     }
 
     init() {
-        guard self.audioRecordingEnabled else {
+        guard self.appSettings.audio.recordingEnabled else {
             return
         }
         
@@ -69,26 +62,3 @@ struct TunApp: App {
     }
 }
 
-// MARK: - Supporting Types
-
-private struct AudioRecordingEnabledKey: EnvironmentKey {
-    static let defaultValue: Bool = true
-}
-
-extension EnvironmentValues {
-  var audioRecordingEnabled: Bool {
-    get { self[AudioRecordingEnabledKey.self] }
-    set { self[AudioRecordingEnabledKey.self] = newValue }
-  }
-}
-
-private struct NetworkingEnabledKey: EnvironmentKey {
-    static let defaultValue: Bool = true
-}
-
-extension EnvironmentValues {
-  var networkingEnabled: Bool {
-    get { self[NetworkingEnabledKey.self] }
-    set { self[NetworkingEnabledKey.self] = newValue }
-  }
-}

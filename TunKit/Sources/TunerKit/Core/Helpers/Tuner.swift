@@ -9,10 +9,7 @@ import MusicKit
 import SoundpipeAudioKit
 
 public final class Tuner: ObservableObject {
-    // TODO: Make this sensitivity configurable?
-    /// The amplitude threshold for when the mic begins to pick up audio, in order to suppress unwanted background noise.
-    /// The lower then number, the more sensitive -- meaning that more audio is detected.
-    private static let noiseSensitivityThreshold: AUValue = 0.15
+    private let audioSettings: AudioSettings
 
     @Published public private(set) var data: TunerData 
     
@@ -26,10 +23,21 @@ public final class Tuner: ObservableObject {
     private var tracker: PitchTap?
 
     private var isInitialized: Bool = false
+    
+    private var subscriptions = Set<AnyCancellable>()
 
-    public init(data: TunerData = .inactive, isDetectingAudio: Bool = false) {
+    public init(
+        audioSettings: AudioSettings,
+        data: TunerData = .inactive,
+        isDetectingAudio: Bool = false
+    ) {
+        self.audioSettings = audioSettings
         self.data = data
         self.isDetectingAudio = isDetectingAudio
+        
+        self.audioSettings.$recordingEnabled
+            .sink(receiveValue: self.recordingEnabledDidChange)
+            .store(in: &self.subscriptions)
     }
 
     public func initialize() {
@@ -54,8 +62,27 @@ public final class Tuner: ObservableObject {
 
         self.isInitialized = true
     }
+    
+    #warning("Test that this works!")
+    private func recordingEnabledDidChange(_ recordingEnabled: Bool) {
+        // If recording was enabled but the engine is already running, do nothing.
+        // Similarly, if it was disabled but the engine is stopped, do nothing.
+        guard recordingEnabled != self.engine.avEngine.isRunning else {
+            return
+        }
+        
+        if recordingEnabled {
+            self.start()
+        } else {
+            self.stop()
+        }
+    }
 
     public func start() {
+        guard self.audioSettings.recordingEnabled else {
+            return
+        }
+        
         self.initialize()
 
         do {
@@ -65,14 +92,28 @@ public final class Tuner: ObservableObject {
             print(error.localizedDescription)
         }
     }
+    
+    public func pause() {
+        guard self.engine.avEngine.isRunning else {
+            return
+        }
+        
+        self.engine.pause()
+    }
 
     public func stop() {
+        guard self.engine.avEngine.isRunning else {
+            return
+        }
+        
         self.engine.stop()
     }
     
     private func update(_ frequency: AUValue, _ amplitude: AUValue) {
         // Reduces sensitivity to background noise to prevent random / fluctuating data.
-        self.isDetectingAudio = amplitude > Self.noiseSensitivityThreshold
+        self.isDetectingAudio = amplitude > self.audioSettings.noiseSensitivityThreshold
+        
+        print(amplitude)
 
         guard self.isDetectingAudio else {
             return
