@@ -13,16 +13,27 @@ public final class AudioManager {
     
     private let session: AVAudioSession
     
+    private let category: AVAudioSession.Category = .playAndRecord
+    private var options: AVAudioSession.CategoryOptions {
+        #if os(tvOS)
+            [.mixWithOthers]
+        #else
+            [.defaultToSpeaker, .mixWithOthers]
+        #endif
+    }
+    
     public init() {
         self.session = AVAudioSession.sharedInstance()
     }
     
     public func start() throws {
         try self.session.setPreferredIOBufferDuration(self.bufferLength.duration)
+        
         try self.session.setCategory(
-            .playAndRecord,
-            options: [.defaultToSpeaker, .mixWithOthers]
+            self.category,
+            options: self.options
         )
+        
         try self.session.setActive(true)
     }
 }

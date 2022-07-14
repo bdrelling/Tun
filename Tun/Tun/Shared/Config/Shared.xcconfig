@@ -1,0 +1,27 @@
+// Copyright © 2022 Brian Drelling. All rights reserved.
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Xcode
+
+IPHONEOS_DEPLOYMENT_TARGET = 15.0
+MACOSX_DEPLOYMENT_TARGET = 12.0
+TVOS_DEPLOYMENT_TARGET = 13.0
+WATCHOS_DEPLOYMENT_TARGET = 7.0
+
+CURRENT_PROJECT_VERSION = 0
+PRODUCT_BUNDLE_IDENTIFIER = $(APP_BUNDLE_IDENTIFIER)
+PRODUCT_NAME = Tün
+SWIFT_VERSION = 5.0
+
+INFOPLIST_KEY_NSHumanReadableCopyright =
+
+// Code Signing
+CODE_SIGN_STYLE = Automatic
+DEVELOPMENT_TEAM = 79E585EFP3
+
+// Custom
+APP_VERSION = 0.2.2
+APP_BUNDLE_IDENTIFIER = com.briandrelling.tun
+PRIVACY_MICROPHONE_USAGE_DESCRIPTION = We need access to your microphone in order to detect the frequency of your instrument or voice.
