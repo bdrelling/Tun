@@ -111,8 +111,6 @@ public final class Tuner: ObservableObject {
     private func update(_ frequency: AUValue, _ amplitude: AUValue) {
         // Reduces sensitivity to background noise to prevent random / fluctuating data.
         self.isDetectingAudio = amplitude > self.audioSettings.noiseSensitivityThreshold
-        
-        print(amplitude)
 
         guard self.isDetectingAudio else {
             return
