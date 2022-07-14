@@ -24,10 +24,6 @@
 		D3AF958C287F9A6400EC819D /* Tün.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3AF958B287F9A6400EC819D /* Tün.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D3AF9591287F9A6400EC819D /* TunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9590287F9A6400EC819D /* TunApp.swift */; };
 		D3AF9593287F9A6400EC819D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9592287F9A6400EC819D /* ContentView.swift */; };
-		D3AF9595287F9A6400EC819D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9594287F9A6400EC819D /* NotificationController.swift */; };
-		D3AF9597287F9A6400EC819D /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9596287F9A6400EC819D /* NotificationView.swift */; };
-		D3AF9599287F9A6400EC819D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF9598287F9A6400EC819D /* ComplicationController.swift */; };
-		D3AF959B287F9A6400EC819D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AF959A287F9A6400EC819D /* Assets.xcassets */; };
 		D3AF959E287F9A6400EC819D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AF959D287F9A6400EC819D /* Preview Assets.xcassets */; };
 		D3CF2101287B7E37006538CE /* InstrumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2100287B7E37006538CE /* InstrumentKit */; };
 		D3CF2103287B7E37006538CE /* MusicKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF2102287B7E37006538CE /* MusicKit */; };
@@ -121,13 +117,8 @@
 		D3AF958B287F9A6400EC819D /* Tün.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tün.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AF9590287F9A6400EC819D /* TunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunApp.swift; sourceTree = "<group>"; };
 		D3AF9592287F9A6400EC819D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D3AF9594287F9A6400EC819D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		D3AF9596287F9A6400EC819D /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		D3AF9598287F9A6400EC819D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		D3AF959A287F9A6400EC819D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3AF959D287F9A6400EC819D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3AF959F287F9A6400EC819D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3AF95A0287F9A6400EC819D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		D3CF2106287B7E66006538CE /* Tun.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tun.xctestplan; sourceTree = "<group>"; };
 		D3CF2107287B7FEC006538CE /* TunKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TunKit.xctestplan; sourceTree = "<group>"; };
 		D3CF2108287BAB3D006538CE /* NotePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePicker.swift; sourceTree = "<group>"; };
@@ -238,12 +229,9 @@
 		D3AF958F287F9A6400EC819D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D3AF95B4287F9F0600EC819D /* Apps */,
 				D3AF95B0287F9DE300EC819D /* Config */,
-				D3AF95B3287F9EFE00EC819D /* Controllers */,
+				D3AF95B5287FA34F00EC819D /* Core */,
 				D3AF959C287F9A6400EC819D /* Previews */,
-				D3AF95B1287F9E9E00EC819D /* Resources */,
-				D3AF95B2287F9EE800EC819D /* Views */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -300,31 +288,12 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		D3AF95B1287F9E9E00EC819D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D3AF95A0287F9A6400EC819D /* PushNotificationPayload.apns */,
-				D3AF959A287F9A6400EC819D /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		D3AF95B2287F9EE800EC819D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D3AF9592287F9A6400EC819D /* ContentView.swift */,
-				D3AF9596287F9A6400EC819D /* NotificationView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		D3AF95B3287F9EFE00EC819D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D3AF9598287F9A6400EC819D /* ComplicationController.swift */,
-				D3AF9594287F9A6400EC819D /* NotificationController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		D3AF95B4287F9F0600EC819D /* Apps */ = {
@@ -333,6 +302,15 @@
 				D3AF9590287F9A6400EC819D /* TunApp.swift */,
 			);
 			path = Apps;
+			sourceTree = "<group>";
+		};
+		D3AF95B5287FA34F00EC819D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF95B4287F9F0600EC819D /* Apps */,
+				D3AF95B2287F9EE800EC819D /* Views */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		D3F447EC2877F01900670FBA = {
@@ -661,7 +639,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3AF959E287F9A6400EC819D /* Preview Assets.xcassets in Resources */,
-				D3AF959B287F9A6400EC819D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,11 +674,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AF9595287F9A6400EC819D /* NotificationController.swift in Sources */,
 				D3AF9593287F9A6400EC819D /* ContentView.swift in Sources */,
-				D3AF9599287F9A6400EC819D /* ComplicationController.swift in Sources */,
 				D3AF9591287F9A6400EC819D /* TunApp.swift in Sources */,
-				D3AF9597287F9A6400EC819D /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,7 +734,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.TunUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -779,7 +752,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.TunUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -799,7 +771,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.AppStoreScreenshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -818,7 +789,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79E585EFP3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.briandrelling.AppStoreScreenshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -834,6 +804,8 @@
 		D3AF95A1287F9A6400EC819D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -841,6 +813,8 @@
 		D3AF95A2287F9A6400EC819D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -855,12 +829,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = TunWatch_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).watchkitapp";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
 			};
 			name = Debug;
 		};
@@ -873,26 +847,24 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = TunWatch_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).watchkitapp";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
 			};
 			name = Release;
 		};
 		D3AF95A7287F9A6400EC819D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_ASSET_PATHS = "\"Tun/watchOS/Extension/Previews\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tun/watchOS/Extension/Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tün";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "Tün.ComplicationController";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -906,20 +878,17 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
 			};
 			name = Debug;
 		};
 		D3AF95A8287F9A6400EC819D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_ASSET_PATHS = "\"Tun/watchOS/Extension/Previews\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tun/watchOS/Extension/Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tün";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "Tün.ComplicationController";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -934,7 +903,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
 			};
 			name = Release;
 		};
@@ -989,8 +957,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = "$(APP_VERSION)";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1045,8 +1011,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = "$(APP_VERSION)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

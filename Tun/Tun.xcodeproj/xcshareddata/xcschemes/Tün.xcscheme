@@ -30,7 +30,7 @@
       codeCoverageEnabled = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tun/Config/Tun.xctestplan"
+            reference = "container:Tun/Shared/Config/Tun.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

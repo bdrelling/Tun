@@ -71,7 +71,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tun/Tun/Config/TunKit.xctestplan"
+            reference = "container:Tun/Tun/Shared/Config/TunKit.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

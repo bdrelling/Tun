@@ -15,7 +15,5 @@ struct TunApp: App {
                 ContentView()
             }
         }
-
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }
