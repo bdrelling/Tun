@@ -24,6 +24,21 @@ struct SettingsView: View {
                 .padding(.vertical, 4)
                 
                 VStack(alignment: .leading) {
+                    HStack {
+                        Text("Accuracy Threshold")
+                        Spacer()
+                        Text("\(self.appSettings.audio.centAccuracyThreshold, specifier: "%.2f") cents")
+                    }
+                    
+                    #warning("Make this an Integer step instead")
+                    Slider(
+                        value: self.$appSettings.audio.centAccuracyThreshold,
+                        in: AudioSettings.allowedCentAccuracyThresholds
+                    )
+                }
+                .padding(.vertical, 4)
+                
+                VStack(alignment: .leading) {
                     Text("Note Display Mode")
                     Picker("Note Display Mode", selection: self.$appSettings.noteDisplayMode) {
                         ForEach(NoteDisplayMode.allCases) { displayMode in

@@ -63,7 +63,6 @@ public final class Tuner: ObservableObject {
         self.isInitialized = true
     }
     
-    #warning("Test that this works!")
     private func recordingEnabledDidChange(_ recordingEnabled: Bool) {
         // If recording was enabled but the engine is already running, do nothing.
         // Similarly, if it was disabled but the engine is stopped, do nothing.

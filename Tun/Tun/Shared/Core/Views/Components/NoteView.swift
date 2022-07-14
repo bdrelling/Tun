@@ -6,7 +6,8 @@ import SwiftUI
 import TunerKit
 
 struct NoteView: View {
-    private static let centAccuracyMaxDistance: Float = 4
+    @EnvironmentObject var appSettings: AppSettings
+    
     private static let fontSize: CGFloat = 96
 
     let detectedNote: Note?
@@ -41,8 +42,7 @@ struct NoteView: View {
             return .theme.inactiveTunerBackgroundColor
         }
         
-        #warning("A static value here doesn't make sense since frequency is exponential, I need to find out how accuracy should work here.")
-        if abs(centsFromSelectedNote) < Self.centAccuracyMaxDistance {
+        if abs(centsFromSelectedNote) < self.appSettings.audio.centAccuracyThreshold {
             return .theme.closestTunerBackgroundColor
         } else {
             return .theme.closerTunerBackgroundColor
@@ -156,6 +156,7 @@ struct NoteView_Previews: PreviewProvider {
                 )
             }
         }
+        .environmentObject(AppSettings.mocked)
         .previewMatrix(.sizeThatFits, colorSchemes: [.light])
     }
 }
