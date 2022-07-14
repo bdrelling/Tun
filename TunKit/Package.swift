@@ -52,9 +52,6 @@ let package = Package(
         .target(
             name: "TunerKit",
             dependencies: [
-                .product(name: "AudioKit", package: "AudioKit"),
-                .product(name: "AudioKitEX", package: "AudioKit"),
-                .product(name: "SoundpipeAudioKit", package: "AudioKit"),
                 .product(name: "KippleCore", package: "Core"),
                 .target(name: "AudioKitAdapter"),
                 .target(name: "InstrumentKit"),

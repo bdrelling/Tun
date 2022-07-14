@@ -6,9 +6,6 @@ import AudioKit
 import AVFoundation
 
 public final class AudioManager {
-    // TODO: Remove shared instance, look into Resolver/Factory.
-    public static var shared = AudioManager()
-    
     private let bufferLength: Settings.BufferLength = .short
     
     private let session: AVAudioSession
@@ -22,8 +19,8 @@ public final class AudioManager {
         #endif
     }
     
-    public init() {
-        self.session = AVAudioSession.sharedInstance()
+    public init(session: AVAudioSession = .sharedInstance()) {
+        self.session = session
     }
     
     public func start() throws {

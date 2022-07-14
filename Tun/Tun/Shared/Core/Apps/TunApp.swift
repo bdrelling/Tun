@@ -12,6 +12,8 @@ struct TunApp: App {
     /// For more information, see [Apple Documentation](https://developer.apple.com/documentation/swiftui/scenephase).
     @Environment(\.scenePhase) var scenePhase
     
+    private let audioManager = AudioManager()
+    
     private var audioRecordingEnabled: Bool {
         !(Self.isRunningTests || Kipple.isRunningInXcodePreview)
     }
@@ -60,7 +62,7 @@ struct TunApp: App {
         }
         
         do {
-            try AudioManager.shared.start()
+            try self.audioManager.start()
         } catch {
             print(error.localizedDescription)
         }
