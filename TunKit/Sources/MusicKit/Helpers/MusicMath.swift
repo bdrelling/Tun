@@ -63,12 +63,12 @@ public extension MusicMath {
 
         return round(frequency * MusicMath.precision) / MusicMath.precision
     }
-    
+
     static func frequencyForNote(_ semitone: Semitone, octave: Octave) -> Float {
         let interval = Self.standardInterval(for: (semitone, octave))
         return self.frequencyForInterval(interval)
     }
-    
+
     static func frequencyForNote(_ semitone: Semitone, octave: Int) -> Float {
         self.frequencyForNote(semitone, octave: .init(octave))
     }
@@ -76,18 +76,18 @@ public extension MusicMath {
     static func frequencyForNote(_ note: Note) -> Float {
         self.frequencyForNote(note.semitone, octave: note.octave)
     }
-    
+
     // MARK: Cents
-    
+
     static func cents(from fromFrequency: Float, to toFrequency: Float) -> Float {
         let centsPerOctave = Float(Semitone.count * 100)
         return centsPerOctave * log2f(fromFrequency / toFrequency)
     }
-    
+
     static func cents(from note: Note, to frequency: Float) -> Float {
         self.cents(from: note.frequency, to: frequency)
     }
-    
+
     static func cents(from fromNote: Note, to toNote: Note) -> Float {
         self.cents(from: fromNote.frequency, to: toNote.frequency)
     }

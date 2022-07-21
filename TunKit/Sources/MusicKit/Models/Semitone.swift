@@ -47,7 +47,7 @@ extension Semitone: RawRepresentable {
     public var rawValue: Int {
         self.index
     }
-    
+
     public init?(rawValue: Int) {
         if let semitone = Semitone.allCases.first(where: { $0.index == rawValue }) {
             self = semitone

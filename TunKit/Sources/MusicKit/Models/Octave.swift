@@ -1,15 +1,14 @@
 // Copyright © 2022 Brian Drelling. All rights reserved.
 
-
 public struct Octave: RawRepresentable, Hashable {
     public let rawValue: Int
     public let name: String?
-    
+
     public init(_ rawValue: Int, name: String? = nil) {
         self.rawValue = rawValue
         self.name = name
     }
-    
+
     public init?(rawValue: Int) {
         if let knownOctave = Octave.allCases.first(where: { $0.rawValue == rawValue }) {
             self = knownOctave

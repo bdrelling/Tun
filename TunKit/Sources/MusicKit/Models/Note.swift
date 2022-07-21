@@ -10,13 +10,13 @@ public struct Note: Equatable, Hashable {
     public var name: String {
         "\(self.semitone.name)\(self.octave.rawValue)"
     }
-    
+
     public init(_ semitone: Semitone, octave: Octave, frequency: Float? = nil) {
         self.semitone = semitone
         self.octave = octave
         self.frequency = frequency ?? MusicMath.frequencyForNote(semitone, octave: octave)
     }
-    
+
     public init(_ semitone: Semitone, octave: Int, frequency: Float? = nil) {
         self.init(
             semitone,
@@ -94,7 +94,7 @@ public extension Note {
     static let standard: Self = .init(.a, octave: 4, frequency: 440)
     static let lowest: Self = .init(.c, octave: 0, frequency: Semitone.c.frequency)
     static let highest: Self = .init(.b, octave: 8, frequency: 7920.13)
-    
+
     static let middleA: Self = .standard
     static let middleC: Self = .init(.c, octave: 4, frequency: 261.63)
 

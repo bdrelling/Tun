@@ -10,8 +10,8 @@ public final class AudioDeviceManager {
     public var inputDevices: [Device] {
         AudioEngine.inputDevices.compactMap { $0 }
     }
-    
-#if !os(macOS)
+
+    #if !os(macOS)
     public func setInputDevice(to device: Device) {
         do {
             try AudioEngine.setInputDevice(device)
@@ -19,5 +19,5 @@ public final class AudioDeviceManager {
             print(error.localizedDescription)
         }
     }
-#endif
+    #endif
 }

@@ -1,3 +1,5 @@
+// Copyright © 2022 Brian Drelling. All rights reserved.
+
 import SwiftUI
 import TunerKit
 
@@ -8,28 +10,28 @@ struct SettingsView: View {
         List {
             Section("Audio Settings") {
                 Toggle("Recording Enabled", isOn: self.$appSettings.audio.recordingEnabled)
-                
+
                 VStack(alignment: .leading) {
                     HStack {
                         Text("Noise Threshold")
                         Spacer()
                         Text("\(self.appSettings.audio.noiseSensitivityThreshold, specifier: "%.2f")")
                     }
-                    
+
                     Slider(
                         value: self.$appSettings.audio.noiseSensitivityThreshold,
                         in: AudioSettings.allowedNoiseSensitivityThresholds
                     )
                 }
                 .padding(.vertical, 4)
-                
+
                 VStack(alignment: .leading) {
                     HStack {
                         Text("Accuracy Threshold")
                         Spacer()
                         Text("\(self.appSettings.audio.centAccuracyThreshold, specifier: "%.2f") cents")
                     }
-                    
+
                     #warning("Make this an Integer step instead")
                     Slider(
                         value: self.$appSettings.audio.centAccuracyThreshold,
@@ -37,7 +39,7 @@ struct SettingsView: View {
                     )
                 }
                 .padding(.vertical, 4)
-                
+
                 VStack(alignment: .leading) {
                     Text("Note Display Mode")
                     Picker("Note Display Mode", selection: self.$appSettings.noteDisplayMode) {

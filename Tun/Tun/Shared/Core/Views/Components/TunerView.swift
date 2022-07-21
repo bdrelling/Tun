@@ -8,8 +8,9 @@ import TunerKit
 
 struct TunerView: View {
     @StateObject private var viewModel: ViewModel
-    
+
     @State var selectedNote: Note?
+
     @Binding var noteDisplayMode: NoteDisplayMode
 
     var body: some View {
@@ -28,7 +29,7 @@ struct TunerView: View {
 
                 Spacer()
             }
-            
+
             NoteView(
                 detectedNote: self.viewModel.tunerData.note,
                 selectedNote: self.selectedNote,
@@ -58,21 +59,21 @@ struct TunerView: View {
 private extension TunerView {
     final class ViewModel: ObservableObject {
         private let tuner: Tuner
-        
+
         @Published var tunerData: TunerData = .inactive
         @Published var isDetectingAudio: Bool = false
-        
+
         init(tuner: Tuner) {
             self.tuner = tuner
-            
+
             self.tuner.$data.assign(to: &self.$tunerData)
             self.tuner.$isDetectingAudio.assign(to: &self.$isDetectingAudio)
         }
-        
+
         func start() {
             self.tuner.start()
         }
-        
+
         func stop() {
             self.tuner.stop()
         }
@@ -83,7 +84,7 @@ private extension TunerView {
 
 struct TunerView_Previews: PreviewProvider {
     private static let note: Note = .standard
-    
+
     static var previews: some View {
         Group {
             // No Selected Note, Tuner Inactive
@@ -101,7 +102,7 @@ struct TunerView_Previews: PreviewProvider {
 
 struct TunerView_AccuracyPreviews: PreviewProvider {
     private static let note: Note = .standard
-    
+
     static var previews: some View {
         Group {
             // Selected Note, Tuner Listening and Inaccurate

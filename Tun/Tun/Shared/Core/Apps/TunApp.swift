@@ -12,10 +12,10 @@ struct TunApp: App {
     ///
     /// For more information, see [Apple Documentation](https://developer.apple.com/documentation/swiftui/scenephase).
     @Environment(\.scenePhase) var scenePhase
-    
+
     private let appSettings: AppSettings = Self.shouldMockExternalServices ? .mocked : .default
     private let audioManager = AudioManager()
-    
+
     var body: some Scene {
         WindowGroup {
             Group {
@@ -25,9 +25,9 @@ struct TunApp: App {
                     }
                 } else {
                     RootView()
-                    // This will override the entire application with Dark Mode settings.
-                    // This is temporarily in place until support for both modes is properly implemented.
-                    .preferredColorScheme(.dark)
+                        // This will override the entire application with Dark Mode settings.
+                        // This is temporarily in place until support for both modes is properly implemented.
+                        .preferredColorScheme(.dark)
                 }
             }
             .environmentObject(self.appSettings)
@@ -53,7 +53,7 @@ struct TunApp: App {
         guard self.appSettings.audio.recordingEnabled else {
             return
         }
-        
+
         do {
             try self.audioManager.start()
         } catch {
@@ -61,4 +61,3 @@ struct TunApp: App {
         }
     }
 }
-

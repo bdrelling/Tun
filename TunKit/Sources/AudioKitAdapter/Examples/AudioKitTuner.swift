@@ -35,9 +35,9 @@ class AudioKitTunerConductor: ObservableObject {
         guard let input = engine.input else { fatalError() }
 
         #if os(macOS)
-            let device = self.engine.device
+        let device = self.engine.device
         #else
-            guard let device = engine.inputDevice else { fatalError() }
+        guard let device = engine.inputDevice else { fatalError() }
         #endif
 
         self.initialDevice = device

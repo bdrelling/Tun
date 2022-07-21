@@ -1,3 +1,5 @@
+// Copyright © 2022 Brian Drelling. All rights reserved.
+
 import InstrumentKit
 import MusicKit
 import SwiftUI
@@ -5,9 +7,9 @@ import TunerKit
 
 struct NotePickerButton: View {
     @Binding var selection: Note?
-    
+
     let data: TunerData
-    
+
     @State private var isShowingNotePicker = false
 
     var body: some View {
@@ -32,7 +34,7 @@ struct NotePickerButton: View {
             NotePicker(selection: self.$selection)
         }
     }
-    
+
     private func showNotePicker() {
         self.isShowingNotePicker.toggle()
     }

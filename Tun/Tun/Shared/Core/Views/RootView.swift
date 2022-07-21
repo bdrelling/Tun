@@ -4,7 +4,7 @@ import SwiftUI
 
 struct RootView: View {
     @EnvironmentObject var appSettings: AppSettings
-    
+
     var body: some View {
         TunerScreen(audioSettings: self.appSettings.audio)
     }

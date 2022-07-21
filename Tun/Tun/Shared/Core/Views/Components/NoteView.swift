@@ -7,21 +7,21 @@ import TunerKit
 
 struct NoteView: View {
     @EnvironmentObject var appSettings: AppSettings
-    
+
     private static let fontSize: CGFloat = 96
 
     let detectedNote: Note?
     let displayMode: NoteDisplayMode
-    
+
     let selectedNote: Note?
     let isDetectingAudio: Bool
-    
+
     private var backgroundColor: Color {
         // If the tuner isn't actively detecting audio, show the inactive background.
         guard self.isDetectingAudio else {
             return .theme.inactiveTunerBackgroundColor
         }
-        
+
         // If the tuner has never detected audio, show the inactive background.
         guard let detectedNote = self.detectedNote else {
             return .theme.inactiveTunerBackgroundColor
@@ -31,29 +31,29 @@ struct NoteView: View {
         guard let selectedNote = self.selectedNote else {
             return .theme.closestTunerBackgroundColor
         }
-        
+
         // If the note isn't registering as the same semitone and octave, show the inaccurate background.
         guard detectedNote.semitone == selectedNote.semitone, detectedNote.octave == selectedNote.octave else {
             return .theme.farTunerBackgroundColor
         }
-        
+
         // If the distance between the detected and selected note
         guard let centsFromSelectedNote = self.centsFromSelectedNote else {
             return .theme.inactiveTunerBackgroundColor
         }
-        
+
         if abs(centsFromSelectedNote) < self.appSettings.audio.centAccuracyThreshold {
             return .theme.closestTunerBackgroundColor
         } else {
             return .theme.closerTunerBackgroundColor
         }
     }
-    
+
     private var centsFromSelectedNote: Float? {
         guard let detectedNote = self.detectedNote, let selectedNote = self.selectedNote else {
             return nil
         }
-        
+
         return MusicMath.cents(from: detectedNote, to: selectedNote)
     }
 
@@ -65,7 +65,7 @@ struct NoteView: View {
                 } else {
                     self.inactiveTextView
                 }
-                
+
                 if let centsFromSelectedNote = self.centsFromSelectedNote {
                     Text("\(centsFromSelectedNote, specifier: "%.2f") cents")
                         .font(.body)
@@ -91,7 +91,7 @@ struct NoteView: View {
         Image(systemName: "zzz")
             .opacity(0.35)
     }
-    
+
     init(
         detectedNote: Note? = nil,
         selectedNote: Note? = nil,
@@ -147,7 +147,7 @@ struct NoteView_Previews: PreviewProvider {
                 detectedNote: .c(2),
                 isDetectingAudio: true
             )
-            
+
             ForEach(NoteDisplayMode.allCases, id: \.self) { displayMode in
                 NoteView(
                     detectedNote: .cSharp(4),

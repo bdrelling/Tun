@@ -1,3 +1,5 @@
+// Copyright © 2022 Brian Drelling. All rights reserved.
+
 import SwiftUI
 
 // MARK: - App Settings
@@ -7,8 +9,8 @@ private struct AppSettingsKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-  var appSettings: AppSettings {
-    get { self[AppSettingsKey.self] }
-    set { self[AppSettingsKey.self] = newValue }
-  }
+    var appSettings: AppSettings {
+        get { self[AppSettingsKey.self] }
+        set { self[AppSettingsKey.self] = newValue }
+    }
 }

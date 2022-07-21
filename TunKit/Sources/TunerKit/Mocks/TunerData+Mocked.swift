@@ -14,7 +14,7 @@ public extension TunerData {
             note: note
         )
     }
-    
+
     static func mocked(
         _ note: Note
     ) -> Self {
@@ -22,7 +22,7 @@ public extension TunerData {
             note: note
         )
     }
-    
+
     static func mocked(
         frequency: Float
     ) -> Self {

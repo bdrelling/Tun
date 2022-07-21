@@ -1,13 +1,15 @@
+// Copyright © 2022 Brian Drelling. All rights reserved.
+
 import SwiftUI
 import TestKit
 
 struct TestCoordinator<Content>: View where Content: View {
     let content: () -> Content
-    
+
     private var launchEnvironment: LaunchEnvironment {
         ProcessInfo.processInfo.launchEnvironment
     }
-    
+
     private var preferredColorScheme: ColorScheme? {
         switch self.launchEnvironment.colorScheme {
         case .light:
@@ -18,7 +20,7 @@ struct TestCoordinator<Content>: View where Content: View {
             return nil
         }
     }
-    
+
     var body: some View {
         if let appStoreScreenshot = self.launchEnvironment.appStoreScreenshot {
             Group {
@@ -60,14 +62,14 @@ struct TestCoordinator<Content>: View where Content: View {
 
 // MARK: - Supporting Types
 
-fileprivate enum AppStoreScreenshot: Int {
+private enum AppStoreScreenshot: Int {
     case first
     case second
     case third
     case fourth
 }
 
-fileprivate extension LaunchEnvironment {
+private extension LaunchEnvironment {
     var appStoreScreenshot: AppStoreScreenshot? {
         if let appStoreScreenshotIndex = self.appStoreScreenshotIndex {
             return AppStoreScreenshot(rawValue: appStoreScreenshotIndex)

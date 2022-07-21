@@ -1,3 +1,5 @@
+// Copyright © 2022 Brian Drelling. All rights reserved.
+
 import MusicKit
 import TestKit
 
@@ -9,7 +11,7 @@ extension LaunchEnvironment {
             return nil
         }
     }
-    
+
     var selectedOctave: Octave? {
         if let selectedOctave = self.selectedOctaveValue {
             return .init(rawValue: selectedOctave)

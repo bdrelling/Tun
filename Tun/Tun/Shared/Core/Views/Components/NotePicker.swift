@@ -6,13 +6,13 @@ import SwiftUI
 
 struct NotePicker: View {
     @Environment(\.dismiss) private var dismiss
-    
+
     private let itemHeight: CGFloat = 60
     private let itemVerticalSpacing: CGFloat = 20
     private let itemHorizontalSpacing: CGFloat = 40
 
     @Binding var selection: Note?
-    
+
     @State private var selectedSemitone: Semitone?
     @State private var selectedOctave: Octave?
 
@@ -84,31 +84,31 @@ struct NotePicker: View {
             }
         }
     }
-    
+
     init(selection note: Binding<Note?>) {
         self._selection = note
-        
+
         self._selectedSemitone = .init(initialValue: note.wrappedValue?.semitone)
         self._selectedOctave = .init(initialValue: note.wrappedValue?.octave)
     }
-    
+
     private func clearSelectedNote() {
         self.selection = nil
-        
+
         self.selectedOctave = nil
         self.selectedSemitone = nil
-        
+
         self.dismiss()
     }
-    
+
     private func updateSelectedNote() {
         guard let selectedSemitone = selectedSemitone, let selectedOctave = selectedOctave else {
             self.selection = nil
             return
         }
-        
+
         let selection: Note = .init(selectedSemitone, octave: selectedOctave.rawValue)
-        
+
         self.selection = selection
     }
 }
@@ -119,7 +119,7 @@ private struct NotePickerItem<Content>: View where Content: View {
     private let isSelected: Bool
     private let action: () -> Void
     private let content: () -> Content
-    
+
     private var backgroundColor: Color {
         if self.isSelected {
             return .theme.closestTunerBackgroundColor
@@ -127,7 +127,7 @@ private struct NotePickerItem<Content>: View where Content: View {
             return .theme.cellBackgroundColor
         }
     }
-    
+
     var body: some View {
         Button(action: self.action) {
             content()
@@ -136,7 +136,7 @@ private struct NotePickerItem<Content>: View where Content: View {
                 .cornerRadius(10)
         }
     }
-    
+
     init(
         isSelected: Bool = false,
         action: @escaping () -> Void,
@@ -151,11 +151,11 @@ private struct NotePickerItem<Content>: View where Content: View {
 private struct SemitoneItem: View {
     var semitone: Semitone
     @Binding var selection: Semitone?
-    
+
     private var isSelected: Bool {
         self.semitone == self.selection
     }
-    
+
     var body: some View {
         NotePickerItem(
             isSelected: self.isSelected,
@@ -170,19 +170,19 @@ private struct SemitoneItem: View {
 private struct OctaveItem: View {
     var octave: Octave
     @Binding var selection: Octave?
-    
+
     private var isSelected: Bool {
         self.octave == self.selection
     }
-    
+
     var body: some View {
         NotePickerItem(
             isSelected: self.isSelected,
             action: { self.selection = self.octave }
         ) {
             VStack {
-            Text("\(self.octave.rawValue)")
-                
+                Text("\(self.octave.rawValue)")
+
                 if let name = self.octave.name {
                     Text(name)
                         .font(.caption)
@@ -201,7 +201,7 @@ struct NotePicker_Previews: PreviewProvider {
     static var previews: some View {
         NotePicker(selection: .constant(nil))
             .previewMatrix()
-        
+
         NotePicker(selection: .constant(nil))
             .previewInModal()
     }

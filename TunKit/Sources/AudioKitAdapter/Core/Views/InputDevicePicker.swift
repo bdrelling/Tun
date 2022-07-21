@@ -1,6 +1,8 @@
+// Copyright © 2022 Brian Drelling. All rights reserved.
+
 //// Copyright © 2022 Brian Drelling. All rights reserved.
 //
-//#if canImport(SwiftUI)
+// #if canImport(SwiftUI)
 //
 //    import AudioKit
 //    import SwiftUI
@@ -19,4 +21,4 @@
 //        }
 //    }
 //
-//#endif
+// #endif
